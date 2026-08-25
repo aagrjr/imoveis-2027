@@ -4,6 +4,11 @@
 Single-page web app (pt-BR) para comparar apartamentos numa busca:
 lista, filtra, ordena e compara os imóveis a visitar.
 
+## Editando os dados à mão
+Cada apartamento é **uma linha** do array `apts`. Ao reescrever uma linha por
+script, recoloque a vírgula final: sem ela o `const D` vira erro de sintaxe e a
+página inteira fica em branco. Depois de mexer, valide parseando cada linha.
+
 ## Files
 - `index.html` — a aplicação inteira: dados, CSS e JS. **É o único arquivo que importa.**
 - `README.md`
@@ -42,8 +47,10 @@ são derivados na carga — nunca gravados nos dados.
 6. ⭐ favoritar e ✕ descartar direto no card; descartados ficam ocultos até o chip
    "mostrar descartados", e então exibem ⟲ para recuperar.
 7. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 6 ordenações.
-8. Ordenação padrão é "Mais itens" (`st.ordem = 'itens'` e `selected` no `<option>`
-   correspondente — os dois precisam bater).
+8. Ordenação: `st.ordem` escolhe a métrica em `CHAVE` e `st.dir` (±1) o sentido,
+   aplicado como `(k(a) - k(b)) * st.dir`. As funções em `CHAVE` devolvem sempre o
+   valor cru — nada de negar dentro delas. Padrão: `mensal` crescente, e o
+   `selected` do `<option>` precisa bater com `st.ordem`.
 9. R$/m² colorido por quartil (`q1`/`q3` sobre o conjunto todo).
 
 ## Guardrails

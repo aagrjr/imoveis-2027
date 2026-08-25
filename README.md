@@ -18,7 +18,7 @@ mensal, itens, filtros e anotações por imóvel.
 ## O que a página faz
 
 - Filtros por bairro, favoritos e descartados
-- Ordenação por R$/m², preço, área, custo mensal ou nº de itens
+- Ordenação por custo mensal, R$/m², preço, área ou nº de itens, com botão ↑/↓ pra inverter
 - Alternância cards ⇄ tabela (colunas clicáveis para ordenar)
 - Foto de capa de cada anúncio
 - ⭐ favoritar e ✕ descartar em um clique, direto no card
