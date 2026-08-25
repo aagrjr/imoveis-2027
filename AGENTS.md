@@ -28,8 +28,12 @@ strings presentes em `amenidades`. `Churrasqueira` é a do apartamento e
 são derivados na carga — nunca gravados nos dados.
 
 ## Comportamentos a preservar
-1. Estado por imóvel em `localStorage`, prefixo `imoveis-2027:` — chaves `fav:`, `status:`, `nota:`.
-   O id vem de `endereco + m2` slugificado; mudar essa regra perde as anotações do usuário.
+1. Estado por imóvel em `localStorage`, prefixo `imoveis-2027:` — chaves `fav:`, `status:`, `nota:`, `itens:`.
+   O id vem de `endereco + m2` slugificado, com sufixo `-2`, `-3`… quando dois imóveis
+   geram o mesmo slug (unidades diferentes do mesmo prédio). Sem esse sufixo um
+   sobrescreve o estado do outro silenciosamente. Consequência: o sufixo depende da
+   **ordem** no array — inserir uma unidade duplicada antes de outra troca os ids.
+   Mudar a regra de id perde as anotações do usuário.
 2. O botão `#backup` serializa esse estado em `#s=<base64 do JSON>`; a página importa
    o hash na carga e o limpa com `replaceState`. Manter as duas pontas em sincronia.
 3. `D.estado` / `D.estadoVersao` são o estado publicado no repo. Se a versão do
