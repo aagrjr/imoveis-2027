@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Apartamentos 2027</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0d1117; --surface: #161b22; --surface2: #1c2230; --border: #2a3140;
+    --text: #e6edf3; --muted: #7d8590;
+    --good: #34d399; --good-bg: #061f17; --good-border: #0d4a30;
+    --warn: #fbbf24; --warn-bg: #1f1708; --warn-border: #4a3500;
+    --bad: #f87171; --bad-bg: #2a0f0f; --bad-border: #5c1d1d;
+    --accent: #60a5fa; --accent-bg: #0d1f3c; --accent-border: #1e3a5f;
+  }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body { font-family: 'Georgia', serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+  .site-header {
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    padding: 0 24px; position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px; gap: 16px;
+  }
+  .site-header h1 { font-size: 18px; font-weight: 700; letter-spacing: -.02em;
+    font-family: -apple-system, sans-serif; white-space: nowrap; }
+  .header-stats { display: flex; gap: 22px; font-family: -apple-system, sans-serif;
+    font-size: 12px; color: var(--muted); }
+  .header-stats b { display: block; color: var(--text); font-size: 15px; font-weight: 700; }
+
+  main { max-width: 1180px; margin: 0 auto; padding: 28px 24px 80px; }
+
+  /* ── CONTROLES ─────────────────────────── */
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+    margin-bottom: 22px; font-family: -apple-system, sans-serif; font-size: 13px; }
+  .chip {
+    background: var(--surface); border: 1px solid var(--border); color: var(--muted);
+    padding: 6px 12px; border-radius: 999px; cursor: pointer; font-size: 13px;
+    font-family: inherit; transition: .12s;
+  }
+  .chip:hover { border-color: var(--accent-border); color: var(--text); }
+  .chip.on { background: var(--accent-bg); border-color: var(--accent-border); color: var(--accent); font-weight: 600; }
+  select, .toggle {
+    background: var(--surface); border: 1px solid var(--border); color: var(--text);
+    padding: 6px 10px; border-radius: 6px; font-family: inherit; font-size: 13px; cursor: pointer;
+  }
+  .spacer { flex: 1; }
+
+  /* ── CARDS ─────────────────────────────── */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px 14px; display: flex; flex-direction: column; gap: 10px; position: relative;
+  }
+  .card.st-agendado { border-color: var(--warn-border); }
+  .card.st-visitado { border-color: var(--good-border); }
+  .card.st-descartado { opacity: .45; }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+  .bairro { font-family: -apple-system, sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+  .endereco { font-size: 17px; font-weight: 700; letter-spacing: -.01em; margin-top: 2px; }
+  .sub { font-family: -apple-system, sans-serif; font-size: 12px; color: var(--muted); margin-top: 3px; }
+  .fav { background: none; border: none; cursor: pointer; font-size: 18px; line-height: 1;
+    color: var(--border); padding: 2px; }
+  .fav.on { color: var(--warn); }
+
+  .preco { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .preco b { font-size: 24px; font-weight: 700; letter-spacing: -.02em; font-family: -apple-system, sans-serif; }
+  .m2v { font-family: -apple-system, sans-serif; font-size: 12px; padding: 2px 8px; border-radius: 999px;
+    background: var(--surface2); border: 1px solid var(--border); color: var(--muted); }
+  .m2v.barato { background: var(--good-bg); border-color: var(--good-border); color: var(--good); }
+  .m2v.caro { background: var(--bad-bg); border-color: var(--bad-border); color: var(--bad); }
+
+  .specs { display: flex; gap: 14px; font-family: -apple-system, sans-serif; font-size: 13px;
+    color: var(--muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    padding: 9px 0; }
+  .specs span b { color: var(--text); font-weight: 700; }
+
+  .mensal { font-family: -apple-system, sans-serif; font-size: 12px; color: var(--muted); }
+  .mensal b { color: var(--text); }
+
+  .itens { display: flex; flex-wrap: wrap; gap: 5px; }
+  .item { font-family: -apple-system, sans-serif; font-size: 11px; padding: 3px 8px;
+    border-radius: 4px; background: var(--good-bg); border: 1px solid var(--good-border); color: var(--good); }
+  .item.off { background: transparent; border-color: var(--border); color: #4b5563; }
+
+  .card-foot { display: flex; gap: 8px; align-items: center; margin-top: auto; padding-top: 4px; }
+  .card-foot select { flex: 0 0 auto; font-size: 12px; padding: 5px 8px; }
+  .card-foot a { margin-left: auto; font-family: -apple-system, sans-serif; font-size: 12px;
+    color: var(--accent); text-decoration: none; font-weight: 600; }
+  .card-foot a:hover { text-decoration: underline; }
+  .nota { width: 100%; background: var(--surface2); border: 1px solid var(--border); color: var(--text);
+    border-radius: 6px; padding: 7px 9px; font-family: -apple-system, sans-serif; font-size: 12px;
+    resize: vertical; min-height: 34px; }
+  .nota::placeholder { color: #4b5563; }
+
+  /* ── TABELA ────────────────────────────── */
+  .wrap-tabela { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; }
+  table { border-collapse: collapse; width: 100%; font-family: -apple-system, sans-serif; font-size: 13px; }
+  th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { background: var(--surface2); color: var(--muted); font-size: 11px; text-transform: uppercase;
+    letter-spacing: .05em; cursor: pointer; user-select: none; }
+  th:hover { color: var(--text); }
+  tbody tr:hover { background: var(--surface); }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.descartado { opacity: .4; }
+
+  h2 { font-size: 20px; margin: 40px 0 6px; letter-spacing: -.01em; }
+  h2:first-of-type { margin-top: 0; }
+  .h2sub { font-family: -apple-system, sans-serif; font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+  .vazio { color: var(--muted); font-family: -apple-system, sans-serif; padding: 40px; text-align: center; }
+
+  @media (max-width: 720px) {
+    .site-header { padding: 0 14px; height: auto; flex-direction: column;
+      align-items: flex-start; gap: 6px; padding: 10px 14px; }
+    .header-stats { gap: 16px; }
+    main { padding: 20px 14px 60px; }
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <h1>Apartamentos 2027</h1>
+  <div class="header-stats" id="stats"></div>
+</header>
+
+<main>
+  <div class="controls">
+    <span id="chips-bairro" style="display:flex;gap:8px;flex-wrap:wrap"></span>
+    <button class="chip" id="chip-fav">&#9733; favoritos</button>
+    <button class="chip" id="chip-desc">mostrar descartados</button>
+    <span class="spacer"></span>
+    <select id="ordem">
+      <option value="m2v">R$/m&sup2; (menor)</option>
+      <option value="valor">Preco (menor)</option>
+      <option value="valorD">Preco (maior)</option>
+      <option value="m2">Area (maior)</option>
+      <option value="mensal">Custo mensal (menor)</option>
+      <option value="itens">Mais itens</option>
+    </select>
+    <button class="chip" id="chip-vista">Tabela</button>
+  </div>
+
+  <div id="lista"></div>
+
+</main>
+
+<script>
+const D = {"apts":[{"bairro":"Vila Leopoldina","endereco":"Carlos Weber","privado":false,"cobertura":false,"andar":"12° a 15° andar","m2":110,"qts":3,"vgs":2,"link":"https://www.quintoandar.com.br/imovel/895472830/comprar/apartamento-3-quartos-vila-leopoldina-sao-paulo","cond":1600,"iptu":700,"valor":1600000,"itens":["Ar Condicionado","Academia","Piscina"]},{"bairro":"Vila Leopoldina","endereco":"Paulo Franco","privado":false,"cobertura":false,"andar":2,"m2":112,"qts":3,"vgs":3,"link":"https://www.quintoandar.com.br/imovel/895488822/comprar/apartamento-3-quartos-vila-leopoldina-sao-paulo","cond":1500,"iptu":700,"valor":1550000,"itens":["Churrasqueira","Academia","Piscina"]},{"bairro":"Perdizes","endereco":"Rua Desembargador do Vale","privado":false,"cobertura":false,"andar":4,"m2":200,"qts":4,"vgs":3,"link":"https://www.quintoandar.com.br/imovel/895451609/comprar","cond":4000,"iptu":834,"valor":1800000,"itens":["Ar Condicionado","Closet","Piscina"]},{"bairro":"Vila Leopoldina","endereco":"Rua Froben","privado":false,"cobertura":false,"andar":16,"m2":119,"qts":3,"vgs":2,"link":"https://www.quintoandar.com.br/imovel/895343441/comprar","cond":2100,"iptu":550,"valor":2000000,"itens":["Churrasqueira","Ar Condicionado","Closet","Academia","Piscina"]},{"bairro":"Vila Leopoldina","endereco":"Rua Froben","privado":false,"cobertura":false,"andar":4,"m2":119,"qts":3,"vgs":2,"link":"https://www.quintoandar.com.br/imovel/895207204/comprar/","cond":2200,"iptu":500,"valor":1850000,"itens":["Churrasqueira","Ar Condicionado","Closet","Academia","Piscina"]},{"bairro":"Vila Ipojuca","endereco":"AP2372","privado":true,"cobertura":false,"andar":null,"m2":161,"qts":3,"vgs":3,"link":"https://maramores.com.br/imovel/AP2372","cond":2500,"iptu":1100,"valor":1700000,"itens":["Churrasqueira","Depósito Garagem"]},{"bairro":"Vila Leopoldina","endereco":"AP0375-LUIZ","privado":true,"cobertura":false,"andar":null,"m2":128,"qts":3,"vgs":2,"link":"https://www.netoimoveis.imb.br/imovel/apartamento-sao-paulo-3-quartos-128-m/AP0375-LUIZ?from=sale","cond":1800,"iptu":955,"valor":1759990,"itens":["Churrasqueira","Ar Condicionado","Varanda fechada","Academia","Piscina","Depósito Garagem"]},{"bairro":"Perdizes","endereco":"CO0275 cobertura","privado":true,"cobertura":true,"andar":null,"m2":127,"qts":3,"vgs":2,"link":"https://maramores.com.br/imovel/CO0275","cond":2190,"iptu":570,"valor":1750000,"itens":["Academia"]},{"bairro":"Alto da Lapa","endereco":"ZI291686","privado":true,"cobertura":false,"andar":null,"m2":180,"qts":4,"vgs":3,"link":"https://www.pilarhomes.com.br/imovel/ZI291686/apartamento-4-quartos-alto-da-lapa-sao-paulo","cond":3200,"iptu":1486,"valor":1750000,"itens":["Closet","Piscina"]},{"bairro":"Alto da Lapa","endereco":"ZI288619","privado":true,"cobertura":false,"andar":null,"m2":131,"qts":3,"vgs":2,"link":"https://www.pilarhomes.com.br/imovel/ZI288619/apartamento-3-quartos-alto-da-lapa-sao-paulo","cond":1900,"iptu":590,"valor":2070000,"itens":["Churrasqueira","Closet","Academia","Piscina"]},{"bairro":"Vila Romana","endereco":"AX396","privado":true,"cobertura":false,"andar":null,"m2":162,"qts":3,"vgs":3,"link":"https://www.pilarhomes.com.br/imovel/AX396/apartamento-3-quartos-vila-romana-sao-paulo","cond":2402,"iptu":1179,"valor":2200000,"itens":["Churrasqueira","Ar Condicionado","Closet","Varanda fechada","Academia","Piscina","Depósito Garagem"]},{"bairro":"Vila Romana","endereco":"AXS827","privado":true,"cobertura":false,"andar":"alto","m2":133,"qts":3,"vgs":2,"link":"https://www.pilarhomes.com.br/imovel/AXS827/apartamento-3-quartos-vila-romana-sao-paulo","cond":1393,"iptu":861,"valor":2000000,"itens":["Churrasqueira","Ar Condicionado","Closet","Academia","Piscina"]},{"bairro":"Alto da Lapa","endereco":"CCMG083","privado":true,"cobertura":false,"andar":null,"m2":132,"qts":3,"vgs":2,"link":"https://www.pilarhomes.com.br/imovel/CCMG083/apartamento-3-quartos-alto-da-lapa-sao-paulo","cond":1700,"iptu":633,"valor":1800000,"itens":["Churrasqueira","Escritório","Ar Condicionado","Academia","Piscina"]}],"amenidades":["Churrasqueira","Escritório","Ar Condicionado","Closet","Varanda fechada","Máquina Louça","Academia","Piscina","Depósito Garagem"]};
+const KEY = 'imoveis-2027:';
+const brl = n => 'R$ ' + Math.round(n).toLocaleString('pt-BR');
+const st = { bairros: new Set(), fav: false, desc: false, ordem: 'm2v', tabela: false, sortCol: null, sortDir: 1 };
+
+D.apts.forEach((a, i) => {
+  a.id = (a.endereco + '-' + a.m2).toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  a.m2v = a.valor / a.m2;
+  a.mensal = a.cond + a.iptu;
+  a.n = a.itens.length;
+});
+const load = (k, d) => { try { return JSON.parse(localStorage.getItem(KEY + k)) ?? d; } catch { return d; } };
+const save = (k, v) => localStorage.setItem(KEY + k, JSON.stringify(v));
+
+const m2vals = D.apts.map(a => a.m2v).sort((x, y) => x - y);
+const q1 = m2vals[Math.floor(m2vals.length * .25)], q3 = m2vals[Math.floor(m2vals.length * .75)];
+
+function stats() {
+  const vis = filtrar();
+  const vals = vis.map(a => a.valor);
+  document.getElementById('stats').innerHTML = vis.length ? `
+    <div>imoveis<b>${vis.length}</b></div>
+    <div>faixa<b>${brl(Math.min(...vals) / 1000)}k &ndash; ${brl(Math.max(...vals) / 1000).replace('R$ ', '')}k</b></div>
+    <div>R$/m&sup2; mediano<b>${brl(vis.map(a => a.m2v).sort((x, y) => x - y)[Math.floor(vis.length / 2)])}</b></div>
+    <div>favoritos<b>${D.apts.filter(a => load('fav:' + a.id, false)).length}</b></div>` : '';
+}
+
+function filtrar() {
+  return D.apts.filter(a => {
+    const s = load('status:' + a.id, 'a-visitar');
+    if (!st.desc && s === 'descartado') return false;
+    if (st.fav && !load('fav:' + a.id, false)) return false;
+    if (st.bairros.size && !st.bairros.has(a.bairro)) return false;
+    return true;
+  });
+}
+function ordenar(l) {
+  const k = { m2v: a => a.m2v, valor: a => a.valor, valorD: a => -a.valor,
+              m2: a => -a.m2, mensal: a => a.mensal, itens: a => -a.n }[st.ordem];
+  return l.slice().sort((a, b) => k(a) - k(b));
+}
+
+function cardHTML(a) {
+  const s = load('status:' + a.id, 'a-visitar');
+  const fav = load('fav:' + a.id, false);
+  const cls = a.m2v <= q1 ? 'barato' : a.m2v >= q3 ? 'caro' : '';
+  const andar = a.andar ? (isNaN(a.andar) ? a.andar : a.andar + '&ordm; andar') : 'andar n/d';
+  return `<div class="card st-${s}" data-id="${a.id}">
+    <div class="card-top">
+      <div>
+        <div class="bairro">${a.bairro}${a.cobertura ? ' &middot; cobertura' : ''}</div>
+        <div class="endereco">${a.endereco}</div>
+        <div class="sub">${andar}${a.privado ? ' &middot; endereco so na visita' : ''}</div>
+      </div>
+      <button class="fav ${fav ? 'on' : ''}" title="favoritar">&#9733;</button>
+    </div>
+    <div class="preco"><b>${brl(a.valor)}</b><span class="m2v ${cls}">${brl(a.m2v)}/m&sup2;</span></div>
+    <div class="specs">
+      <span><b>${a.m2}</b> m&sup2;</span><span><b>${a.qts}</b> qts</span><span><b>${a.vgs}</b> vagas</span>
+    </div>
+    <div class="mensal">Mensal <b>${brl(a.mensal)}</b> &middot; cond. ${brl(a.cond)} + IPTU ${brl(a.iptu)}</div>
+    <div class="itens">${D.amenidades.map(i =>
+      `<span class="item ${a.itens.includes(i) ? '' : 'off'}">${i}</span>`).join('')}</div>
+    <textarea class="nota" placeholder="anotacoes...">${load('nota:' + a.id, '')}</textarea>
+    <div class="card-foot">
+      <select>${['a-visitar', 'agendado', 'visitado', 'descartado'].map(o =>
+        `<option value="${o}" ${o === s ? 'selected' : ''}>${o.replace('-', ' ')}</option>`).join('')}</select>
+      <a href="${a.link}" target="_blank" rel="noopener">ver anuncio &rarr;</a>
+    </div>
+  </div>`;
+}
+
+const COLS = [['bairro', 'Bairro', 0], ['endereco', 'Endereco', 0], ['m2', 'm2', 1], ['qts', 'Qts', 1],
+  ['vgs', 'Vgs', 1], ['valor', 'Valor', 1], ['m2v', 'R$/m2', 1], ['cond', 'Cond.', 1],
+  ['iptu', 'IPTU', 1], ['mensal', 'Mensal', 1], ['n', 'Itens', 1]];
+
+function tabelaHTML(l) {
+  if (st.sortCol) l = l.slice().sort((a, b) => (a[st.sortCol] > b[st.sortCol] ? 1 : -1) * st.sortDir);
+  return `<div class="wrap-tabela"><table><thead><tr>${
+    COLS.map(c => `<th data-col="${c[0]}">${c[1]}${st.sortCol === c[0] ? (st.sortDir > 0 ? ' &uarr;' : ' &darr;') : ''}</th>`).join('')
+  }<th></th></tr></thead><tbody>${l.map(a => {
+    const s = load('status:' + a.id, 'a-visitar');
+    return `<tr class="${s}">${COLS.map(c => {
+      let v = a[c[0]];
+      if (['valor', 'm2v', 'cond', 'iptu', 'mensal'].includes(c[0])) v = brl(v);
+      return `<td class="${c[2] ? 'num' : ''}">${v}</td>`;
+    }).join('')}<td><a href="${a.link}" target="_blank" rel="noopener" style="color:var(--accent)">link</a></td></tr>`;
+  }).join('')}</tbody></table></div>`;
+}
+
+function render() {
+  const l = ordenar(filtrar());
+  const el = document.getElementById('lista');
+  el.innerHTML = !l.length ? '<div class="vazio">Nenhum imovel com esses filtros.</div>'
+    : st.tabela ? tabelaHTML(l) : '<div class="grid">' + l.map(cardHTML).join('') + '</div>';
+  stats();
+}
+
+document.getElementById('chips-bairro').innerHTML =
+  [...new Set(D.apts.map(a => a.bairro))].sort().map(b => `<button class="chip" data-b="${b}">${b}</button>`).join('');
+
+document.addEventListener('click', e => {
+  const c = e.target.closest('[data-b]');
+  if (c) { const b = c.dataset.b; st.bairros.has(b) ? st.bairros.delete(b) : st.bairros.add(b);
+    c.classList.toggle('on'); return render(); }
+  if (e.target.id === 'chip-fav') { st.fav = !st.fav; e.target.classList.toggle('on'); return render(); }
+  if (e.target.id === 'chip-desc') { st.desc = !st.desc; e.target.classList.toggle('on'); return render(); }
+  if (e.target.id === 'chip-vista') { st.tabela = !st.tabela;
+    e.target.textContent = st.tabela ? 'Cards' : 'Tabela'; e.target.classList.toggle('on'); return render(); }
+  const th = e.target.closest('th[data-col]');
+  if (th) { const c2 = th.dataset.col; st.sortDir = st.sortCol === c2 ? -st.sortDir : 1; st.sortCol = c2; return render(); }
+  const f = e.target.closest('.fav');
+  if (f) { const id = f.closest('.card').dataset.id;
+    save('fav:' + id, !load('fav:' + id, false)); return render(); }
+});
+document.getElementById('ordem').addEventListener('change', e => { st.ordem = e.target.value; render(); });
+document.addEventListener('change', e => {
+  const card = e.target.closest('.card');
+  if (card && e.target.tagName === 'SELECT') { save('status:' + card.dataset.id, e.target.value); render(); }
+});
+document.addEventListener('input', e => {
+  if (e.target.classList.contains('nota'))
+    save('nota:' + e.target.closest('.card').dataset.id, e.target.value);
+});
+
+render();
+</script>
+</body>
+</html>
