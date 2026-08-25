@@ -81,7 +81,6 @@ html = """<!DOCTYPE html>
   }
   .card.st-agendado { border-color: var(--warn-border); }
   .card.st-visitado { border-color: var(--good-border); }
-  .card.st-descartado { opacity: .45; }
   .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
   .bairro { font-family: -apple-system, sans-serif; font-size: 11px; font-weight: 700;
     letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
@@ -90,6 +89,18 @@ html = """<!DOCTYPE html>
   .fav { background: none; border: none; cursor: pointer; font-size: 18px; line-height: 1;
     color: var(--border); padding: 2px; }
   .fav.on { color: var(--warn); }
+  .card-acoes { display: flex; gap: 2px; align-items: center; }
+  .descartar { background: none; border: none; cursor: pointer; font-size: 15px; line-height: 1;
+    color: var(--border); padding: 2px 4px; font-family: -apple-system, sans-serif; }
+  .descartar:hover { color: var(--bad); }
+  .card.st-descartado .descartar { color: var(--bad); }
+  .card.st-descartado { opacity: .45; }
+  .card.st-descartado:hover { opacity: .8; }
+  #backup { background: var(--surface2); border: 1px solid var(--border); color: var(--muted);
+    padding: 5px 11px; border-radius: 6px; cursor: pointer; font-family: -apple-system, sans-serif;
+    font-size: 12px; white-space: nowrap; }
+  #backup:hover { color: var(--text); border-color: var(--accent-border); }
+  #backup.ok { color: var(--good); border-color: var(--good-border); }
 
   .preco { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
   .preco b { font-size: 24px; font-weight: 700; letter-spacing: -.02em; font-family: -apple-system, sans-serif; }
@@ -149,6 +160,7 @@ html = """<!DOCTYPE html>
 <header class="site-header">
   <h1>Apartamentos 2027</h1>
   <div class="header-stats" id="stats"></div>
+  <button id="backup" title="Copia um link que carrega favoritos, status e anotacoes em outro aparelho">&#128279; copiar meus dados</button>
 </header>
 
 <main>
@@ -176,6 +188,17 @@ html = """<!DOCTYPE html>
 const D = __DATA__;
 const KEY = 'imoveis-2027:';
 const brl = n => 'R$ ' + Math.round(n).toLocaleString('pt-BR');
+const CHAVES = ['fav', 'status', 'nota'];
+const b64e = o => btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(o))));
+const b64d = t => JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(t), c => c.charCodeAt(0))));
+
+if (location.hash.startsWith('#s=')) {
+  try {
+    Object.entries(b64d(location.hash.slice(3))).forEach(([k, v]) => localStorage.setItem(KEY + k, JSON.stringify(v)));
+    history.replaceState(null, '', location.pathname);
+  } catch (e) { console.warn('link de dados invalido', e); }
+}
+
 const st = { bairros: new Set(), fav: false, desc: false, ordem: 'm2v', tabela: false, sortCol: null, sortDir: 1 };
 
 D.apts.forEach((a, i) => {
@@ -227,7 +250,10 @@ function cardHTML(a) {
         <div class="endereco">${a.endereco}</div>
         <div class="sub">${andar}${a.privado ? ' &middot; endereco so na visita' : ''}</div>
       </div>
-      <button class="fav ${fav ? 'on' : ''}" title="favoritar">&#9733;</button>
+      <div class="card-acoes">
+        <button class="fav ${fav ? 'on' : ''}" title="favoritar">&#9733;</button>
+        <button class="descartar" title="${s === 'descartado' ? 'recuperar' : 'descartar'}">${s === 'descartado' ? '&#8634;' : '&#10005;'}</button>
+      </div>
     </div>
     <div class="preco"><b>${brl(a.valor)}</b><span class="m2v ${cls}">${brl(a.m2v)}/m&sup2;</span></div>
     <div class="specs">
@@ -284,6 +310,10 @@ document.addEventListener('click', e => {
     e.target.textContent = st.tabela ? 'Cards' : 'Tabela'; e.target.classList.toggle('on'); return render(); }
   const th = e.target.closest('th[data-col]');
   if (th) { const c2 = th.dataset.col; st.sortDir = st.sortCol === c2 ? -st.sortDir : 1; st.sortCol = c2; return render(); }
+  const x = e.target.closest('.descartar');
+  if (x) { const id = x.closest('.card').dataset.id;
+    save('status:' + id, load('status:' + id, 'a-visitar') === 'descartado' ? 'a-visitar' : 'descartado');
+    return render(); }
   const f = e.target.closest('.fav');
   if (f) { const id = f.closest('.card').dataset.id;
     save('fav:' + id, !load('fav:' + id, false)); return render(); }
@@ -296,6 +326,19 @@ document.addEventListener('change', e => {
 document.addEventListener('input', e => {
   if (e.target.classList.contains('nota'))
     save('nota:' + e.target.closest('.card').dataset.id, e.target.value);
+});
+
+document.getElementById('backup').addEventListener('click', async e => {
+  const o = {};
+  D.apts.forEach(a => CHAVES.forEach(k => {
+    const v = load(k + ':' + a.id, null);
+    if (v && v !== 'a-visitar') o[k + ':' + a.id] = v;
+  }));
+  const url = location.origin + location.pathname + '#s=' + b64e(o);
+  try { await navigator.clipboard.writeText(url); } catch { prompt('Copie o link:', url); }
+  e.target.textContent = '\u2713 link copiado';
+  e.target.classList.add('ok');
+  setTimeout(() => { e.target.innerHTML = '&#128279; copiar meus dados'; e.target.classList.remove('ok'); }, 2500);
 });
 
 render();

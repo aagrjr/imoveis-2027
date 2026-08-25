@@ -56,7 +56,6 @@
   }
   .card.st-agendado { border-color: var(--warn-border); }
   .card.st-visitado { border-color: var(--good-border); }
-  .card.st-descartado { opacity: .45; }
   .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
   .bairro { font-family: -apple-system, sans-serif; font-size: 11px; font-weight: 700;
     letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
@@ -65,6 +64,18 @@
   .fav { background: none; border: none; cursor: pointer; font-size: 18px; line-height: 1;
     color: var(--border); padding: 2px; }
   .fav.on { color: var(--warn); }
+  .card-acoes { display: flex; gap: 2px; align-items: center; }
+  .descartar { background: none; border: none; cursor: pointer; font-size: 15px; line-height: 1;
+    color: var(--border); padding: 2px 4px; font-family: -apple-system, sans-serif; }
+  .descartar:hover { color: var(--bad); }
+  .card.st-descartado .descartar { color: var(--bad); }
+  .card.st-descartado { opacity: .45; }
+  .card.st-descartado:hover { opacity: .8; }
+  #backup { background: var(--surface2); border: 1px solid var(--border); color: var(--muted);
+    padding: 5px 11px; border-radius: 6px; cursor: pointer; font-family: -apple-system, sans-serif;
+    font-size: 12px; white-space: nowrap; }
+  #backup:hover { color: var(--text); border-color: var(--accent-border); }
+  #backup.ok { color: var(--good); border-color: var(--good-border); }
 
   .preco { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
   .preco b { font-size: 24px; font-weight: 700; letter-spacing: -.02em; font-family: -apple-system, sans-serif; }
@@ -124,6 +135,7 @@
 <header class="site-header">
   <h1>Apartamentos 2027</h1>
   <div class="header-stats" id="stats"></div>
+  <button id="backup" title="Copia um link que carrega favoritos, status e anotacoes em outro aparelho">&#128279; copiar meus dados</button>
 </header>
 
 <main>
@@ -151,6 +163,17 @@
 const D = {"apts":[{"bairro":"Vila Leopoldina","endereco":"Carlos Weber","privado":false,"cobertura":false,"andar":"12° a 15° andar","m2":110,"qts":3,"vgs":2,"link":"https://www.quintoandar.com.br/imovel/895472830/comprar/apartamento-3-quartos-vila-leopoldina-sao-paulo","cond":1600,"iptu":700,"valor":1600000,"itens":["Ar Condicionado","Academia","Piscina"]},{"bairro":"Vila Leopoldina","endereco":"Paulo Franco","privado":false,"cobertura":false,"andar":2,"m2":112,"qts":3,"vgs":3,"link":"https://www.quintoandar.com.br/imovel/895488822/comprar/apartamento-3-quartos-vila-leopoldina-sao-paulo","cond":1500,"iptu":700,"valor":1550000,"itens":["Churrasqueira","Academia","Piscina"]},{"bairro":"Perdizes","endereco":"Rua Desembargador do Vale","privado":false,"cobertura":false,"andar":4,"m2":200,"qts":4,"vgs":3,"link":"https://www.quintoandar.com.br/imovel/895451609/comprar","cond":4000,"iptu":834,"valor":1800000,"itens":["Ar Condicionado","Closet","Piscina"]},{"bairro":"Vila Leopoldina","endereco":"Rua Froben","privado":false,"cobertura":false,"andar":16,"m2":119,"qts":3,"vgs":2,"link":"https://www.quintoandar.com.br/imovel/895343441/comprar","cond":2100,"iptu":550,"valor":2000000,"itens":["Churrasqueira","Ar Condicionado","Closet","Academia","Piscina"]},{"bairro":"Vila Leopoldina","endereco":"Rua Froben","privado":false,"cobertura":false,"andar":4,"m2":119,"qts":3,"vgs":2,"link":"https://www.quintoandar.com.br/imovel/895207204/comprar/","cond":2200,"iptu":500,"valor":1850000,"itens":["Churrasqueira","Ar Condicionado","Closet","Academia","Piscina"]},{"bairro":"Vila Ipojuca","endereco":"AP2372","privado":true,"cobertura":false,"andar":null,"m2":161,"qts":3,"vgs":3,"link":"https://maramores.com.br/imovel/AP2372","cond":2500,"iptu":1100,"valor":1700000,"itens":["Churrasqueira","Depósito Garagem"]},{"bairro":"Vila Leopoldina","endereco":"AP0375-LUIZ","privado":true,"cobertura":false,"andar":null,"m2":128,"qts":3,"vgs":2,"link":"https://www.netoimoveis.imb.br/imovel/apartamento-sao-paulo-3-quartos-128-m/AP0375-LUIZ?from=sale","cond":1800,"iptu":955,"valor":1759990,"itens":["Churrasqueira","Ar Condicionado","Varanda fechada","Academia","Piscina","Depósito Garagem"]},{"bairro":"Perdizes","endereco":"CO0275 cobertura","privado":true,"cobertura":true,"andar":null,"m2":127,"qts":3,"vgs":2,"link":"https://maramores.com.br/imovel/CO0275","cond":2190,"iptu":570,"valor":1750000,"itens":["Academia"]},{"bairro":"Alto da Lapa","endereco":"ZI291686","privado":true,"cobertura":false,"andar":null,"m2":180,"qts":4,"vgs":3,"link":"https://www.pilarhomes.com.br/imovel/ZI291686/apartamento-4-quartos-alto-da-lapa-sao-paulo","cond":3200,"iptu":1486,"valor":1750000,"itens":["Closet","Piscina"]},{"bairro":"Alto da Lapa","endereco":"ZI288619","privado":true,"cobertura":false,"andar":null,"m2":131,"qts":3,"vgs":2,"link":"https://www.pilarhomes.com.br/imovel/ZI288619/apartamento-3-quartos-alto-da-lapa-sao-paulo","cond":1900,"iptu":590,"valor":2070000,"itens":["Churrasqueira","Closet","Academia","Piscina"]},{"bairro":"Vila Romana","endereco":"AX396","privado":true,"cobertura":false,"andar":null,"m2":162,"qts":3,"vgs":3,"link":"https://www.pilarhomes.com.br/imovel/AX396/apartamento-3-quartos-vila-romana-sao-paulo","cond":2402,"iptu":1179,"valor":2200000,"itens":["Churrasqueira","Ar Condicionado","Closet","Varanda fechada","Academia","Piscina","Depósito Garagem"]},{"bairro":"Vila Romana","endereco":"AXS827","privado":true,"cobertura":false,"andar":"alto","m2":133,"qts":3,"vgs":2,"link":"https://www.pilarhomes.com.br/imovel/AXS827/apartamento-3-quartos-vila-romana-sao-paulo","cond":1393,"iptu":861,"valor":2000000,"itens":["Churrasqueira","Ar Condicionado","Closet","Academia","Piscina"]},{"bairro":"Alto da Lapa","endereco":"CCMG083","privado":true,"cobertura":false,"andar":null,"m2":132,"qts":3,"vgs":2,"link":"https://www.pilarhomes.com.br/imovel/CCMG083/apartamento-3-quartos-alto-da-lapa-sao-paulo","cond":1700,"iptu":633,"valor":1800000,"itens":["Churrasqueira","Escritório","Ar Condicionado","Academia","Piscina"]}],"amenidades":["Churrasqueira","Escritório","Ar Condicionado","Closet","Varanda fechada","Máquina Louça","Academia","Piscina","Depósito Garagem"]};
 const KEY = 'imoveis-2027:';
 const brl = n => 'R$ ' + Math.round(n).toLocaleString('pt-BR');
+const CHAVES = ['fav', 'status', 'nota'];
+const b64e = o => btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(o))));
+const b64d = t => JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(t), c => c.charCodeAt(0))));
+
+if (location.hash.startsWith('#s=')) {
+  try {
+    Object.entries(b64d(location.hash.slice(3))).forEach(([k, v]) => localStorage.setItem(KEY + k, JSON.stringify(v)));
+    history.replaceState(null, '', location.pathname);
+  } catch (e) { console.warn('link de dados invalido', e); }
+}
+
 const st = { bairros: new Set(), fav: false, desc: false, ordem: 'm2v', tabela: false, sortCol: null, sortDir: 1 };
 
 D.apts.forEach((a, i) => {
@@ -202,7 +225,10 @@ function cardHTML(a) {
         <div class="endereco">${a.endereco}</div>
         <div class="sub">${andar}${a.privado ? ' &middot; endereco so na visita' : ''}</div>
       </div>
-      <button class="fav ${fav ? 'on' : ''}" title="favoritar">&#9733;</button>
+      <div class="card-acoes">
+        <button class="fav ${fav ? 'on' : ''}" title="favoritar">&#9733;</button>
+        <button class="descartar" title="${s === 'descartado' ? 'recuperar' : 'descartar'}">${s === 'descartado' ? '&#8634;' : '&#10005;'}</button>
+      </div>
     </div>
     <div class="preco"><b>${brl(a.valor)}</b><span class="m2v ${cls}">${brl(a.m2v)}/m&sup2;</span></div>
     <div class="specs">
@@ -259,6 +285,10 @@ document.addEventListener('click', e => {
     e.target.textContent = st.tabela ? 'Cards' : 'Tabela'; e.target.classList.toggle('on'); return render(); }
   const th = e.target.closest('th[data-col]');
   if (th) { const c2 = th.dataset.col; st.sortDir = st.sortCol === c2 ? -st.sortDir : 1; st.sortCol = c2; return render(); }
+  const x = e.target.closest('.descartar');
+  if (x) { const id = x.closest('.card').dataset.id;
+    save('status:' + id, load('status:' + id, 'a-visitar') === 'descartado' ? 'a-visitar' : 'descartado');
+    return render(); }
   const f = e.target.closest('.fav');
   if (f) { const id = f.closest('.card').dataset.id;
     save('fav:' + id, !load('fav:' + id, false)); return render(); }
@@ -271,6 +301,19 @@ document.addEventListener('change', e => {
 document.addEventListener('input', e => {
   if (e.target.classList.contains('nota'))
     save('nota:' + e.target.closest('.card').dataset.id, e.target.value);
+});
+
+document.getElementById('backup').addEventListener('click', async e => {
+  const o = {};
+  D.apts.forEach(a => CHAVES.forEach(k => {
+    const v = load(k + ':' + a.id, null);
+    if (v && v !== 'a-visitar') o[k + ':' + a.id] = v;
+  }));
+  const url = location.origin + location.pathname + '#s=' + b64e(o);
+  try { await navigator.clipboard.writeText(url); } catch { prompt('Copie o link:', url); }
+  e.target.textContent = '✓ link copiado';
+  e.target.classList.add('ok');
+  setTimeout(() => { e.target.innerHTML = '&#128279; copiar meus dados'; e.target.classList.remove('ok'); }, 2500);
 });
 
 render();

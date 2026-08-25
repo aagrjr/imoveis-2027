@@ -1,7 +1,7 @@
 # AGENTS
 
 ## Purpose
-Single-page web app (pt-BR) para acompanhar a busca de apartamento em São Paulo:
+Single-page web app (pt-BR) para comparar apartamentos numa busca:
 lista, filtra, ordena e compara os imóveis a visitar.
 
 ## Files
@@ -24,6 +24,8 @@ Mudanças de layout/CSS/JS vão no template `html = """..."""` dentro do `build.
 ## Comportamentos a preservar
 1. Estado por imóvel em `localStorage`, prefixo `imoveis-2027:` — chaves `fav:`, `status:`, `nota:`.
    O id do imóvel vem de `endereco + m2` slugificado; mudar isso perde as anotações do usuário.
+   O botão `#backup` serializa esse estado em `#s=<base64 do JSON>`; a página importa
+   o hash na carga e o limpa com `replaceState`. Manter as duas pontas em sincronia.
 2. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 6 ordenações.
 3. R$/m² colorido por quartil (`q1`/`q3` calculados sobre o conjunto todo).
 4. Página sem dependências externas e sem build step além do `build.py`.
@@ -31,8 +33,11 @@ Mudanças de layout/CSS/JS vão no template `html = """..."""` dentro do `build.
 ## Guardrails
 1. Manter dependency-free e em pt-BR.
 2. Preferir edições localizadas; não reescrever o CSS em bloco.
-3. Nada de dados pessoais/financeiros além do que já está nos anúncios públicos —
-   o repo é público; anotações ficam no navegador.
+3. O repo é público. Nada de dados pessoais/financeiros além do que já consta
+   nos anúncios públicos; favoritos, status e anotações ficam só no `localStorage`
+   do navegador e nunca são versionados.
+4. Manter o aviso do README sobre a natureza dos dados (amostra de anúncios
+   públicos, sem representar orçamento ou negociação de ninguém).
 
 ## Validação
 1. Abrir `index.html` sem erros no console.
