@@ -132,6 +132,24 @@
   .vazio { color: var(--muted); font-family: -apple-system, sans-serif; padding: 40px; text-align: center; }
 
   @media (max-width: 720px) {
+    .controls { gap: 8px; }
+    .spacer { display: none; }
+    #chips-bairro {
+      flex-wrap: nowrap !important;
+      overflow-x: auto;
+      scrollbar-width: none;
+      width: 100%;
+      padding-bottom: 2px;
+      -webkit-overflow-scrolling: touch;
+    }
+    #chips-bairro::-webkit-scrollbar { display: none; }
+    #chips-bairro .chip { flex: 0 0 auto; }
+    .chip, select { font-size: 12px; padding: 8px 12px; }
+    /* alvos de toque: os chips de item sao usados de pe, na visita */
+    .item { font-size: 12px; padding: 7px 10px; }
+    .fav { font-size: 22px; padding: 6px; }
+    .descartar { font-size: 18px; padding: 6px 8px; }
+    .card-foot select { font-size: 13px; padding: 8px 10px; }
     .site-header { padding: 0 14px; height: auto; flex-direction: column;
       align-items: flex-start; gap: 6px; padding: 10px 14px; }
     .header-stats { gap: 16px; }
@@ -150,7 +168,7 @@
   <div class="controls">
     <span id="chips-bairro" style="display:flex;gap:8px;flex-wrap:wrap"></span>
     <button class="chip" id="chip-fav">&#9733; favoritos</button>
-    <button class="chip" id="chip-desc">mostrar descartados</button>
+    <button class="chip" id="chip-desc" title="mostrar tambem os descartados">descartados</button>
     <span class="spacer"></span>
     <select id="ordem">
       <option value="mensal" selected>Custo mensal</option>
@@ -159,7 +177,7 @@
       <option value="m2">&Aacute;rea</option>
       <option value="itens">Itens</option>
     </select>
-    <button class="chip" id="dir" title="inverter ordem">&uarr; menor primeiro</button>
+    <button class="chip" id="dir" title="inverter a ordem">&uarr; menor</button>
     <button class="chip" id="chip-vista">Tabela</button>
   </div>
 
@@ -350,7 +368,7 @@ document.addEventListener('click', e => {
 document.getElementById('ordem').addEventListener('change', e => { st.ordem = e.target.value; render(); });
 document.getElementById('dir').addEventListener('click', e => {
   st.dir = -st.dir;
-  e.target.innerHTML = st.dir > 0 ? '&uarr; menor primeiro' : '&darr; maior primeiro';
+  e.target.innerHTML = st.dir > 0 ? '&uarr; menor' : '&darr; maior';
   render();
 });
 document.addEventListener('change', e => {

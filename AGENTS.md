@@ -56,6 +56,9 @@ são derivados na carga — nunca gravados nos dados.
 ## Guardrails
 1. Manter arquivo único, dependency-free e em pt-BR.
 2. Preferir edições localizadas; não reescrever o CSS em bloco.
+   No `@media (max-width: 720px)` os controles encolhem em fonte, nunca em alvo
+   de toque: chips de item, ⭐, ✕ e selects ficam em ~30px+ porque são usados de
+   pé, com uma mão, durante a visita. A faixa de bairros rola na horizontal.
 3. O repo é público. Nada de dados pessoais/financeiros além do que já consta
    nos anúncios públicos; favoritos, status e anotações ficam só no `localStorage`
    e nunca são versionados.
