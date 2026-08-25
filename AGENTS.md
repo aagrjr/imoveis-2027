@@ -5,42 +5,43 @@ Single-page web app (pt-BR) para comparar apartamentos numa busca:
 lista, filtra, ordena e compara os imóveis a visitar.
 
 ## Files
-- `index.html` — **arquivo gerado**. Página completa: CSS e JS embutidos, sem dependências.
-- `build.py` — gera `index.html` a partir de `~/Downloads/Aptos.xlsx`, aba `Pra visitar 2027`.
+- `index.html` — a aplicação inteira: dados, CSS e JS. **É o único arquivo que importa.**
 - `README.md`
 
+Não há build step, dependências, bundler ou fonte de dados externa.
+Se for tentado a adicionar qualquer um dos quatro, não adicione.
+
 ## Source of truth
-Os dados vivem na planilha, não no repo. `build.py` lê a aba `Pra visitar 2027`,
-converte o IPTU (`=12*mensal`) para valor mensal e embute tudo num único
-`const D = {apts, amenidades}` dentro de `index.html`.
+Os dados vivem no `const D = { amenidades, apts }` dentro do `index.html`,
+**uma linha por apartamento**, para que adicionar um imóvel seja copiar uma linha.
+Preserve esse formato ao editar — não reformate o bloco em JSON indentado.
 
-**Não edite os dados direto no `index.html`** — a próxima execução do `build.py`
-sobrescreve. Edite a planilha (ou o template dentro do `build.py`) e regenere:
-
-    python3 build.py    # requer openpyxl
-
-Mudanças de layout/CSS/JS vão no template `html = """..."""` dentro do `build.py`.
+Campos: `bairro, endereco, privado, cobertura, andar, m2, qts, vgs, link,
+cond, iptu, valor, itens[]`. `cond` e `iptu` são **mensais**; `itens` só aceita
+strings presentes em `amenidades`. `m2v` (R$/m²), `mensal` e `n` (nº de itens)
+são derivados na carga — nunca gravados nos dados.
 
 ## Comportamentos a preservar
 1. Estado por imóvel em `localStorage`, prefixo `imoveis-2027:` — chaves `fav:`, `status:`, `nota:`.
-   O id do imóvel vem de `endereco + m2` slugificado; mudar isso perde as anotações do usuário.
-   O botão `#backup` serializa esse estado em `#s=<base64 do JSON>`; a página importa
+   O id vem de `endereco + m2` slugificado; mudar essa regra perde as anotações do usuário.
+2. O botão `#backup` serializa esse estado em `#s=<base64 do JSON>`; a página importa
    o hash na carga e o limpa com `replaceState`. Manter as duas pontas em sincronia.
-2. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 6 ordenações.
-3. R$/m² colorido por quartil (`q1`/`q3` calculados sobre o conjunto todo).
-4. Página sem dependências externas e sem build step além do `build.py`.
+3. ⭐ favoritar e ✕ descartar direto no card; descartados ficam ocultos até o chip
+   "mostrar descartados", e então exibem ⟲ para recuperar.
+4. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 6 ordenações.
+5. R$/m² colorido por quartil (`q1`/`q3` sobre o conjunto todo).
 
 ## Guardrails
-1. Manter dependency-free e em pt-BR.
+1. Manter arquivo único, dependency-free e em pt-BR.
 2. Preferir edições localizadas; não reescrever o CSS em bloco.
 3. O repo é público. Nada de dados pessoais/financeiros além do que já consta
    nos anúncios públicos; favoritos, status e anotações ficam só no `localStorage`
-   do navegador e nunca são versionados.
+   e nunca são versionados.
 4. Manter o aviso do README sobre a natureza dos dados (amostra de anúncios
    públicos, sem representar orçamento ou negociação de ninguém).
 
 ## Validação
 1. Abrir `index.html` sem erros no console.
-2. Contagem de cards e de linhas da tabela bate com a planilha.
+2. Contagem de cards == nº de linhas em `apts`; tabela idem.
 3. Favorito, status e anotação persistem após reload.
-4. Filtros e ordenações batem com os números da planilha.
+4. Abrir a página com um `#s=` gerado pelo botão restaura o estado e limpa o hash.

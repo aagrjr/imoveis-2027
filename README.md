@@ -1,7 +1,10 @@
 # imoveis-2027
 
-Página única (`index.html`, sem dependências) para comparar apartamentos durante
-uma busca: preço, R$/m², custo mensal, itens, filtros e anotações por imóvel.
+Página única para comparar apartamentos durante uma busca: preço, R$/m², custo
+mensal, itens, filtros e anotações por imóvel.
+
+**Um arquivo, sem dependências e sem build.** Abra o `index.html` no navegador
+(ou use o link do Pages) e pronto.
 
 > **Sobre os dados desta demo**
 > Os imóveis listados são uma **amostra montada a partir de anúncios públicos**
@@ -23,15 +26,25 @@ uma busca: preço, R$/m², custo mensal, itens, filtros e anotações por imóve
   embutidos. Abra esse link em outro aparelho e o estado é carregado lá.
   É o backup — `localStorage` é por navegador e some se você limpar o site.
 
-## Regerar a partir da planilha
+## Adicionar ou editar um imóvel
 
-Os dados vivem numa planilha local (`~/Downloads/Aptos.xlsx`, aba
-`Pra visitar 2027`), não no repo. Depois de editá-la:
+Os dados ficam no `const D` dentro do `index.html`, **uma linha por apartamento**.
+Copie uma linha, ajuste os campos e salve:
 
-    pip install openpyxl && python3 build.py
+```js
+{"bairro": "Vila Romana", "endereco": "Rua Exemplo", "privado": false, "cobertura": false,
+ "andar": 7, "m2": 120, "qts": 3, "vgs": 2, "link": "https://...",
+ "cond": 1500, "iptu": 700, "valor": 1600000, "itens": ["Churrasqueira", "Piscina"]},
+```
 
-`build.py` lê a planilha, embute o JSON e reescreve `index.html`.
-`index.html` é **arquivo gerado** — mudanças de layout vão no template dentro do `build.py`.
+- `iptu` e `cond` são valores **mensais**
+- `itens` só aceita nomes que existam em `amenidades` (logo acima na mesma lista)
+- `privado: true` mostra "endereço só na visita"; `andar` aceita número ou texto
+- R$/m², custo mensal e contagem de itens são calculados sozinhos
+
+Cuidado com um detalhe: o id usado para guardar favoritos/anotações vem de
+`endereco + m2`. Se você corrigir um desses campos, as anotações daquele imóvel
+não são reencontradas.
 
 ## Publicação
 
