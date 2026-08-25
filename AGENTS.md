@@ -32,7 +32,9 @@ são derivados na carga — nunca gravados nos dados.
 4. ⭐ favoritar e ✕ descartar direto no card; descartados ficam ocultos até o chip
    "mostrar descartados", e então exibem ⟲ para recuperar.
 5. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 6 ordenações.
-6. R$/m² colorido por quartil (`q1`/`q3` sobre o conjunto todo).
+6. Ordenação padrão é "Mais itens" (`st.ordem = 'itens'` e `selected` no `<option>`
+   correspondente — os dois precisam bater).
+7. R$/m² colorido por quartil (`q1`/`q3` sobre o conjunto todo).
 
 ## Guardrails
 1. Manter arquivo único, dependency-free e em pt-BR.
