@@ -23,6 +23,8 @@ mensal, itens, filtros e anotações por imóvel.
 - Foto de capa de cada anúncio
 - ⭐ favoritar e ✕ descartar em um clique, direto no card
 - Anotações por imóvel
+- Chips de itens **clicáveis**: durante a visita, marque o que o anúncio errou.
+  A correção entra no `localStorage` e viaja no link de "copiar meus dados"
 - **🔗 copiar meus dados**: gera um link com favoritos, status e anotações
   embutidos. Abra esse link em outro aparelho e o estado é carregado lá.
 
@@ -67,6 +69,8 @@ Copie uma linha, ajuste os campos e salve:
 
 - `iptu` e `cond` são valores **mensais**
 - `itens` só aceita nomes que existam em `amenidades` (logo acima na mesma lista)
+- `Churrasqueira` é a do **apartamento** (varanda/espaço gourmet privativo);
+  `Churrasq. prédio` é a da área comum. São coisas diferentes — não misture
 - `privado: true` mostra "endereço só na visita"; `andar` aceita número ou texto
 - R$/m², custo mensal e contagem de itens são calculados sozinhos
 - `foto` é a capa do anúncio, normalmente a mesma do `og:image` da página:

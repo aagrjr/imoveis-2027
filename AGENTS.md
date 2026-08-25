@@ -18,7 +18,8 @@ Preserve esse formato ao editar — não reformate o bloco em JSON indentado.
 
 Campos: `bairro, endereco, privado, cobertura, andar, m2, qts, vgs, link, foto,
 cond, iptu, valor, itens[]`. `foto` é opcional. `cond` e `iptu` são **mensais**; `itens` só aceita
-strings presentes em `amenidades`. `m2v` (R$/m²), `mensal` e `n` (nº de itens)
+strings presentes em `amenidades`. `Churrasqueira` é a do apartamento e
+`Churrasq. prédio` a da área comum — nunca colapsar as duas. `m2v` (R$/m²), `mensal` e `n` (nº de itens)
 são derivados na carga — nunca gravados nos dados.
 
 ## Comportamentos a preservar
@@ -35,12 +36,15 @@ são derivados na carga — nunca gravados nos dados.
 4. Capa via `<img class="card-foto">` com `loading="lazy"`,
    `referrerpolicy="no-referrer"` e `onerror="this.remove()"` — a imagem some
    sozinha se o anúncio sair do ar, sem quebrar o card.
-5. ⭐ favoritar e ✕ descartar direto no card; descartados ficam ocultos até o chip
+5. Chips de item são clicáveis e gravam `itens:<id>` — a lista **efetiva**, não um diff.
+   Use sempre `itensDe(a)` (override ou `a.itens`) para exibir, contar e ordenar;
+   `a.n` é só o valor do anúncio e não vale como contagem.
+6. ⭐ favoritar e ✕ descartar direto no card; descartados ficam ocultos até o chip
    "mostrar descartados", e então exibem ⟲ para recuperar.
-6. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 6 ordenações.
-7. Ordenação padrão é "Mais itens" (`st.ordem = 'itens'` e `selected` no `<option>`
+7. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 6 ordenações.
+8. Ordenação padrão é "Mais itens" (`st.ordem = 'itens'` e `selected` no `<option>`
    correspondente — os dois precisam bater).
-8. R$/m² colorido por quartil (`q1`/`q3` sobre o conjunto todo).
+9. R$/m² colorido por quartil (`q1`/`q3` sobre o conjunto todo).
 
 ## Guardrails
 1. Manter arquivo único, dependency-free e em pt-BR.
