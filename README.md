@@ -25,7 +25,34 @@ mensal, itens, filtros e anotações por imóvel.
 - Anotações por imóvel
 - **🔗 copiar meus dados**: gera um link com favoritos, status e anotações
   embutidos. Abra esse link em outro aparelho e o estado é carregado lá.
-  É o backup — `localStorage` é por navegador e some se você limpar o site.
+
+## Onde fica o que você marca
+
+Favoritos, status e anotações gravam na hora no `localStorage`, prefixo
+`imoveis-2027:`. Não existe botão de salvar. Mas isso é **por navegador**: o que
+você marca no celular não aparece no desktop, e some se limpar dados do site.
+
+Para valer em todo lugar, o estado é publicado no repo. Dentro do `index.html`:
+
+```js
+"estadoVersao": "2026-08-24a",
+"estado": {},
+```
+
+Ao carregar a página, se a `estadoVersao` do arquivo for diferente da última que
+aquele navegador viu, ele **adota o `estado` do repo e descarta o que tinha
+localmente**. É o ponto de sincronia: publicou versão nova, todos os aparelhos
+convergem no próximo acesso. Entre publicações, cada navegador segue livre.
+
+O ciclo é:
+
+1. Marque à vontade no celular durante as visitas
+2. Toque em **🔗 copiar meus dados** — vai um link pra área de transferência
+3. Cole o conteúdo do `#s=` em `estado` e mude a `estadoVersao`
+4. Commit e push — no próximo acesso, todo aparelho está igual
+
+Um link `#s=...` aberto manualmente sempre vence o estado do repo, então dá pra
+passar algo de um aparelho pro outro sem publicar nada.
 
 ## Adicionar ou editar um imóvel
 

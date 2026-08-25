@@ -166,6 +166,8 @@
 
 <script>
 const D = {
+  "estadoVersao": "2026-08-24a",
+  "estado": {},
   "amenidades": ["Churrasqueira", "Escritório", "Ar Condicionado", "Closet", "Varanda fechada", "Máquina Louça", "Academia", "Piscina", "Depósito Garagem"],
   "apts": [
   {"bairro": "Vila Leopoldina", "endereco": "Carlos Weber", "privado": false, "cobertura": false, "andar": "12° a 15° andar", "m2": 110, "qts": 3, "vgs": 2, "link": "https://www.quintoandar.com.br/imovel/895472830/comprar/apartamento-3-quartos-vila-leopoldina-sao-paulo", "foto": "https://www.quintoandar.com.br/img/med/original895472830-610.43073411028731000757508.jpg", "cond": 1600, "iptu": 700, "valor": 1600000, "itens": ["Ar Condicionado", "Academia", "Piscina"]},
@@ -187,6 +189,14 @@ const brl = n => 'R$ ' + Math.round(n).toLocaleString('pt-BR');
 const CHAVES = ['fav', 'status', 'nota'];
 const b64e = o => btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(o))));
 const b64d = t => JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(t), c => c.charCodeAt(0))));
+
+// Estado publicado no repo: ao mudar `estadoVersao`, todos os aparelhos adotam
+// esse estado uma vez, descartando o que tinham localmente. E o ponto de sincronia.
+if (localStorage.getItem(KEY + '_versao') !== JSON.stringify(D.estadoVersao)) {
+  Object.keys(localStorage).filter(k => k.startsWith(KEY)).forEach(k => localStorage.removeItem(k));
+  Object.entries(D.estado).forEach(([k, v]) => localStorage.setItem(KEY + k, JSON.stringify(v)));
+  localStorage.setItem(KEY + '_versao', JSON.stringify(D.estadoVersao));
+}
 
 if (location.hash.startsWith('#s=')) {
   try {

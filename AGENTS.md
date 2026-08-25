@@ -26,15 +26,21 @@ são derivados na carga — nunca gravados nos dados.
    O id vem de `endereco + m2` slugificado; mudar essa regra perde as anotações do usuário.
 2. O botão `#backup` serializa esse estado em `#s=<base64 do JSON>`; a página importa
    o hash na carga e o limpa com `replaceState`. Manter as duas pontas em sincronia.
-3. Capa via `<img class="card-foto">` com `loading="lazy"`,
+3. `D.estado` / `D.estadoVersao` são o estado publicado no repo. Se a versão do
+   arquivo diferir da guardada em `imoveis-2027:_versao`, a página limpa o
+   `localStorage` do prefixo e adota `D.estado`. Ordem importa: essa adoção roda
+   **antes** da importação do `#s=`, para que um link aberto à mão sempre vença.
+   Ao publicar estado novo, **sempre** mude a `estadoVersao` — sem isso nenhum
+   aparelho adota o que foi commitado.
+4. Capa via `<img class="card-foto">` com `loading="lazy"`,
    `referrerpolicy="no-referrer"` e `onerror="this.remove()"` — a imagem some
    sozinha se o anúncio sair do ar, sem quebrar o card.
-4. ⭐ favoritar e ✕ descartar direto no card; descartados ficam ocultos até o chip
+5. ⭐ favoritar e ✕ descartar direto no card; descartados ficam ocultos até o chip
    "mostrar descartados", e então exibem ⟲ para recuperar.
-5. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 6 ordenações.
-6. Ordenação padrão é "Mais itens" (`st.ordem = 'itens'` e `selected` no `<option>`
+6. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 6 ordenações.
+7. Ordenação padrão é "Mais itens" (`st.ordem = 'itens'` e `selected` no `<option>`
    correspondente — os dois precisam bater).
-7. R$/m² colorido por quartil (`q1`/`q3` sobre o conjunto todo).
+8. R$/m² colorido por quartil (`q1`/`q3` sobre o conjunto todo).
 
 ## Guardrails
 1. Manter arquivo único, dependency-free e em pt-BR.
@@ -52,3 +58,5 @@ são derivados na carga — nunca gravados nos dados.
 2. Contagem de cards == nº de linhas em `apts`; tabela idem.
 3. Favorito, status e anotação persistem após reload.
 4. Abrir a página com um `#s=` gerado pelo botão restaura o estado e limpa o hash.
+5. Publicar `estado` novo com `estadoVersao` nova: um navegador com estado antigo
+   adota o do repo no primeiro load, e edições posteriores dele voltam a persistir.
