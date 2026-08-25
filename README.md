@@ -20,6 +20,7 @@ mensal, itens, filtros e anotações por imóvel.
 - Filtros por bairro, favoritos e descartados
 - Ordenação por R$/m², preço, área, custo mensal ou nº de itens
 - Alternância cards ⇄ tabela (colunas clicáveis para ordenar)
+- Foto de capa de cada anúncio
 - ⭐ favoritar e ✕ descartar em um clique, direto no card
 - Anotações por imóvel
 - **🔗 copiar meus dados**: gera um link com favoritos, status e anotações
@@ -33,7 +34,7 @@ Copie uma linha, ajuste os campos e salve:
 
 ```js
 {"bairro": "Vila Romana", "endereco": "Rua Exemplo", "privado": false, "cobertura": false,
- "andar": 7, "m2": 120, "qts": 3, "vgs": 2, "link": "https://...",
+ "andar": 7, "m2": 120, "qts": 3, "vgs": 2, "link": "https://...", "foto": "https://...jpg",
  "cond": 1500, "iptu": 700, "valor": 1600000, "itens": ["Churrasqueira", "Piscina"]},
 ```
 
@@ -41,6 +42,13 @@ Copie uma linha, ajuste os campos e salve:
 - `itens` só aceita nomes que existam em `amenidades` (logo acima na mesma lista)
 - `privado: true` mostra "endereço só na visita"; `andar` aceita número ou texto
 - R$/m², custo mensal e contagem de itens são calculados sozinhos
+- `foto` é a capa do anúncio, normalmente a mesma do `og:image` da página:
+
+      curl -sL "<url do anuncio>" | grep -o '<meta[^>]*og:image[^>]*>'
+
+  A imagem é **referenciada** no servidor do portal, nunca copiada para o repo.
+  Se o anúncio sair do ar a foto some sozinha e o card segue funcionando; para
+  ficar sem foto, basta omitir o campo.
 
 Cuidado com um detalhe: o id usado para guardar favoritos/anotações vem de
 `endereco + m2`. Se você corrigir um desses campos, as anotações daquele imóvel
