@@ -72,6 +72,9 @@ Copie uma linha, ajuste os campos e salve:
 - `Churrasqueira` é a do **apartamento** (varanda/espaço gourmet privativo);
   `Churrasq. prédio` é a da área comum. São coisas diferentes — não misture
 - `privado: true` mostra "endereço só na visita"; `andar` aceita número ou texto
+- `link2` é opcional: um segundo anúncio **do mesmo imóvel** em outro portal, que
+  aparece como "2º anúncio" no card. Imóvel anunciado por duas imobiliárias é uma
+  linha só — dois registros contariam em dobro nas ordenações
 - R$/m², custo mensal e contagem de itens são calculados sozinhos
 - `foto` é a capa do anúncio, normalmente a mesma do `og:image` da página:
 

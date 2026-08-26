@@ -21,8 +21,12 @@ Os dados vivem no `const D = { amenidades, apts }` dentro do `index.html`,
 **uma linha por apartamento**, para que adicionar um imóvel seja copiar uma linha.
 Preserve esse formato ao editar — não reformate o bloco em JSON indentado.
 
-Campos: `bairro, endereco, privado, cobertura, andar, m2, qts, vgs, link, foto,
-cond, iptu, valor, itens[]`. `foto` é opcional. `cond` e `iptu` são **mensais**; `itens` só aceita
+Campos: `bairro, endereco, privado, cobertura, andar, m2, qts, vgs, link, link2, foto,
+cond, iptu, valor, itens[]`. `foto` e `link2` são opcionais. `link2` é um segundo
+anúncio **do mesmo imóvel** em outro portal — um imóvel anunciado duas vezes é
+**uma linha só**, nunca dois registros, senão ele conta em dobro nos filtros e nas
+ordenações. Os números ficam os do anúncio já revisado; o segundo link serve pra
+conferir divergência de metragem, condomínio e IPTU entre corretores. `cond` e `iptu` são **mensais**; `itens` só aceita
 strings presentes em `amenidades`. `Churrasqueira` é a do apartamento e
 `Churrasq. prédio` a da área comum — nunca colapsar as duas. `m2v` (R$/m²), `mensal` e `n` (nº de itens)
 são derivados na carga — nunca gravados nos dados.

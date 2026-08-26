@@ -1,7 +1,7 @@
 # Contexto da busca
 
 Documento de handoff: o que não dá pra deduzir lendo o código.
-Atualizado em 2026-08-25.
+Atualizado em 2026-08-26.
 
 ## O que estamos procurando
 
@@ -47,9 +47,22 @@ Isto vale mais que qualquer dado individual da lista:
 3. **QuintoAndar separa "Itens disponíveis" (unidade) de amenidades do condomínio**,
    em listas estruturadas — é a fonte mais confiável. Ainda assim erra: o Carlos
    Weber listava churrasqueira como indisponível nos dois, e tinha no prédio.
-4. **Maramores e Pilar bloqueiam WebFetch (403).** Use o browser.
+4. **Maramores bloqueia WebFetch (403).** Use o browser. A Pilar já bloqueou, mas em
+   2026-08-26 respondeu normalmente — tente o fetch antes de partir pro browser.
 5. **Endereço:** Maramores e Pilar só divulgam mediante agendamento. Quando o
    usuário souber, publique **rua e número, nunca a unidade** — o repo é público.
+6. **O mesmo imóvel aparece em mais de um portal, com números diferentes.** O
+   ZI292317 da Pilar é o apartamento da Rua Paulo Franco (Insight Vila Leopoldina,
+   nº 153) já listado pelo QuintoAndar: mesmo preço ao real, 3 suítes, 2 vagas, a
+   mesma descrição de planta. Mas um diz 112 m² e o outro 117; um cobra R$ 1.500 de
+   condomínio e o outro R$ 1.800; IPTU R$ 700 contra R$ 590. **Antes de adicionar,
+   compare preço, m², vagas e condomínio com os do mesmo bairro** — quando a Pilar
+   ou a Maramores escondem o endereço, é a única checagem possível. Duplicata vira
+   `link2` na linha existente, nunca uma linha nova: dois registros do mesmo imóvel
+   contam em dobro nos filtros e nas ordenações.
+7. **Os nossos próprios dados envelhecem.** A Paulo Franco estava com 3 vagas; o
+   anúncio hoje diz 2, e a Pilar confirma 2 fixas. Ao reabrir um anúncio por
+   qualquer motivo, confira os números contra o que está publicado.
 
 ## Decisões já tomadas (não reabrir sem motivo)
 
