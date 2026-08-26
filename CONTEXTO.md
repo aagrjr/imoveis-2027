@@ -87,9 +87,11 @@ o de 4º andar (R$ 150 mil mais barato) tem 9 itens contra 6 do 16º.
 Resolvido com sufixo numérico. Se um dia mudar a regra de id, lembre que ela é
 order-dependent e que o id é a chave do estado do usuário.
 
-## Estado em 2026-08-25
+## Estado em 2026-08-26
 
-18 imóveis, todos com itens já revisados pelo usuário em visita ou releitura do anúncio.
+19 imóveis. Os 18 primeiros têm itens já revisados pelo usuário em visita ou releitura
+do anúncio; o Horizons entrou hoje e ainda não passou por revisão. Todos carregam o
+campo `add` — os antigos como 2026-08-24, que é quando o campo nasceu.
 
 - **6 favoritos:** Avenida Mercedes, CCMG083, ZI288619, CO0275, Rua Mota Pais, Rua Ponta Porã
 - **1 descartado:** Carlos Weber
@@ -104,4 +106,11 @@ Observações em aberto:
 - **AX396 e Froben 4º** lideram em itens (9) e **não** foram favoritados — pode ser
   decisão ou esquecimento.
 - **Rua Inhatium** tem IPTU de R$ 112/mês no anúncio, incompatível com um imóvel de
-  R$ 1,85 mi. Provável erro de cadastro, ainda não confirmado.
+  R$ 1,85 mi. Provável erro de cadastro, ainda não confirmado. O Carlos Weber tem o
+  mesmo problema pelo outro lado: o QuintoAndar mostra IPTU de R$ 42×12 e nós
+  gravamos R$ 700 — um dos dois está errado, e ele está descartado de qualquer forma.
+- **Horizons** (entrou em 26/08) é o pior R$/m² da lista, R$ 17.094 — acima até das
+  Froben. Fica na **Rua Carlos Weber, 790**, a mesma rua do imóvel já descartado, que
+  é de outro prédio (Weber Art). Vale saber se a rua foi o motivo do descarte ou não.
+- O **IPTU do Horizons (R$ 664)** e o do **ZI292317 (R$ 590)** vieram sem indicação de
+  mensal ou anual na página da Pilar. Gravados como mensais; confirmar.

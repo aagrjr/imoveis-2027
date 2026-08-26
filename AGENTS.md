@@ -22,7 +22,10 @@ Os dados vivem no `const D = { amenidades, apts }` dentro do `index.html`,
 Preserve esse formato ao editar — não reformate o bloco em JSON indentado.
 
 Campos: `bairro, endereco, privado, cobertura, andar, m2, qts, vgs, link, link2, foto,
-cond, iptu, valor, itens[]`. `foto` e `link2` são opcionais. `link2` é um segundo
+cond, iptu, valor, add, itens[]`. `foto` e `link2` são opcionais. `add` é a data em
+que o imóvel entrou na lista, `AAAA-MM-DD`, e serve pra saber o que é novidade —
+preencha ao adicionar uma linha e nunca reescreva a dos outros. Quem não tem `add`
+é tratado como `2026-08-24`, a data em que o campo nasceu. `link2` é um segundo
 anúncio **do mesmo imóvel** em outro portal — um imóvel anunciado duas vezes é
 **uma linha só**, nunca dois registros, senão ele conta em dobro nos filtros e nas
 ordenações. Os números ficam os do anúncio já revisado; o segundo link serve pra
@@ -56,12 +59,15 @@ são derivados na carga — nunca gravados nos dados.
    `a.n` é só o valor do anúncio e não vale como contagem.
 7. ⭐ favoritar e ✕ descartar direto no card; descartados ficam ocultos até o chip
    "mostrar descartados", e então exibem ⟲ para recuperar.
-8. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 6 ordenações.
+8. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 7 ordenações.
 9. Ordenação: `st.ordem` escolhe a métrica em `CHAVE` e `st.dir` (±1) o sentido,
    aplicado como `(k(a) - k(b)) * st.dir`. As funções em `CHAVE` devolvem sempre o
    valor cru — nada de negar dentro delas. Padrão: `mensal` crescente, e o
    `selected` do `<option>` precisa bater com `st.ordem`.
 10. R$/m² colorido por quartil (`q1`/`q3` sobre o conjunto todo).
+11. `addN` (o `add` parseado) é derivado na carga, como `m2v` e `mensal` — nunca gravado.
+    A data aparece na linha do andar no card e na coluna "Entrou" da tabela. Ordenar
+    por ela cresce do mais antigo pro mais novo; o ↑/↓ inverte, como nas outras.
 
 ## Guardrails
 1. Manter arquivo único, dependency-free e em pt-BR.

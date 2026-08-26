@@ -18,7 +18,8 @@ mensal, itens, filtros e anotações por imóvel.
 ## O que a página faz
 
 - Filtros por bairro e favoritos; o chip "descartados" alterna entre a lista ativa e a dos descartados
-- Ordenação por custo mensal, R$/m², preço, área ou nº de itens, com botão ↑/↓ pra inverter
+- Ordenação por custo mensal, R$/m², preço, área, nº de itens ou data em que o imóvel
+  entrou na lista, com botão ↑/↓ pra inverter
 - Alternância cards ⇄ tabela (colunas clicáveis para ordenar)
 - Foto de capa de cada anúncio
 - ⭐ favoritar e ✕ descartar em um clique, direto no card
@@ -72,6 +73,9 @@ Copie uma linha, ajuste os campos e salve:
 - `Churrasqueira` é a do **apartamento** (varanda/espaço gourmet privativo);
   `Churrasq. prédio` é a da área comum. São coisas diferentes — não misture
 - `privado: true` mostra "endereço só na visita"; `andar` aceita número ou texto
+- `add` é a data em que o imóvel entrou na lista (`AAAA-MM-DD`). Aparece no card como
+  "entrou 26/08" e na coluna "Entrou" da tabela; ordene por ela pra ver o que é novo.
+  Linhas sem `add` valem como 24/08/2026
 - `link2` é opcional: um segundo anúncio **do mesmo imóvel** em outro portal, que
   aparece como "2º anúncio" no card. Imóvel anunciado por duas imobiliárias é uma
   linha só — dois registros contariam em dobro nas ordenações
