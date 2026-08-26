@@ -45,17 +45,19 @@ são derivados na carga — nunca gravados nos dados.
 4. Capa via `<img class="card-foto">` com `loading="lazy"`,
    `referrerpolicy="no-referrer"` e `onerror="this.remove()"` — a imagem some
    sozinha se o anúncio sair do ar, sem quebrar o card.
-5. Chips de item são clicáveis e gravam `itens:<id>` — a lista **efetiva**, não um diff.
+5. O chip `#chip-desc` **alterna** entre a lista ativa e a dos descartados — nunca
+   soma as duas. Descartado não aparece em nenhuma outra combinação de filtros.
+6. Chips de item são clicáveis e gravam `itens:<id>` — a lista **efetiva**, não um diff.
    Use sempre `itensDe(a)` (override ou `a.itens`) para exibir, contar e ordenar;
    `a.n` é só o valor do anúncio e não vale como contagem.
-6. ⭐ favoritar e ✕ descartar direto no card; descartados ficam ocultos até o chip
+7. ⭐ favoritar e ✕ descartar direto no card; descartados ficam ocultos até o chip
    "mostrar descartados", e então exibem ⟲ para recuperar.
-7. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 6 ordenações.
-8. Ordenação: `st.ordem` escolhe a métrica em `CHAVE` e `st.dir` (±1) o sentido,
+8. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 6 ordenações.
+9. Ordenação: `st.ordem` escolhe a métrica em `CHAVE` e `st.dir` (±1) o sentido,
    aplicado como `(k(a) - k(b)) * st.dir`. As funções em `CHAVE` devolvem sempre o
    valor cru — nada de negar dentro delas. Padrão: `mensal` crescente, e o
    `selected` do `<option>` precisa bater com `st.ordem`.
-9. R$/m² colorido por quartil (`q1`/`q3` sobre o conjunto todo).
+10. R$/m² colorido por quartil (`q1`/`q3` sobre o conjunto todo).
 
 ## Guardrails
 1. Manter arquivo único, dependency-free e em pt-BR.

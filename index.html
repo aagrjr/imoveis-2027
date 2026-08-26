@@ -168,7 +168,7 @@
   <div class="controls">
     <span id="chips-bairro" style="display:flex;gap:8px;flex-wrap:wrap"></span>
     <button class="chip" id="chip-fav">&#9733; favoritos</button>
-    <button class="chip" id="chip-desc" title="mostrar tambem os descartados">descartados</button>
+    <button class="chip" id="chip-desc" title="ver so os descartados">descartados</button>
     <span class="spacer"></span>
     <select id="ordem">
       <option value="mensal" selected>Custo mensal</option>
@@ -266,7 +266,8 @@ function stats() {
 function filtrar() {
   return D.apts.filter(a => {
     const s = load('status:' + a.id, 'a-visitar');
-    if (!st.desc && s === 'descartado') return false;
+    // O chip alterna entre a lista ativa e a lista de descartados: nunca as duas.
+    if ((s === 'descartado') !== st.desc) return false;
     if (st.fav && !load('fav:' + a.id, false)) return false;
     if (st.bairros.size && !st.bairros.has(a.bairro)) return false;
     return true;

@@ -17,7 +17,7 @@ mensal, itens, filtros e anotações por imóvel.
 
 ## O que a página faz
 
-- Filtros por bairro, favoritos e descartados
+- Filtros por bairro e favoritos; o chip "descartados" alterna entre a lista ativa e a dos descartados
 - Ordenação por custo mensal, R$/m², preço, área ou nº de itens, com botão ↑/↓ pra inverter
 - Alternância cards ⇄ tabela (colunas clicáveis para ordenar)
 - Foto de capa de cada anúncio
