@@ -1,14 +1,14 @@
 # Contexto da busca
 
 Documento de handoff: o que não dá pra deduzir lendo o código.
-Atualizado em 2026-08-26.
+Atualizado em 2026-08-29.
 
 ## O que estamos procurando
 
 Apartamento para compra em São Paulo, zona oeste. Perfil que emergiu da lista:
 
 - **Bairros:** Vila Leopoldina, Alto da Lapa, Vila Romana, Perdizes, Vila Ipojuca
-- **Faixa:** R$ 1,55 mi a R$ 2,2 mi
+- **Faixa:** R$ 1,55 mi a R$ 2,3 mi (o teto subiu de 2,2 para 2,3 em 29/08/2026)
 - **Tamanho:** 110 a 200 m², 3+ quartos, 2–3 vagas
 - **Custo mensal** (condomínio + IPTU) é critério de peso — é a ordenação padrão da página
 
@@ -47,8 +47,9 @@ Isto vale mais que qualquer dado individual da lista:
 3. **QuintoAndar separa "Itens disponíveis" (unidade) de amenidades do condomínio**,
    em listas estruturadas — é a fonte mais confiável. Ainda assim erra: o Carlos
    Weber listava churrasqueira como indisponível nos dois, e tinha no prédio.
-4. **Maramores bloqueia WebFetch (403).** Use o browser. A Pilar já bloqueou, mas em
-   2026-08-26 respondeu normalmente — tente o fetch antes de partir pro browser.
+4. **O bloqueio de WebFetch não é confiável nos dois sentidos.** Pilar e Maramores já
+   devolveram 403, mas em 26/08 e 29/08 respectivamente responderam normalmente.
+   Sempre tente o fetch primeiro; só vá pro browser se ele falhar de fato.
 5. **Endereço:** Maramores e Pilar só divulgam mediante agendamento. Quando o
    usuário souber, publique **rua e número, nunca a unidade** — o repo é público.
 6. **O mesmo imóvel aparece em mais de um portal, com números diferentes.** O
@@ -87,10 +88,12 @@ o de 4º andar (R$ 150 mil mais barato) tem 9 itens contra 6 do 16º.
 Resolvido com sufixo numérico. Se um dia mudar a regra de id, lembre que ela é
 order-dependent e que o id é a chave do estado do usuário.
 
-## Estado em 2026-08-26
+## Estado em 2026-08-29
 
-19 imóveis. Os 18 primeiros têm itens já revisados pelo usuário em visita ou releitura
-do anúncio; o Horizons entrou hoje e ainda não passou por revisão. Todos carregam o
+20 imóveis. Os 18 primeiros têm itens já revisados pelo usuário em visita ou releitura
+do anúncio; o Horizons (26/08) e o AP2434 (29/08) ainda não passaram por revisão — o
+AP2434 em especial entrou com **dois itens só**, porque a Maramores não lista nada da
+unidade, e isso quase certamente é subnotificação. Todos carregam o
 campo `add` — os antigos como 2026-08-24, que é quando o campo nasceu.
 
 - **6 favoritos:** Avenida Mercedes, CCMG083, ZI288619, CO0275, Rua Mota Pais, Rua Ponta Porã
