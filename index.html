@@ -190,8 +190,8 @@
 
 <script>
 const D = {
-  "estadoVersao": "2026-08-30d",
-  "estado": {"status:carlos-weber-110": "descartado", "status:paulo-franco-112": "descartado", "status:rua-froben-119": "descartado", "fav:rua-ponta-por-710-161": true, "status:ap0375-luiz-128": "descartado", "fav:co0275-cobertura-127": true, "status:co0275-cobertura-127": "descartado", "fav:zi288619-131": true, "status:zi288619-131": "descartado", "status:ax396-162": "descartado", "fav:ccmg083-132": true, "status:ccmg083-132": "descartado", "status:rua-inhatium-127": "descartado", "fav:avenida-mercedes-180": true, "fav:rua-mota-pais-130": true, "status:zi278746-129": "descartado"},
+  "estadoVersao": "2026-08-30e",
+  "estado": {"status:carlos-weber-110": "descartado", "status:paulo-franco-112": "descartado", "status:rua-froben-119": "descartado", "fav:rua-ponta-por-710-161": true, "status:ap0375-luiz-128": "descartado", "status:co0275-cobertura-127": "descartado", "status:zi288619-131": "descartado", "status:ax396-162": "descartado", "status:ccmg083-132": "descartado", "status:rua-inhatium-127": "descartado", "fav:avenida-mercedes-180": true, "fav:rua-mota-pais-130": true, "status:zi278746-129": "descartado", "status:horizons-117": "descartado"},
   "amenidades": ["Churrasqueira", "Churrasq. prédio", "Escritório", "Ar Condicionado", "Closet", "Varanda fechada", "Máquina Louça", "Academia", "Piscina", "Depósito Garagem"],
   "apts": [
   {"bairro": "Vila Leopoldina", "endereco": "Carlos Weber", "privado": false, "cobertura": false, "andar": "12° a 15° andar", "m2": 110, "qts": 3, "vgs": 2, "link": "https://www.quintoandar.com.br/imovel/895472830/comprar/apartamento-3-quartos-vila-leopoldina-sao-paulo", "foto": "https://www.quintoandar.com.br/img/med/original895472830-610.43073411028731000757508.jpg", "cond": 1600, "iptu": 700, "valor": 1600000, "add": "2026-08-24", "itens": ["Churrasq. prédio", "Escritório", "Ar Condicionado", "Varanda fechada", "Academia", "Piscina"]},
@@ -252,6 +252,7 @@ D.apts.forEach((a, i) => {
 });
 const load = (k, d) => { try { return JSON.parse(localStorage.getItem(KEY + k)) ?? d; } catch { return d; } };
 const save = (k, v) => localStorage.setItem(KEY + k, JSON.stringify(v));
+const saveStatus = (id, v) => { save('status:' + id, v); if (v === 'descartado') localStorage.removeItem(KEY + 'fav:' + id); };
 
 // Itens podem ser corrigidos na visita: o override vence o que veio do anuncio.
 const itensDe = a => load('itens:' + a.id, a.itens);
@@ -376,7 +377,7 @@ document.addEventListener('click', e => {
   }
   const x = e.target.closest('.descartar');
   if (x) { const id = x.closest('.card').dataset.id;
-    save('status:' + id, load('status:' + id, 'a-visitar') === 'descartado' ? 'a-visitar' : 'descartado');
+    saveStatus(id, load('status:' + id, 'a-visitar') === 'descartado' ? 'a-visitar' : 'descartado');
     return render(); }
   const f = e.target.closest('.fav');
   if (f) { const id = f.closest('.card').dataset.id;
@@ -390,7 +391,7 @@ document.getElementById('dir').addEventListener('click', e => {
 });
 document.addEventListener('change', e => {
   const card = e.target.closest('.card');
-  if (card && e.target.tagName === 'SELECT') { save('status:' + card.dataset.id, e.target.value); render(); }
+  if (card && e.target.tagName === 'SELECT') { saveStatus(card.dataset.id, e.target.value); render(); }
 });
 document.addEventListener('input', e => {
   if (e.target.classList.contains('nota'))
