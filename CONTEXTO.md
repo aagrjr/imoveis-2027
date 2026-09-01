@@ -65,6 +65,28 @@ Isto vale mais que qualquer dado individual da lista:
    anúncio hoje diz 2, e a Pilar confirma 2 fixas. Ao reabrir um anúncio por
    qualquer motivo, confira os números contra o que está publicado.
 
+## Critério de acabamento (o que a tabela não captura)
+
+Descoberto em 2026-09-01, depois de duas rodadas de sugestões recusadas. **Sempre
+abra as fotos antes de sugerir um imóvel** — os números sozinhos trazem os
+errados. O alvo é estreito:
+
+- ❌ **Reforma antiga.** Parede colorida, sanca de gesso, piso ébano com laca
+  branca, mobília clássica. Recusou Rua Wanderley e Rua Doutor Alberto Torres.
+- ❌ **Contrapiso / unidade crua.** Não quer tocar obra. Recusou Rua Catão (eu
+  tinha sugerido como vantagem — "acaba do seu jeito" — e estava errado) e
+  Rua Cayowaá.
+- ✅ **Pronto, com acabamento atual.** Ripado de madeira, porcelanato grande
+  formato, marcenaria clara, caixilho amplo. É o meio-termo, e é raro.
+
+Bairros: Vila Leopoldina, Alto da Lapa, Vila Romana, Perdizes, Vila Ipojuca,
+mais Pompeia, Vila Madalena e Pinheiros. **Vila Anastácio está fora** (região
+recusada em 2026-09-01).
+
+Busca no VivaReal: filtros na URL funcionam (`preco-desde`, `preco-ate`,
+`area-desde`, `quartos`, `vagas`) e `ordem=MOST_RECENT` ordena por anúncio mais
+novo. O QuintoAndar ignora filtros por URL.
+
 ## Decisões já tomadas (não reabrir sem motivo)
 
 - **A planilha foi abandonada.** O projeto nasceu de `~/Downloads/Aptos.xlsx` e tinha
