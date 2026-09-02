@@ -5,6 +5,13 @@ Single-page web app (pt-BR) para comparar apartamentos numa busca:
 lista, filtra, ordena e compara os imóveis a visitar.
 
 ## Editando os dados à mão
+
+**Cuidado com a vírgula final.** O array `apts` pode terminar com vírgula sobrando
+(trailing comma é legal em JS) e pode conter linhas de comentário `//`. Ao inserir
+um imóvel, verifique o fim da última linha antes de acrescentar `,` — duas vírgulas
+seguidas criam um **buraco** no array (`undefined`), a página quebra ao renderizar
+e o erro não aparece no diff. Ao validar por script, ignore as linhas `//`, elas
+são JS válido e JSON inválido.
 Cada apartamento é **uma linha** do array `apts`. Ao reescrever uma linha por
 script, recoloque a vírgula final: sem ela o `const D` vira erro de sintaxe e a
 página inteira fica em branco. Depois de mexer, valide parseando cada linha.
