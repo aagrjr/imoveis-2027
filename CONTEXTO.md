@@ -83,9 +83,35 @@ Bairros: Vila Leopoldina, Alto da Lapa, Vila Romana, Perdizes, Vila Ipojuca,
 mais Pompeia, Vila Madalena e Pinheiros. **Vila Anastácio está fora** (região
 recusada em 2026-09-01).
 
-Busca no VivaReal: filtros na URL funcionam (`preco-desde`, `preco-ate`,
-`area-desde`, `quartos`, `vagas`) e `ordem=MOST_RECENT` ordena por anúncio mais
-novo. O QuintoAndar ignora filtros por URL.
+## Onde buscar (e o viés que já custou caro)
+
+Em 2026-09-02 a conta era: **21 dos 22 imóveis da lista vieram de portais que as
+buscas automáticas não cobriam.** QuintoAndar 9, Pilar 7, Maramores 3, Neto e
+MJOffre 1 cada — e só 1 do VivaReal. Motivo: no primeiro dia o QuintoAndar
+ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
+**Não repita isso.** Varra QuintoAndar e Pilar também.
+
+- **VivaReal** — filtros na URL funcionam (`preco-desde`, `preco-ate`,
+  `area-desde`, `quartos`, `vagas`) e `ordem=MOST_RECENT` traz os anúncios novos.
+  Paginação por `&pagina=N`, ~20 por página. Zap é do mesmo grupo, estoque
+  duplicado, não vale varrer os dois.
+- **QuintoAndar** — ignora filtros por URL, mas tem um filtro
+  **"Novos ou reformados"** que é exatamente o critério de acabamento, e ele vira
+  caminho na URL:
+  `/comprar/imovel/<bairro>-sao-paulo-sp-brasil/apartamento/novos-ou-reformados`.
+  Preço e área só pelo painel "Mais filtros" (inputs React: use o setter nativo
+  de `value` + eventos `input`/`change`). **A lista é virtualizada** — mantém ~11
+  cards montados e recicla o resto; `scrollTop` programático não dispara o
+  carregamento e dá timeout. Role com o mouse aos poucos, coletando a cada passo.
+- **Pilar Homes** — SPA; a página de detalhe responde a WebFetch, a busca precisa
+  do browser. Tem exclusivos e off-market que não aparecem em lugar nenhum.
+- **Maramores** — bloqueia WebFetch (403), use o browser.
+
+Método que funciona para julgar acabamento: montar uma folha de contato local
+com todas as fotos do anúncio numa página só (grid de `<img>` com
+`referrerpolicy="no-referrer"`), servir com `python3 -m http.server` e olhar de
+uma vez; depois ampliar as que decidem cada item. Muito mais rápido que o
+carrossel do portal.
 
 ## Decisões já tomadas (não reabrir sem motivo)
 
