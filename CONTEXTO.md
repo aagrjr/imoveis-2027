@@ -91,8 +91,10 @@ errados. O alvo é estreito:
   juntos ("Via Condoti, 2004"), caindo para só o nome ou só "predio de AAAA"
   quando falta um; `ano` também é coluna na tabela (`?` quando ausente).
   O nome do edifício é a chave para achar o ano: o QuintoAndar quase sempre traz
-  o nome mesmo sem o ano. **Nunca preencha com dado incerto** — se as
-  fontes divergirem, deixe vazio e diga isso.
+  o nome mesmo sem o ano. **Quando a divergência entre os anos for pequena,
+  use o mais antigo**, conforme orientação do usuário em 02/09/2026: Le Havre
+  2020 (vs. 2021) e AEI3348 2011 (vs. 2012). Registre a divergência nos comentários
+  dos dados. Para divergências maiores ou sem fonte, deixe vazio e diga isso.
 - ✅ **Pronto, com acabamento atual.** Ripado de madeira, porcelanato grande
   formato, marcenaria clara, caixilho amplo. É o meio-termo, e é raro.
 
