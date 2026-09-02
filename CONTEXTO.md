@@ -81,6 +81,15 @@ errados. O alvo é estreito:
   é que pesou. **Sempre levante e informe o ano de construção** junto com a
   sugestão; ele não estava na tabela e derrubou um candidato já aprovado nas fotos.
   Não há corte definido: 2002 (Presidente Antônio Cândido) segue na lista.
+
+  **Onde achar o ano.** O QuintoAndar traz "Construído em AAAA" na ficha quando
+  tem o dado, e sempre dá o nome do edifício; o Pilar às vezes cita no texto
+  ("Construído em 2012, pela Rossi"); VivaReal e Maramores quase nunca. Quando
+  faltar, pesquise o nome do edifício ou `"<rua>, <número>" condomínio ano` — as
+  páginas de condomínio de Loft, Lopes, QuintoAndar e imovelweb costumam trazer.
+  O campo `ano` é opcional no `apts`, aparece no card e como coluna "Ano" na
+  tabela (`?` quando ausente). **Nunca preencha com dado incerto** — se as
+  fontes divergirem, deixe vazio e diga isso.
 - ✅ **Pronto, com acabamento atual.** Ripado de madeira, porcelanato grande
   formato, marcenaria clara, caixilho amplo. É o meio-termo, e é raro.
 
