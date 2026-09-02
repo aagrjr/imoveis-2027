@@ -76,6 +76,11 @@ errados. O alvo é estreito:
 - ❌ **Contrapiso / unidade crua.** Não quer tocar obra. Recusou Rua Catão (eu
   tinha sugerido como vantagem — "acaba do seu jeito" — e estava errado) e
   Rua Cayowaá.
+- ❌ **Prédio muito antigo.** Recusou o Rua Cardoso de Almeida, 704 em 2026-09-02
+  ao saber que o edifício é de 1976 — a unidade era reformada e bonita, o prédio
+  é que pesou. **Sempre levante e informe o ano de construção** junto com a
+  sugestão; ele não estava na tabela e derrubou um candidato já aprovado nas fotos.
+  Não há corte definido: 2002 (Presidente Antônio Cândido) segue na lista.
 - ✅ **Pronto, com acabamento atual.** Ripado de madeira, porcelanato grande
   formato, marcenaria clara, caixilho amplo. É o meio-termo, e é raro.
 
@@ -145,7 +150,7 @@ unidade, e isso quase certamente é subnotificação. Todos carregam o
 campo `add` — os antigos como 2026-08-24, que é quando o campo nasceu.
 
 - **6 favoritos:** Avenida Mercedes, CCMG083, ZI288619, CO0275, Rua Mota Pais, Rua Ponta Porã
-- **1 descartado:** Carlos Weber
+- **descartados:** ver `estado` no index.html
 - **Nenhuma visita registrada** ainda (todos em "a visitar")
 
 Observações em aberto:
