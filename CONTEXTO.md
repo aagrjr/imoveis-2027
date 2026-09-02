@@ -87,8 +87,11 @@ errados. O alvo é estreito:
   ("Construído em 2012, pela Rossi"); VivaReal e Maramores quase nunca. Quando
   faltar, pesquise o nome do edifício ou `"<rua>, <número>" condomínio ano` — as
   páginas de condomínio de Loft, Lopes, QuintoAndar e imovelweb costumam trazer.
-  O campo `ano` é opcional no `apts`, aparece no card e como coluna "Ano" na
-  tabela (`?` quando ausente). **Nunca preencha com dado incerto** — se as
+  Os campos `ano` e `predio` são opcionais no `apts`. O card mostra os dois
+  juntos ("Via Condoti, 2004"), caindo para só o nome ou só "predio de AAAA"
+  quando falta um; `ano` também é coluna na tabela (`?` quando ausente).
+  O nome do edifício é a chave para achar o ano: o QuintoAndar quase sempre traz
+  o nome mesmo sem o ano. **Nunca preencha com dado incerto** — se as
   fontes divergirem, deixe vazio e diga isso.
 - ✅ **Pronto, com acabamento atual.** Ripado de madeira, porcelanato grande
   formato, marcenaria clara, caixilho amplo. É o meio-termo, e é raro.
