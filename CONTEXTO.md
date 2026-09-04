@@ -132,6 +132,38 @@ com todas as fotos do anúncio numa página só (grid de `<img>` com
 uma vez; depois ampliar as que decidem cada item. Muito mais rápido que o
 carrossel do portal.
 
+## Rotina de "tem algo novo?"
+
+Sempre que ele pedir novidades, rode as duas partes — a segunda é tão útil quanto
+a primeira, porque anúncio sai do ar sem aviso.
+
+**1. Checar se os ativos ainda existem.** Só os ativos (status != descartado),
+hoje ~11. Para cada `link`, leia o **conteúdo renderizado** e confirme preço e
+disponibilidade.
+
+> **Não use `curl | grep` para isso.** Testado em 2026-09-04: deu 8 falsos
+> positivos em 30 links. As páginas são SPAs e as palavras "indisponível" e "404"
+> aparecem dentro do bundle JavaScript mesmo em anúncio ativo. Use WebFetch
+> (funciona em QuintoAndar, Pilar, MJOffre, Neto) ou o browser lendo
+> `document.body.innerText` (necessário para VivaReal e Maramores, que devolvem
+> 403 ao WebFetch).
+
+Reporte mudança de preço junto — é sinal de negociação em andamento.
+
+**2. Buscar anúncios novos.** Alterne a ordem de partida entre as rodadas para não
+varrer sempre a mesma fonte:
+
+- **QuintoAndar** — `/comprar/imovel/<bairro>-sao-paulo-sp-brasil/apartamento/novos-ou-reformados`,
+  um bairro por vez. Colete os ~23 do primeiro load e navegue para o próximo: a
+  lista é virtualizada e a rolagem programática trava.
+- **VivaReal** — `ordem=MOST_RECENT` com `preco-desde`, `preco-ate`, `area-desde`,
+  `quartos`, `vagas`; pagine com `&pagina=N`. Traz "Publicado há X".
+- **Pilar** — `/venda/imoveis/<bairro>-sao-paulo-sp-brasil/apartamento?minAskingPrice=&maxAskingPrice=&regions=<Nome>`.
+  Mostra 12 por bairro e não tem paginação: é amostra, diga isso ao reportar.
+
+Depois **filtre por fotos antes de mostrar qualquer coisa** — ver a seção de
+acabamento acima. A taxa histórica é de ~15% dos que passam pelos números.
+
 ## Decisões já tomadas (não reabrir sem motivo)
 
 - **A planilha foi abandonada.** O projeto nasceu de `~/Downloads/Aptos.xlsx` e tinha
