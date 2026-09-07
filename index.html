@@ -106,7 +106,7 @@
   .item:hover { border-color: var(--good); }
   .item.off:hover { border-color: var(--muted); color: var(--muted); }
 
-  .card-foot { display: flex; gap: 8px; align-items: center; margin-top: auto; padding-top: 4px; }
+  .card-foot { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: auto; padding-top: 4px; }
   .card-foot select { flex: 0 0 auto; font-size: 12px; padding: 5px 8px; }
   .card-foot a { margin-left: auto; font-family: -apple-system, sans-serif; font-size: 12px;
     color: var(--accent); text-decoration: none; font-weight: 600; }
@@ -222,8 +222,8 @@ const D = {
   {"bairro": "Perdizes", "endereco": "Rua Cardoso de Almeida, 704", "predio": "Ed. Sena", "privado": false, "cobertura": false, "andar": null, "ano": 1976, "m2": 160, "qts": 3, "vgs": 2, "link": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-perdizes-zona-oeste-sao-paulo-com-garagem-160m2-venda-RS1800000-id-2909465713/", "foto": "https://resizedimgs.vivareal.com/img/vr-listing/ca553ef98f5e1bd907898731f3129b4d/apartamento-com-3-quartos-a-venda-160m-no-perdizes-sao-paulo.webp?action=fit-in&dimension=870x707", "cond": 1970, "iptu": 560, "valor": 1800000, "add": "2026-09-02", "itens": ["Churrasq. prédio", "Escritório", "Máquina Louça", "Academia", "Piscina"]},
   // ARCO1258: 2 suites, mobiliado. Confirmar 3 dormitorios utilizaveis e periodicidade do IPTU (valor anunciado mantido provisoriamente como mensal). Ano adotado: 2020, o mais antigo entre 2020 e 2021.
   {"bairro": "Vila Leopoldina", "endereco": "Avenida Mofarrej, 706", "predio": "Le Havre", "privado": false, "cobertura": false, "andar": null, "ano": 2020, "m2": 153, "qts": 3, "vgs": 3, "link": "https://www.pilarhomes.com.br/imovel/ARCO1258/apartamento-3-quartos-vila-leopoldina-sao-paulo", "foto": "https://imagens.pilarhomes.com.br/aHR0cHM6Ly9ibGludHotcHJvcGVydGllcy1zYW5kYm94LnMzLmFtYXpvbmF3cy5jb20vNmE3MGJjYzc3NTRkNjAyOGJjNDhlMWQxL3BpbGFyLWhvbWVzLWltYWdlcy13YXRlcm1hcmsvYWVmYmNlY2UtNjQ1Yy00Mjg1LWFlYjEtMzlhZjY5NjRmZTU2LmpwZWc/w:960/output:webp/q:80/aefbcece-645c-4285-aeb1-39af6964fe56-v224008974c204595.webp", "cond": 1800, "iptu": 718, "valor": 2399900, "add": "2026-09-02", "itens": ["Churrasq. prédio", "Ar Condicionado", "Closet", "Varanda fechada", "Academia", "Piscina"]},
-  // AEI3348: 1 suite, mobiliado, endereco a confirmar. Confirmar periodicidade do IPTU (valor anunciado mantido provisoriamente como mensal). Ano adotado: 2011, o mais antigo entre ficha atual (2011) e indexacao (2012).
-  {"bairro": "Vila Leopoldina", "endereco": "AEI3348", "privado": true, "cobertura": false, "andar": "alto", "ano": 2011, "m2": 130, "qts": 3, "vgs": 2, "link": "https://www.pilarhomes.com.br/imovel/AEI3348/apartamento-3-quartos-vila-leopoldina-sao-paulo", "foto": "https://imagens.pilarhomes.com.br/aHR0cHM6Ly9ibGludHotcHJvcGVydGllcy1zYW5kYm94LnMzLmFtYXpvbmF3cy5jb20vNjk5ZDhhNTRhYjMyZmQ2Njg4MDYyYmE1L3BpbGFyLWhvbWVzLWltYWdlcy13YXRlcm1hcmsvZDI0NjMyOWYtZGExOC00MWMyLTk5MzctNmVlMTQ0Y2ZkNzk1LmpwZWc/w:960/output:webp/q:80/d246329f-da18-41c2-9937-6ee144cfd795.webp", "cond": 1500, "iptu": 386, "valor": 2500000, "add": "2026-09-02", "itens": ["Churrasqueira", "Churrasq. prédio", "Escritório", "Ar Condicionado", "Varanda fechada", "Academia", "Piscina", "Depósito Garagem"]},
+  // AEI3348: mesma unidade confirmada pelas fotos da sala e varanda na Loft e QuintoAndar (06/09/2026). ID antigo preservado para manter marcacoes locais. Ano 2011, o mais antigo entre Pilar (2011) e outras fichas (2012).
+  {"id": "aei3348-130", "bairro": "Vila Leopoldina", "endereco": "Rua Belchior de Azevedo, 156", "predio": "Podium Vila Leopoldina", "privado": false, "cobertura": false, "andar": "20° a 23° andar", "ano": 2011, "m2": 130, "qts": 3, "vgs": 2, "link": "https://www.pilarhomes.com.br/imovel/AEI3348/apartamento-3-quartos-vila-leopoldina-sao-paulo", "link2": "https://loft.com.br/imovel/apartamento-rua-belchior-de-azevedo-vila-leopoldina-sao-paulo-3-quartos-130m2/fnc6jao9", "link3": "https://www.quintoandar.com.br/imovel/895528029/comprar/apartamento-3-quartos-vila-leopoldina-sao-paulo", "detalhes": "AEI3348 · 1 suíte · 4 banheiros · mobiliado · automação de som e iluminação. Fotos: Pilar 44; Loft 45; QuintoAndar 31 (mesma sessão). Pilar/Loft: R$ 2,5 mi; QuintoAndar: R$ 2,7 mi. IPTU a confirmar: Pilar R$ 386 sem periodicidade; Loft R$ 3.860/ano; QuintoAndar 12x R$ 322. Dados conferidos em 06/09/2026.", "foto": "https://imagens.pilarhomes.com.br/aHR0cHM6Ly9ibGludHotcHJvcGVydGllcy1zYW5kYm94LnMzLmFtYXpvbmF3cy5jb20vNjk5ZDhhNTRhYjMyZmQ2Njg4MDYyYmE1L3BpbGFyLWhvbWVzLWltYWdlcy13YXRlcm1hcmsvZDI0NjMyOWYtZGExOC00MWMyLTk5MzctNmVlMTQ0Y2ZkNzk1LmpwZWc/w:960/output:webp/q:80/d246329f-da18-41c2-9937-6ee144cfd795.webp", "cond": 1500, "iptu": 386, "valor": 2500000, "add": "2026-09-02", "itens": ["Churrasqueira", "Churrasq. prédio", "Escritório", "Ar Condicionado", "Varanda fechada", "Academia", "Piscina", "Depósito Garagem"]},
   {"bairro": "Vila Romana", "endereco": "ZI160331", "privado": true, "cobertura": false, "andar": null, "m2": 177, "qts": 4, "vgs": 3, "link": "https://www.pilarhomes.com.br/imovel/ZI160331/apartamento-4-quartos-vila-romana-sao-paulo", "foto": "https://imagens.pilarhomes.com.br/aHR0cHM6Ly9ibGludHotcHJvcGVydGllcy1zYW5kYm94LnMzLmFtYXpvbmF3cy5jb20vWkkxNjAzMzEvcGlsYXItaG9tZXMtaW1hZ2VzLXdhdGVybWFyay8wMDEuanBn/w:960/output:webp/q:80/001.webp", "cond": 2594, "iptu": 1500, "valor": 1990000, "add": "2026-09-02", "itens": ["Churrasq. prédio", "Closet", "Varanda fechada", "Academia", "Piscina", "Depósito Garagem"]},
   // CVIA1774 / ZI293570: 3 suites; correspondencia pelas fotos. Provavel Madero, Rua Barao do Bananal, 455: numero/predio e andar a confirmar. Ano 2014 (NPi: entrega 29/05/2014), mais antigo que 2015 (Lopes/Loft).
   // Custos da Pilar mantidos provisoriamente como mensais; confirmar periodicidade do IPTU e boletos. Zimmermann diverge: condominio R$ 2.500 e IPTU R$ 1.855. Fontes: https://www.npiconsultoria.com.br/madero-pompeia e link2.
@@ -258,7 +258,7 @@ const usados = {};
 D.apts.forEach((a, i) => {
   const base = (a.endereco + '-' + a.m2).toLowerCase().replace(/[^a-z0-9]+/g, '-');
   usados[base] = (usados[base] || 0) + 1;
-  a.id = usados[base] > 1 ? base + '-' + usados[base] : base;
+  a.id = a.id || (usados[base] > 1 ? base + '-' + usados[base] : base);
   a.m2v = a.valor / a.m2;
   a.mensal = a.cond + a.iptu;
   a.n = a.itens.length;
@@ -331,6 +331,7 @@ function cardHTML(a) {
       <span><b>${a.m2}</b> m&sup2;</span><span><b>${a.qts}</b> qts</span><span><b>${a.vgs}</b> vagas</span>
     </div>
     <div class="mensal">Mensal <b>${brl(a.mensal)}</b> &middot; cond. ${brl(a.cond)} + IPTU ${brl(a.iptu)}</div>
+    ${a.detalhes ? `<div class="sub">${a.detalhes}</div>` : ''}
     <div class="itens">${(sel => D.amenidades.map(i =>
       `<button class="item ${sel.includes(i) ? '' : 'off'}" data-item="${i}"
         title="clique para marcar ou desmarcar">${i}</button>`).join(''))(itensDe(a))}</div>
@@ -340,6 +341,7 @@ function cardHTML(a) {
         `<option value="${o}" ${o === s ? 'selected' : ''}>${o.replace('-', ' ')}</option>`).join('')}</select>
       <a href="${a.link}" target="_blank" rel="noopener">ver anuncio &rarr;</a>
       ${a.link2 ? `<a href="${a.link2}" target="_blank" rel="noopener">2&ordm; anuncio &rarr;</a>` : ''}
+      ${a.link3 ? `<a href="${a.link3}" target="_blank" rel="noopener">3&ordm; anuncio &rarr;</a>` : ''}
     </div>
   </div>`;
 }
@@ -360,7 +362,7 @@ function tabelaHTML(l) {
       if (c[0] === 'ano' && !v) v = '?';
       if (['valor', 'm2v', 'cond', 'iptu', 'mensal'].includes(c[0])) v = brl(v);
       return `<td class="${c[2] ? 'num' : ''}">${v}</td>`;
-    }).join('')}<td><a href="${a.link}" target="_blank" rel="noopener" style="color:var(--accent)">link</a>${a.link2 ? ` <a href="${a.link2}" target="_blank" rel="noopener" style="color:var(--accent)">2</a>` : ''}</td></tr>`;
+    }).join('')}<td><a href="${a.link}" target="_blank" rel="noopener" style="color:var(--accent)">link</a>${a.link2 ? ` <a href="${a.link2}" target="_blank" rel="noopener" style="color:var(--accent)">2</a>` : ''}${a.link3 ? ` <a href="${a.link3}" target="_blank" rel="noopener" style="color:var(--accent)">3</a>` : ''}</td></tr>`;
   }).join('')}</tbody></table></div>`;
 }
 
