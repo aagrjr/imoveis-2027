@@ -95,6 +95,14 @@ errados. O alvo é estreito:
   use o mais antigo**, conforme orientação do usuário em 02/09/2026: Le Havre
   2020 (vs. 2021) e AEI3348 2011 (vs. 2012). Registre a divergência nos comentários
   dos dados. Para divergências maiores ou sem fonte, deixe vazio e diga isso.
+- ❌ **Decorado de construtora.** Recusou o AEI2726 (Vila Romana, prédio de 2022)
+  em 2026-09-11: as fotos eram de apartamento modelo, não da unidade à venda.
+  Sinais: prédio com menos de ~5 anos ou anúncio "novo"/"lançamento", encenação
+  perfeita (nenhum objeto pessoal, tudo simétrico, luz de catálogo), e às vezes a
+  mesma foto em várias unidades do prédio. A unidade real pode estar no
+  acabamento padrão ou no contrapiso. **Acabamento bonito só conta se for daquele
+  apartamento** — imóvel habitado ou reformado pelo dono é evidência mais forte que
+  foto impecável.
 - ✅ **Pronto, com acabamento atual.** Ripado de madeira, porcelanato grande
   formato, marcenaria clara, caixilho amplo. É o meio-termo, e é raro.
 
