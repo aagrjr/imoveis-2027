@@ -118,10 +118,16 @@ MJOffre 1 cada — e só 1 do VivaReal. Motivo: no primeiro dia o QuintoAndar
 ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
 **Não repita isso.** Varra QuintoAndar e Pilar também.
 
-- **VivaReal** — filtros na URL funcionam (`preco-desde`, `preco-ate`,
-  `area-desde`, `quartos`, `vagas`) e `ordem=MOST_RECENT` traz os anúncios novos.
-  Paginação por `&pagina=N`, ~20 por página. Zap é do mesmo grupo, estoque
-  duplicado, não vale varrer os dois.
+- **VivaReal** — desde 2026-09-14 **ignora `preco-desde`, `preco-ate` e
+  `area-desde` na URL** (a busca da zona oeste devolveu Jardim Europa a R$ 13 mi).
+  O que funciona é o bairro no caminho,
+  `/venda/sp/sao-paulo/zona-oeste/<bairro>/apartamento_residencial/?quartos=3&vagas=2&ordem=MOST_RECENT`
+  (Pompeia é `pompeia`; `vila-pompeia` dá 404), filtrando os números no cliente.
+  Com uma aba do VivaReal aberta, `fetch()` dessas buscas e das páginas de anúncio
+  devolve o HTML completo: um script só varre todos os bairros e ainda pega as
+  fotos (`resizedimgs.vivareal.com/img/vr-listing/<hash>/<nome>`; fique só com as
+  que têm `-<m2>m-` no nome, as outras são de anúncios similares). Zap é do mesmo
+  grupo, estoque duplicado, não vale varrer os dois.
 - **QuintoAndar** — ignora filtros por URL, mas tem um filtro
   **"Novos ou reformados"** que é exatamente o critério de acabamento, e ele vira
   caminho na URL:
@@ -130,8 +136,14 @@ ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
   de `value` + eventos `input`/`change`). **A lista é virtualizada** — mantém ~11
   cards montados e recicla o resto; `scrollTop` programático não dispara o
   carregamento e dá timeout. Role com o mouse aos poucos, coletando a cada passo.
-- **Pilar Homes** — SPA; a página de detalhe responde a WebFetch, a busca precisa
-  do browser. Tem exclusivos e off-market que não aparecem em lugar nenhum.
+  Atalho testado em 2026-09-14: `curl` na URL já traz um JSON-LD `ItemList` com os
+  12 primeiros (link, m², quartos, rua, preço), sem browser. O `curl` da página de
+  anúncio às vezes vem sem fotos; aí abra no browser e colete
+  `original<id>-*.jpg` do `innerHTML`, servidas por `/img/med/`.
+- **Pilar Homes** — a busca vem renderizada do servidor: `curl` e um split em
+  `data-test-id="property-card"` dão código, preço, m², quartos e vagas dos 12 de
+  cada bairro, sem browser (testado em 2026-09-14). Tem exclusivos e off-market
+  que não aparecem em lugar nenhum.
 - **Maramores** — bloqueia WebFetch (403), use o browser.
 
 Método que funciona para julgar acabamento: montar uma folha de contato local
@@ -164,10 +176,12 @@ varrer sempre a mesma fonte:
 - **QuintoAndar** — `/comprar/imovel/<bairro>-sao-paulo-sp-brasil/apartamento/novos-ou-reformados`,
   um bairro por vez. Colete os ~23 do primeiro load e navegue para o próximo: a
   lista é virtualizada e a rolagem programática trava.
-- **VivaReal** — `ordem=MOST_RECENT` com `preco-desde`, `preco-ate`, `area-desde`,
-  `quartos`, `vagas`; pagine com `&pagina=N`. Traz "Publicado há X".
-- **Pilar** — `/venda/imoveis/<bairro>-sao-paulo-sp-brasil/apartamento?minAskingPrice=&maxAskingPrice=&regions=<Nome>`.
-  Mostra 12 por bairro e não tem paginação: é amostra, diga isso ao reportar.
+- **VivaReal** — bairro no caminho com `ordem=MOST_RECENT`, filtrando os números
+  no cliente (ver acima). Traz "Publicado há X".
+- **Pilar** — `/venda/imoveis/<bairro>-sao-paulo-sp-brasil/apartamento?minAskingPrice=&maxAskingPrice=&regions=<Nome>`,
+  via `curl`. Mostra 12 por bairro e não tem paginação: é amostra, diga isso ao
+  reportar. Muda devagar: em 2026-09-14 nenhum dos 12 de cada bairro era novo em
+  relação a 09-11.
 
 Depois **filtre por fotos antes de mostrar qualquer coisa** — ver a seção de
 acabamento acima. A taxa histórica é de ~15% dos que passam pelos números.
