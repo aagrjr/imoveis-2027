@@ -202,6 +202,10 @@ acabamento acima. A taxa histórica é de ~15% dos que passam pelos números.
   diferente. Só 3 dos 18 têm a do apartamento.
 - **Repo público, com o endereço do AP2372 dentro.** Decidido conscientemente
   depois de eu levantar a questão. As anotações continuam só no `localStorage`.
+- **Descartar não tira o favorito.** Decidido em 2026-09-14: a estrela fica no
+  imóvel descartado para lembrar o que já foi favorito (Ponta Porã, Avenida
+  Mercedes, Rua Mota Pais). Ao publicar um descarte, mexa só no `status:` e na
+  `nota:`, nunca remova o `fav:`.
 - **Ordenação padrão: custo mensal crescente.** Antes era "mais itens", trocada
   quando os itens viraram editáveis e a contagem ficou instável.
 
