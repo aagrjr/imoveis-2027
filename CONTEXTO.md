@@ -110,6 +110,11 @@ Bairros: Vila Leopoldina, Alto da Lapa, Vila Romana, Perdizes, Vila Ipojuca,
 mais Pompeia, Vila Madalena e Pinheiros. **Vila Anastácio está fora** (região
 recusada em 2026-09-01).
 
+**MaxHaus está fora**: qualquer prédio da marca, em qualquer bairro (decidido em
+2026-09-14, logo depois de o MaxHaus Vila Leopoldina I passar no filtro de fotos).
+Na Av. Mofarrej há mais de um (nº 1130 e 1500); confira o nome do condomínio antes
+de sugerir qualquer imóvel dessa avenida.
+
 ## Onde buscar (e o viés que já custou caro)
 
 Em 2026-09-02 a conta era: **21 dos 22 imóveis da lista vieram de portais que as
