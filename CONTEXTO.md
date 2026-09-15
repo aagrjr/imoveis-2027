@@ -132,8 +132,11 @@ ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
   Com uma aba do VivaReal aberta, `fetch()` dessas buscas e das páginas de anúncio
   devolve o HTML completo: um script só varre todos os bairros e ainda pega as
   fotos (`resizedimgs.vivareal.com/img/vr-listing/<hash>/<nome>`; fique só com as
-  que têm `-<m2>m-` no nome, as outras são de anúncios similares). Zap é do mesmo
-  grupo, estoque duplicado, não vale varrer os dois.
+  que têm `-<m2>m-` no nome, as outras são de anúncios similares). Em 2026-09-15
+  esse `fetch()` travou (timeout de 45 s) com o painel do browser oculto, e `curl`
+  dá 403. O que funcionou foi navegar página a página e ler o DOM já carregado com
+  JS síncrono, sem `await`; o `browser_batch` aceita no máximo 25 ações. Zap é do
+  mesmo grupo, estoque duplicado, não vale varrer os dois.
 - **QuintoAndar** — ignora filtros por URL, mas tem um filtro
   **"Novos ou reformados"** que é exatamente o critério de acabamento, e ele vira
   caminho na URL:
@@ -186,8 +189,12 @@ varrer sempre a mesma fonte:
   no cliente (ver acima). Traz "Publicado há X".
 - **Pilar** — `/venda/imoveis/<bairro>-sao-paulo-sp-brasil/apartamento?minAskingPrice=&maxAskingPrice=&regions=<Nome>`,
   via `curl`. Mostra 12 por bairro e não tem paginação: é amostra, diga isso ao
-  reportar. Muda devagar: em 2026-09-14 nenhum dos 12 de cada bairro era novo em
-  relação a 09-11.
+  reportar. A amostra gira: em 2026-09-14 nenhum dos 12 era novo em relação a
+  09-11, mas em 09-15 metade dos bairros veio com códigos inéditos.
+  A página de detalhe traz `__NUXT_DATA__`, um array em que os campos são índices:
+  `condoFee`, `condoName`, `askingPrice` e `suites` resolvem com `arr[obj.campo]`.
+  Nome do prédio e ano aparecem como `"<código>","<hash>","<nome>",[],[],"AAAA-MM-DD"`.
+  As fotos vêm repetidas em vários tamanhos: deduplique pelo segmento base64 da URL.
 
 Depois **filtre por fotos antes de mostrar qualquer coisa** — ver a seção de
 acabamento acima. A taxa histórica é de ~15% dos que passam pelos números.
