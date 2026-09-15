@@ -69,8 +69,9 @@ são derivados na carga — nunca gravados nos dados.
 8. Alternância cards ⇄ tabela, filtros por bairro/favoritos/descartados, e as 7 ordenações.
 9. Ordenação: `st.ordem` escolhe a métrica em `CHAVE` e `st.dir` (±1) o sentido,
    aplicado como `(k(a) - k(b)) * st.dir`. As funções em `CHAVE` devolvem sempre o
-   valor cru — nada de negar dentro delas. Padrão: `mensal` crescente, e o
-   `selected` do `<option>` precisa bater com `st.ordem`.
+   valor cru — nada de negar dentro delas. Padrão: `add` decrescente (mais novos
+   primeiro). O `selected` do `<option>` precisa bater com `st.ordem`, e o rótulo
+   inicial do `#dir` com `st.dir`.
 10. R$/m² colorido por quartil (`q1`/`q3` sobre o conjunto todo).
 11. `addN` (o `add` parseado) é derivado na carga, como `m2v` e `mensal` — nunca gravado.
     A data aparece na linha do andar no card e na coluna "Entrou" da tabela. Ordenar

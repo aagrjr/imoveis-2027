@@ -213,8 +213,10 @@ acabamento acima. A taxa histórica é de ~15% dos que passam pelos números.
   imóvel descartado para lembrar o que já foi favorito (Ponta Porã, Avenida
   Mercedes, Rua Mota Pais). Ao publicar um descarte, mexa só no `status:` e na
   `nota:`, nunca remova o `fav:`.
-- **Ordenação padrão: custo mensal crescente.** Antes era "mais itens", trocada
-  quando os itens viraram editáveis e a contagem ficou instável.
+- **Ordenação padrão: data de entrada, mais novos primeiro.** Decidido em
+  2026-09-15. Antes foi "mais itens" (trocada quando os itens viraram editáveis) e
+  depois custo mensal crescente. Na mesma data, quem foi inserido depois no `apts`
+  aparece antes.
 
 ## Bug que já custou caro
 

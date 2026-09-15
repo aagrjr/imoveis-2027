@@ -173,14 +173,14 @@
     <button class="chip" id="chip-desc" title="ver so os descartados">descartados</button>
     <span class="spacer"></span>
     <select id="ordem">
-      <option value="mensal" selected>Custo mensal</option>
+      <option value="mensal">Custo mensal</option>
       <option value="m2v">R$/m&sup2;</option>
       <option value="valor">Pre&ccedil;o</option>
       <option value="m2">&Aacute;rea</option>
       <option value="itens">Itens</option>
-      <option value="add">Data em que entrou</option>
+      <option value="add" selected>Data em que entrou</option>
     </select>
-    <button class="chip" id="dir" title="inverter a ordem">&uarr; menor</button>
+    <button class="chip" id="dir" title="inverter a ordem">&darr; maior</button>
     <button class="chip" id="chip-vista">Tabela</button>
   </div>
 
@@ -261,7 +261,7 @@ if (location.hash.startsWith('#s=')) {
   } catch (e) { console.warn('link de dados invalido', e); }
 }
 
-const st = { bairros: new Set(), fav: false, desc: false, ordem: 'mensal', dir: 1, tabela: false, sortCol: null, sortDir: 1 };
+const st = { bairros: new Set(), fav: false, desc: false, ordem: 'add', dir: -1, tabela: false, sortCol: null, sortDir: 1 };
 
 // Dois imoveis podem ter mesmo endereco e metragem (unidades diferentes do mesmo
 // predio): o contador garante id unico, senao um sobrescreve o estado do outro.
@@ -273,7 +273,8 @@ D.apts.forEach((a, i) => {
   a.m2v = a.valor / a.m2;
   a.mensal = a.cond + a.iptu;
   a.n = a.itens.length;
-  a.addN = Date.parse(a.add || '2026-08-24');
+  // + i ms: na mesma data, quem foi inserido depois no array conta como mais novo
+  a.addN = Date.parse(a.add || '2026-08-24') + i;
 });
 const load = (k, d) => { try { return JSON.parse(localStorage.getItem(KEY + k)) ?? d; } catch { return d; } };
 const save = (k, v) => localStorage.setItem(KEY + k, JSON.stringify(v));
