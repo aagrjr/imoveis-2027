@@ -116,6 +116,12 @@ recusada em 2026-09-01).
 Na Av. Mofarrej há mais de um (nº 1130 e 1500); confira o nome do condomínio antes
 de sugerir qualquer imóvel dessa avenida.
 
+**A microrregião derruba o imóvel.** Em 2026-09-16 ele recusou o ZI289918 (Vila
+Romana, 132 m², 3 suítes, R$ 2,2 mi, acabamento atual): "muito bom mas o lugar não
+é tão legal". Fica no quarteirão entre as ruas Jeroaquara, Catão e Coriolano, perto
+do Bairro Siciliano. Bairro aprovado não basta — **localize antes de sugerir**, e
+diga onde é junto com a sugestão.
+
 ## Onde buscar (e o viés que já custou caro)
 
 Em 2026-09-02 a conta era: **21 dos 22 imóveis da lista vieram de portais que as
@@ -195,6 +201,12 @@ varrer sempre a mesma fonte:
   `condoFee`, `condoName`, `askingPrice` e `suites` resolvem com `arr[obj.campo]`.
   Nome do prédio e ano aparecem como `"<código>","<hash>","<nome>",[],[],"AAAA-MM-DD"`.
   As fotos vêm repetidas em vários tamanhos: deduplique pelo segmento base64 da URL.
+  **Para achar onde fica um anúncio sem endereço:** o mesmo payload traz
+  `h3Cluster.geometry.coordinates`, a célula de ~150 m onde o imóvel está, e a
+  geocodificação reversa (`nominatim.openstreetmap.org/reverse?format=jsonv2&lat=&lon=&zoom=18`)
+  devolve a rua. Foi assim que localizamos o ZI289918 (Jeroaquara) e o ZI284654
+  (Piracuama). Margem de um quarteirão: trate como rua provável, nunca como endereço
+  confirmado, e não publique no campo `endereco`.
 
 Depois **filtre por fotos antes de mostrar qualquer coisa** — ver a seção de
 acabamento acima. A taxa histórica é de ~15% dos que passam pelos números.
