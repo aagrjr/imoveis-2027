@@ -122,6 +122,13 @@ Romana, 132 m², 3 suítes, R$ 2,2 mi, acabamento atual): "muito bom mas o lugar
 do Bairro Siciliano. Bairro aprovado não basta — **localize antes de sugerir**, e
 diga onde é junto com a sugestão.
 
+**Ruas fora da busca.** Em 2026-09-17 ele tirou a **Rua Lauriano Fernandes Júnior**
+e a **Rua Belchior de Azevedo**, as duas na Vila Leopoldina — a segunda é onde fica
+o **Podium**, então nenhuma unidade dele serve, por mais barata que apareça (já
+apareceram três, de R$ 1,67 mi a R$ 2,5 mi). Ficam fora também os endereços do
+**Bairro Siciliano** (Francisco Alves, Faustolo, Jeroaquara). A **Rua Coriolano**
+continua valendo: o nº 1642 (Neo Milano) entrou na lista em 16/09.
+
 ## Onde buscar (e o viés que já custou caro)
 
 Em 2026-09-02 a conta era: **21 dos 22 imóveis da lista vieram de portais que as
