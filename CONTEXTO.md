@@ -166,6 +166,22 @@ ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
   `data-test-id="property-card"` dão código, preço, m², quartos e vagas dos 12 de
   cada bairro, sem browser (testado em 2026-09-14). Tem exclusivos e off-market
   que não aparecem em lugar nenhum.
+  **O card da busca mostra suítes, não quartos** — o regex de "N quartos" não casa
+  e todo mundo sai com quartos desconhecido. Filtrar por quartos exige o
+  `bedrooms` do payload da página de anúncio. Em 18/09 isso deixou passar dois
+  imóveis de 2 quartos (MO6117 e ZI104551) até a lista de finalistas.
+  **O `__NUXT_DATA__` da página de anúncio traz ~7 anúncios**, o principal mais os
+  similares. Varrer o array por chave e pegar a primeira ocorrência mistura campos
+  de imóveis diferentes: fixe **um** objeto (o primeiro `dict` que tem
+  `askingPrice` e `condoFee`) e leia tudo dele. Confira área e preço contra o card
+  da busca — se divergirem, você pegou um similar.
+  **`condoName` é o nome do prédio, não o endereço**, e nome de prédio costuma
+  citar uma rua onde ele não fica: o "Momento Mota Pais" (2022) é na Vila Ipojuca
+  e não tem nada a ver com o apartamento da Rua Mota Pais (Pateo Mondrian, 2012)
+  que está na lista. Antes de declarar duplicata, confira a célula de geo e os
+  quartos, e exija **preço e condomínio iguais ao real** — R$ 1,80 mi contra
+  R$ 1,85 mi e cond R$ 2.616 contra R$ 2.600 não é o mesmo imóvel. Essa assinatura
+  (preço + condomínio) é mais confiável que a metragem, que os portais arredondam.
 - **Maramores** — bloqueia WebFetch (403), use o browser.
 
 Método que funciona para julgar acabamento: montar uma folha de contato local
