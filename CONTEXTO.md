@@ -175,6 +175,12 @@ ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
   de imóveis diferentes: fixe **um** objeto (o primeiro `dict` que tem
   `askingPrice` e `condoFee`) e leia tudo dele. Confira área e preço contra o card
   da busca — se divergirem, você pegou um similar.
+  **As características do payload são a união do anúncio com os similares.**
+  No ZI290512 o payload listava 15 itens de área externa; a página renderizada
+  mostra 7 no total (Closet, Lavabo, Varanda / Quintal, Playground, Salão de
+  festas, Piscina). A descrição idem — a primeira string longa do array pode ser
+  de outro imóvel. Pegue itens e descrição do **HTML renderizado** ou do bloco
+  JSON-LD preso ao `@id` do código, nunca varrendo o array.
   **`condoName` é o nome do prédio, não o endereço**, e nome de prédio costuma
   citar uma rua onde ele não fica: o "Momento Mota Pais" (2022) é na Vila Ipojuca
   e não tem nada a ver com o apartamento da Rua Mota Pais (Pateo Mondrian, 2012)
