@@ -183,6 +183,13 @@ ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
   R$ 1,85 mi e cond R$ 2.616 contra R$ 2.600 não é o mesmo imóvel. Essa assinatura
   (preço + condomínio) é mais confiável que a metragem, que os portais arredondam.
 - **Maramores** — bloqueia WebFetch (403), use o browser.
+  **Não confie nas coordenadas do mapa do anúncio.** Em 18/09 eu deduzi do
+  `lat`/`lng` do embed do Google que o AP2352 ficava na Rua Ministro Godói com a
+  João Ramalho, e afirmei isso pro usuário. O endereço real é Rua Diana, 863 —
+  **1,1 km de distância**. O mapa da Maramores é ofuscado de propósito, coerente
+  com o "endereço completo é compartilhado mediante agendamento". A célula de geo
+  da Pilar (`h3Cluster`, ~150 m) é confiável; a da Maramores não é. Se o endereço
+  não veio do anúncio ou do usuário, diga que não sabe.
 
 Método que funciona para julgar acabamento: montar uma folha de contato local
 com todas as fotos do anúncio numa página só (grid de `<img>` com
