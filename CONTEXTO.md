@@ -181,6 +181,17 @@ ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
   festas, Piscina). A descrição idem — a primeira string longa do array pode ser
   de outro imóvel. Pegue itens e descrição do **HTML renderizado** ou do bloco
   JSON-LD preso ao `@id` do código, nunca varrendo o array.
+  **Para saber se dois anúncios são o mesmo apartamento, só as fotos decidem.**
+  Nome de arquivo não serve: cada corretor sobe a própria cópia numa pasta S3
+  própria, então dois anúncios do mesmo imóvel têm **zero** nomes em comum. E
+  comparar todas as fotos da página também não serve, porque o HTML traz as dos
+  similares junto — isso me deu "11 a 17 fotos idênticas" entre imóveis
+  diferentes. O certo é filtrar as fotos cuja URL, depois do base64, contenha o
+  `id` do objeto principal, e então **olhar**. Na Via Condoti, 5 anúncios eram 3
+  apartamentos: AXS1443 = IEF578 = AEI5822 (vazio, painel de madeira na TV),
+  AXS1447 = PLANTA1213 (mobiliado, sofá florido, banco de madeira na varanda) e
+  o AP2442 (parede laranja, sofás creme). Preço + condomínio acertou o
+  agrupamento, mas quem confirma é a foto.
   **`condoName` é o nome do prédio, não o endereço**, e nome de prédio costuma
   citar uma rua onde ele não fica: o "Momento Mota Pais" (2022) é na Vila Ipojuca
   e não tem nada a ver com o apartamento da Rua Mota Pais (Pateo Mondrian, 2012)
