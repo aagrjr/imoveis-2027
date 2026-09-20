@@ -204,6 +204,23 @@ ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
   R$ 1,85 mi e cond R$ 2.616 contra R$ 2.600 não é o mesmo imóvel. Essa assinatura
   (preço + condomínio) é mais confiável que a metragem, que os portais arredondam.
 - **Maramores** — bloqueia WebFetch (403), use o browser.
+
+**Validando o endereço deduzido da célula da Pilar (ida e volta).** Reverse
+geocoding com `zoom=18` devolve um `house_number`; então faça o caminho inverso,
+geocodifique "<rua>, <número>" e meça a distância até a célula. Abaixo de ~100 m
+o número está certo; acima de 400 m é outro prédio na mesma rua. Foi assim que o
+ZI286621 fechou na Rua Traipu 1167 (28 m) e que o CVIA1900 e o AXS1552 foram
+descartados como sendo os prédios que o QuintoAndar anuncia nas mesmas ruas (472
+e 531 m). Sem essa volta o `zoom=17` engana: ele devolve a via mais próxima, que
+muda conforme o zoom (o CVIA1900 dá "Dr. Homem de Melo" em 17 e "João Ramalho"
+em 18 — é esquina).
+
+**Ano de construção em anúncio da Pilar sem endereço nem nome de prédio: não
+tem como.** Testado no ZI286621, CVIA1900 e AXS1552 em 20/09. O campo "Ano de
+construção" só aparece em parte dos anúncios, as bases de condomínio (Lopes,
+Loft, QuintoAndar, imovelweb) só indexam prédios com nome comercial, e os
+prédios pequenos e antigos não estão lá. Quando faltar, diga que falta — não
+chute pelo estilo da foto.
   **Não confie nas coordenadas do mapa do anúncio.** Em 18/09 eu deduzi do
   `lat`/`lng` do embed do Google que o AP2352 ficava na Rua Ministro Godói com a
   João Ramalho, e afirmei isso pro usuário. O endereço real é Rua Diana, 863 —
