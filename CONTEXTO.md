@@ -229,6 +229,20 @@ chute pelo estilo da foto.
   da Pilar (`h3Cluster`, ~150 m) é confiável; a da Maramores não é. Se o endereço
   não veio do anúncio ou do usuário, diga que não sabe.
 
+**O que decide não é o acabamento, é o tamanho dos quartos** (dito pelo usuário
+em 2026-09-20, depois de ele descartar 11 dos 12 imóveis que entraram em dois
+dias). A busca e a triagem por números estão boas; a recusa acontece ao olhar a
+distribuição da planta. Duas consequências práticas:
+
+- **A folha de contato estava mostrando os cômodos errados.** Eu pegava as 6
+  primeiras fotos do anúncio, e a ordem dos portais é sempre sala → varanda →
+  vista → cozinha; os quartos só aparecem da 10ª em diante. Monte a folha com as
+  fotos **do meio e do fim** da sequência, ou com todas, nunca só as primeiras.
+- **Planta e medidas de cômodo não existem nos portais.** Testado em 2026-09-20
+  em 17 anúncios de Pilar e QuintoAndar: nenhum traz imagem de planta nem texto
+  de medidas (`3,20 x 3,50`). Não prometa essa informação; o que dá para levar é
+  foto de quarto e a diferença entre área útil e área total.
+
 Método que funciona para julgar acabamento: montar uma folha de contato local
 com todas as fotos do anúncio numa página só (grid de `<img>` com
 `referrerpolicy="no-referrer"`), servir com `python3 -m http.server` e olhar de
