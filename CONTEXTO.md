@@ -100,6 +100,18 @@ errados. O alvo é estreito:
   use o mais antigo**, conforme orientação do usuário em 02/09/2026: Le Havre
   2020 (vs. 2021) e AEI3348 2011 (vs. 2012). Registre a divergência nos comentários
   dos dados. Para divergências maiores ou sem fonte, deixe vazio e diga isso.
+  **Atenção — a Pilar mostra o ano errado no navegador.** O payload guarda
+  `launchDate: "AAAA-01-01"`; o JavaScript lê como meia-noite UTC e o navegador
+  em São Paulo (UTC−3) exibe 31/12 do ano anterior. Resultado: **a página aberta
+  no browser mostra sempre um ano a menos**; o HTML baixado por `curl` (render do
+  servidor, em UTC) e o `launchDate` trazem o ano certo. Confirmado em 21/09 em
+  AEI2602 (2018 vs 2017), NRH138 (2012 vs 2011) e FIKA5854 (2000 vs 1999). Em
+  20/09 eu "corrigi" o FIKA5854 para 1999 confiando no navegador — errado.
+  Leia o ano do `launchDate` ou do HTML do servidor, nunca do browser. Isso
+  provavelmente explica parte das divergências de 1 ano que motivaram a regra
+  do "mais antigo" acima (Le Havre, AEI3348): quando uma das fontes é a Pilar
+  vista no browser, o "mais antigo" é justamente o artefato. A regra é do
+  usuário — não altere sem ele decidir.
 - ❌ **Decorado de construtora.** Recusou o AEI2726 (Vila Romana, prédio de 2022)
   em 2026-09-11: as fotos eram de apartamento modelo, não da unidade à venda.
   Sinais: prédio com menos de ~5 anos ou anúncio "novo"/"lançamento", encenação
