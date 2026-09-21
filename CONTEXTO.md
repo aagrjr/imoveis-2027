@@ -231,17 +231,12 @@ chute pelo estilo da foto.
 
 **O que decide não é o acabamento, é o tamanho dos quartos** (dito pelo usuário
 em 2026-09-20, depois de ele descartar 11 dos 12 imóveis que entraram em dois
-dias). A busca e a triagem por números estão boas; a recusa acontece ao olhar a
-distribuição da planta. Duas consequências práticas:
-
-- **A folha de contato estava mostrando os cômodos errados.** Eu pegava as 6
-  primeiras fotos do anúncio, e a ordem dos portais é sempre sala → varanda →
-  vista → cozinha; os quartos só aparecem da 10ª em diante. Monte a folha com as
-  fotos **do meio e do fim** da sequência, ou com todas, nunca só as primeiras.
-- **Planta e medidas de cômodo não existem nos portais.** Testado em 2026-09-20
-  em 17 anúncios de Pilar e QuintoAndar: nenhum traz imagem de planta nem texto
-  de medidas (`3,20 x 3,50`). Não prometa essa informação; o que dá para levar é
-  foto de quarto e a diferença entre área útil e área total.
+dias). A busca e a triagem por números estão boas; a recusa acontece quando ele
+analisa a planta. **Ele avalia isso manualmente e pediu para não mudar nada no
+processo** — continue trazendo candidatos como antes, sem tentar pré-julgar a
+distribuição dos cômodos. Planta e medidas de cômodo nem existem nos portais
+(testado em 17 anúncios de Pilar e QuintoAndar), então não prometa essa
+informação.
 
 Método que funciona para julgar acabamento: montar uma folha de contato local
 com todas as fotos do anúncio numa página só (grid de `<img>` com
