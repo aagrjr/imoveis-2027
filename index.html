@@ -338,6 +338,7 @@ function cardHTML(a) {
   const fav = load('fav:' + a.id, false);
   const cls = a.m2v <= q1 ? 'barato' : a.m2v >= q3 ? 'caro' : '';
   const andar = a.andar ? (isNaN(a.andar) ? a.andar : a.andar + '&ordm; andar') : 'andar n/d';
+  const mapa = a.privado ? '' : `<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.endereco + ', ' + a.bairro + ', São Paulo - SP')}" target="_blank" rel="noopener">ver mapa &nearr;</a>`;
   return `<div class="card st-${s}" data-id="${a.id}">
     ${a.foto ? `<a class="card-foto-link" href="${a.link}" target="_blank" rel="noopener"><img class="card-foto"
       src="${a.foto}" alt="Abrir anuncio de ${a.endereco}" loading="lazy" decoding="async"
@@ -369,6 +370,7 @@ function cardHTML(a) {
       <a href="${a.link}" target="_blank" rel="noopener">ver anuncio &rarr;</a>
       ${a.link2 ? `<a href="${a.link2}" target="_blank" rel="noopener">2&ordm; anuncio &rarr;</a>` : ''}
       ${a.link3 ? `<a href="${a.link3}" target="_blank" rel="noopener">3&ordm; anuncio &rarr;</a>` : ''}
+      ${mapa}
     </div>
   </div>`;
 }

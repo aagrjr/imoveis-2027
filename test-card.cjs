@@ -26,12 +26,12 @@ vm.runInContext(`
 vm.runInContext(`(() => {
   const a = D.apts.find(a => a.id === 'aei3348-130');
   globalThis.result = {
-    a, card: cardHTML(a), table: tabelaHTML([a]),
+    a, card: cardHTML(a), privateCard: cardHTML(D.apts.find(a => a.privado)), table: tabelaHTML([a]),
     count: D.apts.length, ids: D.apts.map(a => a.id),
     active: filtrar().length,
   };
 })()`, context);
-const { a, card, table, count, ids, active } = context.result;
+const { a, card, privateCard, table, count, ids, active } = context.result;
 assert.equal(new Set(ids).size, count);
 assert.equal(a.endereco, 'Rua Belchior de Azevedo, 156');
 assert.equal(a.predio, 'Podium Vila Leopoldina');
@@ -43,6 +43,8 @@ for (const link of [a.link, a.link2, a.link3]) {
   assert.ok(table.includes(`href="${link}"`));
 }
 assert.ok(card.includes(a.detalhes));
+assert.ok(card.includes('https://www.google.com/maps/search/?api=1&query='));
+assert.ok(!privateCard.includes('google.com/maps'));
 assert.ok(card.includes('fav on'));
 assert.ok(card.includes('Teste de persistência'));
 assert.equal((elements.lista.innerHTML.match(/class="card st-/g) || []).length, active);
