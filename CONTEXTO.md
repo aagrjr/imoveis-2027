@@ -227,6 +227,14 @@ e 531 m). Sem essa volta o `zoom=17` engana: ele devolve a via mais próxima, qu
 muda conforme o zoom (o CVIA1900 dá "Dr. Homem de Melo" em 17 e "João Ramalho"
 em 18 — é esquina).
 
+**Mesma célula não é mesmo prédio.** A célula da Pilar é um hexágono de ~150 m
+e cabe mais de um edifício. Em 21/09 eu disse que ZI166675 e GR2184 eram "o
+mesmo prédio" do ZI290512 porque os três caíam na mesma célula — e no mesmo dia
+o NRE2512 caiu nessa célula e era o AP2388, da Rua Dr. José Elias 227, a 162 m
+do centro. Ou seja, aquela célula tem pelo menos dois prédios (Sales Júnior ~407
+e Dr. José Elias 227). Célula igual só diz "mesma quadra"; para afirmar mesmo
+prédio precisa de foto ou de número de rua batendo.
+
 **Ano de construção em anúncio da Pilar sem endereço nem nome de prédio: não
 tem como.** Testado no ZI286621, CVIA1900 e AXS1552 em 20/09. O campo "Ano de
 construção" só aparece em parte dos anúncios, as bases de condomínio (Lopes,
