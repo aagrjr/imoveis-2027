@@ -254,7 +254,14 @@ em 2026-09-20, depois de ele descartar 11 dos 12 imóveis que entraram em dois
 dias). A busca e a triagem por números estão boas; a recusa acontece quando ele
 analisa a planta. **Ele avalia isso manualmente e pediu para não mudar nada no
 processo** — continue trazendo candidatos como antes, sem tentar pré-julgar a
-distribuição dos cômodos. Planta e medidas de cômodo nem existem nos portais
+distribuição dos cômodos.
+**"Ele avalia manualmente" vale só para planta e tamanho de quarto.** Os filtros
+de acabamento desta seção (contrapiso, reforma antiga, prédio muito antigo,
+decorado de construtora) continuam sendo trabalho meu, com fotos, antes de
+mandar qualquer lista. Em 21/09 eu entendi o contrário, mandei 21 imóveis sem
+abrir nenhuma foto e passaram 3 que ele recusa na hora: dois em contrapiso (Rua
+Campevas e Rua Rodrigo Lobato) e um lançamento com fotos só de maquete 3D (Rua
+Pio XI). Ele percebeu antes de mim. Planta e medidas de cômodo nem existem nos portais
 (testado em 17 anúncios de Pilar e QuintoAndar), então não prometa essa
 informação.
 
