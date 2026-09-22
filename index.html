@@ -495,6 +495,8 @@ function mapaDesenhar() {
         referrerpolicy="no-referrer" onerror="this.remove()"></a>` : ''}<b>${a.endereco}</b> &middot; ${a.bairro}<br>${brl(a.valor)} &middot; ${a.m2} m&sup2; &middot; mensal ${brl(a.mensal)}
         ${a.aprox ? '<br><span class="sub">localizacao aproximada</span>' : ''}<br>
         <a href="${a.link}" target="_blank" rel="noopener">anuncio &rarr;</a> &middot;
+        ${a.link2 ? `<a href="${a.link2}" target="_blank" rel="noopener">2&ordm; anuncio &rarr;</a> &middot;` : ''}
+        ${a.link3 ? `<a href="${a.link3}" target="_blank" rel="noopener">3&ordm; anuncio &rarr;</a> &middot;` : ''}
         <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}" target="_blank" rel="noopener">Google Maps &nearr;</a></div>`;
     }).join('')}</div>`;
   });
