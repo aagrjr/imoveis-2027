@@ -272,6 +272,23 @@ com todas as fotos do anúncio numa página só (grid de `<img>` com
 uma vez; depois ampliar as que decidem cada item. Muito mais rápido que o
 carrossel do portal.
 
+## Mapa (desde 2026-09-22)
+
+O botão "Mapa" mostra um pin por prédio, com os filtros ativos. Não usa a API do
+Google, que exigiria chave exposta no repo público: os tiles vêm do
+OpenStreetMap (a CARTO passou a exigir chave) e são posicionados em código
+próprio, sem biblioteca. Cada pin tem link para o Google Maps.
+
+**Toda linha nova precisa de `lat`/`lon`** (5 casas, logo depois de `vgs`). Fontes,
+da melhor para a pior:
+1. QuintoAndar: o HTML do anúncio traz `"lat"`/`"lng"` exatos.
+2. Endereço com número: Nominatim `search`. Confira se voltou `house_number`;
+   sem ele o ponto é só a rua, e a linha leva `"aprox": true`.
+3. Pilar: a célula `h3Cluster` (~150 m), sempre com `"aprox": true`.
+Linhas com `aprox` mostram pin tracejado, e o "ver mapa" do card abre as
+coordenadas em vez do endereço. Sem nenhuma fonte, a linha fica sem pin e é
+listada abaixo do mapa como "sem localização".
+
 ## Rotina de "tem algo novo?"
 
 Sempre que ele pedir novidades, rode as duas partes — a segunda é tão útil quanto
