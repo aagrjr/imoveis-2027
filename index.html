@@ -170,6 +170,7 @@
   <div class="controls">
     <span id="chips-bairro" style="display:flex;gap:8px;flex-wrap:wrap"></span>
     <button class="chip" id="chip-fav">&#9733; favoritos</button>
+    <button class="chip" id="chip-rev" title="ver so os que ainda nao foram revisados">a revisar</button>
     <button class="chip" id="chip-desc" title="ver so os descartados">descartados</button>
     <span class="spacer"></span>
     <select id="ordem">
@@ -280,7 +281,7 @@ if (location.hash.startsWith('#s=')) {
   } catch (e) { console.warn('link de dados invalido', e); }
 }
 
-const st = { bairros: new Set(), fav: false, desc: false, ordem: 'add', dir: -1, tabela: false, sortCol: null, sortDir: 1 };
+const st = { bairros: new Set(), fav: false, rev: false, desc: false, ordem: 'add', dir: -1, tabela: false, sortCol: null, sortDir: 1 };
 
 // Dois imoveis podem ter mesmo endereco e metragem (unidades diferentes do mesmo
 // predio): o contador garante id unico, senao um sobrescreve o estado do outro.
@@ -321,6 +322,8 @@ function filtrar() {
     // O chip alterna entre a lista ativa e a lista de descartados: nunca as duas.
     if ((s === 'descartado') !== st.desc) return false;
     if (st.fav && !load('fav:' + a.id, false)) return false;
+    // "A revisar" = ainda no status padrao; revisado, agendado e visitado ja passaram por revisao.
+    if (st.rev && s !== 'a-visitar') return false;
     if (st.bairros.size && !st.bairros.has(a.bairro)) return false;
     return true;
   });
@@ -369,7 +372,7 @@ function cardHTML(a) {
         title="clique para marcar ou desmarcar">${i}</button>`).join(''))(itensDe(a))}</div>
     <textarea class="nota" placeholder="anotacoes...">${load('nota:' + a.id, '')}</textarea>
     <div class="card-foot">
-      <select>${['a-visitar', 'agendado', 'visitado', 'descartado'].map(o =>
+      <select>${['a-visitar', 'revisado', 'agendado', 'visitado', 'descartado'].map(o =>
         `<option value="${o}" ${o === s ? 'selected' : ''}>${o.replace('-', ' ')}</option>`).join('')}</select>
       <a href="${a.link}" target="_blank" rel="noopener">ver anuncio &rarr;</a>
       ${a.link2 ? `<a href="${a.link2}" target="_blank" rel="noopener">2&ordm; anuncio &rarr;</a>` : ''}
@@ -415,6 +418,7 @@ document.addEventListener('click', e => {
   if (c) { const b = c.dataset.b; st.bairros.has(b) ? st.bairros.delete(b) : st.bairros.add(b);
     c.classList.toggle('on'); return render(); }
   if (e.target.id === 'chip-fav') { st.fav = !st.fav; e.target.classList.toggle('on'); return render(); }
+  if (e.target.id === 'chip-rev') { st.rev = !st.rev; e.target.classList.toggle('on'); return render(); }
   if (e.target.id === 'chip-desc') { st.desc = !st.desc; e.target.classList.toggle('on'); return render(); }
   if (e.target.id === 'chip-vista') { st.tabela = !st.tabela;
     e.target.textContent = st.tabela ? 'Cards' : 'Tabela'; e.target.classList.toggle('on'); return render(); }
