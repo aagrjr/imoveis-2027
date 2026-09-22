@@ -292,6 +292,15 @@ Linhas com `aprox` mostram pin tracejado, e o "ver mapa" do card abre as
 coordenadas em vez do endereço. Sem nenhuma fonte, a linha fica sem pin e é
 listada abaixo do mapa como "sem localização".
 
+**Busca de 2 quartos (22/09/2026).** Ele pediu uma rodada só de 2 quartos, com as
+demais regras valendo e a régua das fotos bem mais alta: "só algo realmente muito
+bom". Dos 38 anúncios na faixa, sobraram três. Ele recusou o melhor deles (Rua
+Chafalote, 70) por preço. Os outros dois: o Ybyrá (Pilar FIKA5785, Rua Fidalga,
+2020, 122 m², 1 vaga, R$ 2,2 mi, cond R$ 1.300) e um de 125 m² na Vila Ipojuca
+(Pilar ZI280050 / Maramores AP2380, R$ 2,2–2,3 mi) cuja célula cai na Rua
+Francisco Alves, no Bairro Siciliano. **2 quartos não virou regra**: foi uma
+consulta pontual, e a busca padrão continua em 3+.
+
 ## Rotina de "tem algo novo?"
 
 Sempre que ele pedir novidades, rode as duas partes — a segunda é tão útil quanto
@@ -352,6 +361,11 @@ monte a URL direto pela pasta do código:
 `blintz-properties-sandbox.s3.amazonaws.com/<CÓDIGO>/pilar-homes-images-watermark/001.jpg`.
 
 Recusados sem virar linha na página (cruze com eles também):
+- **Rua Chafalote, 70** (Vila Ipojuca, 131 m², 2 suítes, 3 vagas, R$ 2,35 mi,
+  cond R$ 1.800; QuintoAndar 894895292 e três anúncios no VivaReal): recusado em
+  22/09 por preço — "não acho que vale 2.400". Apareceu numa busca à parte de
+  2 quartos (ver abaixo). No mesmo prédio há outra unidade de 131 m² por
+  R$ 1,8 mi (QA 895441660) e a Pilar RB4275, no contrapiso.
 - **ZI277090** (Pilar, Vila Leopoldina, 115 m², 1 suíte, 2 vagas, R$ 1,90 mi,
   cond R$ 2.000): a célula de geo cai na Rua Lauriano Fernandes Júnior, que está
   excluída. Recusado em 22/09. O H2U220 tem a mesma assinatura e pode ser ele.
