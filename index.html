@@ -160,8 +160,11 @@
   .pin.desc { background: #9ca3af; }
   .pin.aprox { border-style: dashed; }
   .mapa-pop { position: absolute; z-index: 5; background: var(--surface); border: 1px solid var(--border);
-    border-radius: 8px; padding: 10px 12px; font: 13px -apple-system, sans-serif; width: 250px; max-height: 260px;
+    border-radius: 8px; padding: 10px 12px; font: 13px -apple-system, sans-serif; width: 260px; max-height: 340px;
     overflow-y: auto; transform: translate(-50%, calc(-100% - 16px)); box-shadow: 0 4px 16px #000a; cursor: auto; }
+  .mapa-pop.abaixo { transform: translate(-50%, 16px); }
+  .pop-foto { display: block; width: 100%; height: 120px; object-fit: cover; border-radius: 6px; margin-bottom: 6px;
+    background: var(--surface2); }
   .mapa-pop > div + div { border-top: 1px solid var(--border); margin-top: 8px; padding-top: 8px; }
   .mapa-pop a { color: var(--accent); }
   .mapa-zoom { position: absolute; right: 10px; top: 10px; z-index: 4; display: flex; flex-direction: column; gap: 4px; }
@@ -478,9 +481,13 @@ function mapaDesenhar() {
       : s.every(v => v === 'descartado') ? 'desc' : '';
     html += `<div class="pin ${cls} ${g.apts.every(a => a.aprox) ? 'aprox' : ''}" data-g="${i}"
       style="left:${x - x0}px;top:${y - y0}px" title="${g.apts.map(a => a.endereco).join(' / ')}">${g.apts.length > 1 ? g.apts.length : ''}</div>`;
-    if (mp.aberto === i) html += `<div class="mapa-pop" style="left:${x - x0}px;top:${y - y0}px">${g.apts.map(a => {
+    // Popup nao pode sair do mapa (overflow hidden): abre para baixo perto do topo e encosta nas laterais.
+    const px = Math.min(Math.max(x - x0, 140), w - 140), abaixo = y - y0 < h / 2;
+    const alt = Math.min(340, (abaixo ? h - (y - y0) : y - y0) - 30);
+    if (mp.aberto === i) html += `<div class="mapa-pop ${abaixo ? 'abaixo' : ''}" style="left:${px}px;top:${y - y0}px;max-height:${alt}px">${g.apts.map(a => {
       const q = a.aprox || a.privado ? a.lat + ',' + a.lon : a.endereco + ', ' + a.bairro + ', São Paulo - SP';
-      return `<div><b>${a.endereco}</b> &middot; ${a.bairro}<br>${brl(a.valor)} &middot; ${a.m2} m&sup2; &middot; mensal ${brl(a.mensal)}
+      return `<div>${a.foto ? `<a href="${a.link}" target="_blank" rel="noopener"><img class="pop-foto" src="${a.foto}" alt=""
+        referrerpolicy="no-referrer" onerror="this.remove()"></a>` : ''}<b>${a.endereco}</b> &middot; ${a.bairro}<br>${brl(a.valor)} &middot; ${a.m2} m&sup2; &middot; mensal ${brl(a.mensal)}
         ${a.aprox ? '<br><span class="sub">localizacao aproximada</span>' : ''}<br>
         <a href="${a.link}" target="_blank" rel="noopener">anuncio &rarr;</a> &middot;
         <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}" target="_blank" rel="noopener">Google Maps &nearr;</a></div>`;
