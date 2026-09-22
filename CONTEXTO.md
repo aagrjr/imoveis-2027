@@ -321,6 +321,15 @@ varrer sempre a mesma fonte:
   e as primeiras ~10 são as do imóvel. A busca também traz Vila Madalena e Alto de
   Pinheiros, que ficam de fora.
 
+**Antes de mostrar, cruze também com os descartados, não só com os códigos já
+vistos.** Um apartamento descartado volta com código novo, em outra imobiliária ou
+em outro portal. Compare m² + preço + condomínio com as linhas descartadas do
+`index.html` e, se bater perto, confirme pelas fotos. Em 2026-09-22 mandei o Pilar
+H2U212 ("Vitá", 129 m², R$ 2,10 mi) e o VivaReal 2913573233 como novidade: eram o
+ZI281608, descartado em 21/09. Para ver as fotos de um anúncio antigo da Pilar,
+monte a URL direto pela pasta do código:
+`blintz-properties-sandbox.s3.amazonaws.com/<CÓDIGO>/pilar-homes-images-watermark/001.jpg`.
+
 Depois **filtre por fotos antes de mostrar qualquer coisa** — ver a seção de
 acabamento acima. A taxa histórica é de ~15% dos que passam pelos números.
 
