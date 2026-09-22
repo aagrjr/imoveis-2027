@@ -136,16 +136,6 @@
   @media (max-width: 720px) {
     .controls { gap: 8px; }
     .spacer { display: none; }
-    #chips-bairro {
-      flex-wrap: nowrap !important;
-      overflow-x: auto;
-      scrollbar-width: none;
-      width: 100%;
-      padding-bottom: 2px;
-      -webkit-overflow-scrolling: touch;
-    }
-    #chips-bairro::-webkit-scrollbar { display: none; }
-    #chips-bairro .chip { flex: 0 0 auto; }
     .chip, select { font-size: 12px; padding: 8px 12px; }
     /* alvos de toque: os chips de item sao usados de pe, na visita */
     .item { font-size: 12px; padding: 7px 10px; }
@@ -168,7 +158,6 @@
 
 <main>
   <div class="controls">
-    <span id="chips-bairro" style="display:flex;gap:8px;flex-wrap:wrap"></span>
     <button class="chip" id="chip-fav">&#9733; favoritos</button>
     <button class="chip" id="chip-rev" title="ver so os que ainda nao foram revisados">a revisar</button>
     <button class="chip" id="chip-desc" title="ver so os descartados">descartados</button>
@@ -281,7 +270,7 @@ if (location.hash.startsWith('#s=')) {
   } catch (e) { console.warn('link de dados invalido', e); }
 }
 
-const st = { bairros: new Set(), fav: false, rev: false, desc: false, ordem: 'add', dir: -1, tabela: false, sortCol: null, sortDir: 1 };
+const st = { fav: false, rev: false, desc: false, ordem: 'add', dir: -1, tabela: false, sortCol: null, sortDir: 1 };
 
 // Dois imoveis podem ter mesmo endereco e metragem (unidades diferentes do mesmo
 // predio): o contador garante id unico, senao um sobrescreve o estado do outro.
@@ -324,7 +313,6 @@ function filtrar() {
     if (st.fav && !load('fav:' + a.id, false)) return false;
     // "A revisar" = ainda no status padrao; revisado, agendado e visitado ja passaram por revisao.
     if (st.rev && s !== 'a-visitar') return false;
-    if (st.bairros.size && !st.bairros.has(a.bairro)) return false;
     return true;
   });
 }
@@ -410,13 +398,7 @@ function render() {
   stats();
 }
 
-document.getElementById('chips-bairro').innerHTML =
-  [...new Set(D.apts.map(a => a.bairro))].sort().map(b => `<button class="chip" data-b="${b}">${b}</button>`).join('');
-
 document.addEventListener('click', e => {
-  const c = e.target.closest('[data-b]');
-  if (c) { const b = c.dataset.b; st.bairros.has(b) ? st.bairros.delete(b) : st.bairros.add(b);
-    c.classList.toggle('on'); return render(); }
   if (e.target.id === 'chip-fav') { st.fav = !st.fav; e.target.classList.toggle('on'); return render(); }
   if (e.target.id === 'chip-rev') { st.rev = !st.rev; e.target.classList.toggle('on'); return render(); }
   if (e.target.id === 'chip-desc') { st.desc = !st.desc; e.target.classList.toggle('on'); return render(); }
