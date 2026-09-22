@@ -302,7 +302,7 @@ function stats() {
     <div>imoveis<b>${vis.length}</b></div>
     <div>faixa<b>${brl(Math.min(...vals) / 1000)}k &ndash; ${brl(Math.max(...vals) / 1000).replace('R$ ', '')}k</b></div>
     <div>R$/m&sup2; mediano<b>${brl(vis.map(a => a.m2v).sort((x, y) => x - y)[Math.floor(vis.length / 2)])}</b></div>
-    <div>favoritos<b>${D.apts.filter(a => load('fav:' + a.id, false)).length}</b></div>` : '';
+    <div>favoritos<b>${D.apts.filter(a => load('fav:' + a.id, false) && load('status:' + a.id, 'a-visitar') !== 'descartado').length}</b></div>` : '';
 }
 
 function filtrar() {
