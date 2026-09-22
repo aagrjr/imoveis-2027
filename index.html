@@ -157,15 +157,17 @@
     background: var(--accent); border: 2px solid #fff; color: #0d1117; font: 700 11px -apple-system, sans-serif;
     display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 4px #0009; cursor: pointer; z-index: 2; }
   .pin.fav { background: var(--warn); }
+  .pin.rev { background: var(--good); }
   .pin.desc { background: #9ca3af; }
   .pin.aprox { border-style: dashed; }
   .mapa-pop { position: absolute; z-index: 5; background: var(--surface); border: 1px solid var(--border);
-    border-radius: 8px; padding: 10px 12px; font: 13px -apple-system, sans-serif; width: 260px; max-height: 340px;
+    border-radius: 8px; padding: 10px 12px; font: 13px -apple-system, sans-serif; max-width: calc(100% - 20px); max-height: 340px;
+    display: grid; gap: 12px; grid-template-columns: repeat(var(--n), 240px);
     overflow-y: auto; transform: translate(-50%, calc(-100% - 16px)); box-shadow: 0 4px 16px #000a; cursor: auto; }
   .mapa-pop.abaixo { transform: translate(-50%, 16px); }
   .pop-foto { display: block; width: 100%; height: 120px; object-fit: cover; border-radius: 6px; margin-bottom: 6px;
     background: var(--surface2); }
-  .mapa-pop > div + div { border-top: 1px solid var(--border); margin-top: 8px; padding-top: 8px; }
+  .mapa-pop > div + div { border-left: 1px solid var(--border); padding-left: 12px; margin-left: -1px; }
   .mapa-pop a { color: var(--accent); }
   .mapa-zoom { position: absolute; right: 10px; top: 10px; z-index: 4; display: flex; flex-direction: column; gap: 4px; }
   .mapa-zoom button { width: 32px; height: 32px; font-size: 18px; border-radius: 6px; border: 1px solid #0003;
@@ -438,7 +440,7 @@ function mapaHTML(l) {
   const sem = l.filter(a => a.lat == null).map(a => a.endereco);
   return `<div class="mapa"><div class="mapa-zoom"><button data-z="1">+</button><button data-z="-1">&minus;</button></div>
     <div class="mapa-attr">&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></div></div>
-    <div class="sub" style="margin-top:8px">Pin amarelo: favorito &middot; cinza: descartado &middot; borda tracejada: localizacao aproximada &middot; numero: varios anuncios no mesmo predio${
+    <div class="sub" style="margin-top:8px">Pin amarelo: favorito &middot; azul: a revisar &middot; verde: revisado &middot; cinza: descartado &middot; borda tracejada: localizacao aproximada &middot; numero: varios anuncios no mesmo predio${
       sem.length ? ' &middot; sem localizacao: ' + sem.join(', ') : ''}</div>`;
 }
 
@@ -478,13 +480,16 @@ function mapaDesenhar() {
   gs.forEach((g, i) => {
     const [x, y] = proj(g.lat, g.lon, z), s = g.apts.map(a => load('status:' + a.id, 'a-visitar'));
     const cls = g.apts.some((a, j) => s[j] !== 'descartado' && load('fav:' + a.id, false)) ? 'fav'
-      : s.every(v => v === 'descartado') ? 'desc' : '';
+      : s.every(v => v === 'descartado') ? 'desc'
+      : s.some(v => v === 'a-visitar') ? '' : 'rev';
     html += `<div class="pin ${cls} ${g.apts.every(a => a.aprox) ? 'aprox' : ''}" data-g="${i}"
       style="left:${x - x0}px;top:${y - y0}px" title="${g.apts.map(a => a.endereco).join(' / ')}">${g.apts.length > 1 ? g.apts.length : ''}</div>`;
     // Popup nao pode sair do mapa (overflow hidden): abre para baixo perto do topo e encosta nas laterais.
-    const px = Math.min(Math.max(x - x0, 140), w - 140), abaixo = y - y0 < h / 2;
+    // Anuncios do mesmo predio ficam lado a lado (ate 3 colunas), para comparar sem rolar.
+    const n = Math.min(g.apts.length, 3, Math.max(1, Math.floor((w - 40) / 252))), meia = (n * 252 + 14) / 2 + 10;
+    const px = Math.min(Math.max(x - x0, meia), w - meia), abaixo = y - y0 < h / 2;
     const alt = Math.min(340, (abaixo ? h - (y - y0) : y - y0) - 30);
-    if (mp.aberto === i) html += `<div class="mapa-pop ${abaixo ? 'abaixo' : ''}" style="left:${px}px;top:${y - y0}px;max-height:${alt}px">${g.apts.map(a => {
+    if (mp.aberto === i) html += `<div class="mapa-pop ${abaixo ? 'abaixo' : ''}" style="left:${px}px;top:${y - y0}px;max-height:${alt}px;--n:${n}">${g.apts.map(a => {
       const q = a.aprox || a.privado ? a.lat + ',' + a.lon : a.endereco + ', ' + a.bairro + ', São Paulo - SP';
       return `<div>${a.foto ? `<a href="${a.link}" target="_blank" rel="noopener"><img class="pop-foto" src="${a.foto}" alt=""
         referrerpolicy="no-referrer" onerror="this.remove()"></a>` : ''}<b>${a.endereco}</b> &middot; ${a.bairro}<br>${brl(a.valor)} &middot; ${a.m2} m&sup2; &middot; mensal ${brl(a.mensal)}
@@ -522,7 +527,7 @@ document.addEventListener('pointerup', () => {
   mp.el.classList.remove('arrastando'); arr = null;
 });
 document.addEventListener('wheel', e => {
-  const el = e.target.closest('.mapa'); if (!el || !mp) return;
+  const el = e.target.closest('.mapa'); if (!el || !mp || e.target.closest('.mapa-pop')) return;
   e.preventDefault(); const r = el.getBoundingClientRect();
   mapaZoom(e.deltaY < 0 ? 1 : -1, e.clientX - r.left, e.clientY - r.top);
 }, { passive: false });
