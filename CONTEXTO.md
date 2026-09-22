@@ -7,11 +7,14 @@ Atualizado em 2026-08-29.
 
 Apartamento para compra em São Paulo, zona oeste. Perfil que emergiu da lista:
 
-- **Bairros:** Vila Leopoldina, Alto da Lapa, Vila Romana, Perdizes, Vila Ipojuca
+- **Bairros:** Vila Leopoldina, Alto da Lapa, Vila Romana, Perdizes, Vila Ipojuca,
+  Pompeia, Vila Madalena e Pinheiros (os dois últimos confirmados em 22/09/2026:
+  entram na varredura dos portais como os demais)
 - **Faixa:** R$ 1,55 mi a R$ 2,4 mi (o teto subiu de 2,2 para 2,3 em 29/08/2026 e
   para 2,4 em 22/09/2026; nada que já estava na página foi descartado pela mudança)
-- **Tamanho:** acima de 115 m² e até ~200 m², 3+ quartos (o mínimo de área subiu
-  de 110 para 115 m² em 2026-09-14)
+- **Tamanho:** a partir de 115 m², 3+ quartos (o mínimo de área subiu de 110 para
+  115 m² em 2026-09-14). **Sem teto de área** (22/09/2026): maior que 200 m² dentro
+  do preço também serve
 - **Vagas:** 2–3 é o normal, mas **1 vaga não elimina** se o apartamento for bom
   (definido em 2026-09-20). Antes disso eu cortava 1 vaga na triagem, sem abrir
   as fotos — vários imóveis foram descartados assim e precisaram ser resgatados.
@@ -369,7 +372,12 @@ acabamento acima. A taxa histórica é de ~15% dos que passam pelos números.
 - **Descartar não tira o favorito.** Decidido em 2026-09-14: a estrela fica no
   imóvel descartado para lembrar o que já foi favorito (Ponta Porã, Avenida
   Mercedes, Rua Mota Pais). Ao publicar um descarte, mexa só no `status:` e na
-  `nota:`, nunca remova o `fav:`.
+  `nota:`, nunca remova o `fav:`. Até 22/09 a página ainda apagava a estrela ao
+  descartar pelo celular (código de 30/08); corrigido.
+- **Descartado após visita.** Desde 22/09, marcar "visitado" grava
+  `visitou:<id>` com a data. A chave sobrevive a um descarte posterior e o card
+  mostra "visitado em dd/mm". Visitas anteriores ao recurso: só a Ponta Porã
+  (`true`, sem data).
 - **Ordenação padrão: data de entrada, mais novos primeiro.** Decidido em
   2026-09-15. Antes foi "mais itens" (trocada quando os itens viraram editáveis) e
   depois custo mensal crescente. Na mesma data, quem foi inserido depois no `apts`
