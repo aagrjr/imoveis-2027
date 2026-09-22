@@ -330,6 +330,11 @@ ZI281608, descartado em 21/09. Para ver as fotos de um anúncio antigo da Pilar,
 monte a URL direto pela pasta do código:
 `blintz-properties-sandbox.s3.amazonaws.com/<CÓDIGO>/pilar-homes-images-watermark/001.jpg`.
 
+Recusados sem virar linha na página (cruze com eles também):
+- **ZI277090** (Pilar, Vila Leopoldina, 115 m², 1 suíte, 2 vagas, R$ 1,90 mi,
+  cond R$ 2.000): a célula de geo cai na Rua Lauriano Fernandes Júnior, que está
+  excluída. Recusado em 22/09. O H2U220 tem a mesma assinatura e pode ser ele.
+
 Depois **filtre por fotos antes de mostrar qualquer coisa** — ver a seção de
 acabamento acima. A taxa histórica é de ~15% dos que passam pelos números.
 
