@@ -8,7 +8,8 @@ Atualizado em 2026-08-29.
 Apartamento para compra em São Paulo, zona oeste. Perfil que emergiu da lista:
 
 - **Bairros:** Vila Leopoldina, Alto da Lapa, Vila Romana, Perdizes, Vila Ipojuca
-- **Faixa:** R$ 1,55 mi a R$ 2,3 mi (o teto subiu de 2,2 para 2,3 em 29/08/2026)
+- **Faixa:** R$ 1,55 mi a R$ 2,4 mi (o teto subiu de 2,2 para 2,3 em 29/08/2026 e
+  para 2,4 em 22/09/2026; nada que já estava na página foi descartado pela mudança)
 - **Tamanho:** acima de 115 m² e até ~200 m², 3+ quartos (o mínimo de área subiu
   de 110 para 115 m² em 2026-09-14)
 - **Vagas:** 2–3 é o normal, mas **1 vaga não elimina** se o apartamento for bom
