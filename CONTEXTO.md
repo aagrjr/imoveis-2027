@@ -311,6 +311,15 @@ varrer sempre a mesma fonte:
   devolve a rua. Foi assim que localizamos o ZI289918 (Jeroaquara) e o ZI284654
   (Piracuama). Margem de um quarteirão: trate como rua provável, nunca como endereço
   confirmado, e não publique no campo `endereco`.
+- **Masfer** (incluída em 2026-09-22 a pedido dele: costuma postar só nas nossas
+  áreas, e 4 dos ativos já vieram de lá) —
+  `https://www.masferimoveis.com.br/imoveis/a-venda/apartamento+cobertura?quartos=3+&vagas=1+&area=115+&preco-de-venda=0~3000000`,
+  via `curl`, mais `&pagina=2`. Os cards (`/imovel/<slug>/<CÓDIGO>-MA0U`) trazem
+  bairro, m², quartos, vagas e preço; o detalhe traz condomínio e IPTU. Ignore
+  "Rua Teodoro Sampaio" no texto: é o endereço da imobiliária, não do imóvel. A
+  página de detalhe mistura fotos de outros anúncios (130+ URLs `img.kenlo.io`),
+  e as primeiras ~10 são as do imóvel. A busca também traz Vila Madalena e Alto de
+  Pinheiros, que ficam de fora.
 
 Depois **filtre por fotos antes de mostrar qualquer coisa** — ver a seção de
 acabamento acima. A taxa histórica é de ~15% dos que passam pelos números.
