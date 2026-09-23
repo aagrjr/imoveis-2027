@@ -1,7 +1,7 @@
 # Contexto da busca
 
 Documento de handoff: o que não dá pra deduzir lendo o código.
-Atualizado em 2026-08-29.
+Atualizado em 2026-09-23.
 
 ## O que estamos procurando
 
@@ -320,6 +320,33 @@ Chafalote, 70) por preço. Os outros dois: o Ybyrá (Pilar FIKA5785, Rua Fidalga
 Francisco Alves, no Bairro Siciliano. **2 quartos não virou regra**: foi uma
 consulta pontual, e a busca padrão continua em 3+.
 
+## Navegador: como varrer e como ver foto
+
+O que custou tempo em 23/09/2026 e vale saber antes:
+
+- **A Pilar só entrega 12 anúncios por `curl`.** É o furo que deixou passar o Jazz
+  Perdizes. O detalhe está na seção da rotina, mas em uma linha: varra pelo
+  navegador clicando "Ver mais" em laço, e não por `curl`. O `curl` continua ótimo
+  para a **página de um anúncio** (`/imovel/<CÓDIGO>/x` devolve o `__NUXT_DATA__`
+  inteiro, e 410 quer dizer removido).
+- **O painel do navegador precisa estar visível.** Com ele oculto, `screenshot`
+  falha com "the Browser pane is not displayed" e `requestAnimationFrame` não roda —
+  ou seja, nada de triagem de foto. Peça para ele abrir a aba Browser; `navigate`
+  para `localhost` pode ser recusado nesse estado, e aí `preview_start` com a URL
+  resolve.
+- **Folha de contato local.** Para triar em lote: gere um HTML com as miniaturas,
+  sirva com `python3 -m http.server <porta>` dentro do diretório do arquivo e abra
+  no painel. Sempre `referrerpolicy="no-referrer"` nas imagens — Pilar, VivaReal e
+  Maramores bloqueiam por referer. **Miniatura serve para descartar, não para
+  aprovar:** antes de citar um imóvel vazio, abra 2 fotos em `w:1400`.
+- **VivaReal bloqueia `fetch` em série.** Umas 50 requisições e vem o desafio do
+  Cloudflare ("Just a moment..."), que derruba também os `fetch` seguintes. O que
+  funciona: `navigate` para a busca do bairro (o desafio passa sozinho), rolar a
+  página e colher os cards do DOM — cada card traz 5 fotos, suficiente para a
+  primeira peneira. Acumule entre navegações no `sessionStorage`, que a variável
+  global morre a cada página.
+- **Maramores e imovelweb** respondem 403 ao `curl` de anúncio; use o navegador.
+
 ## Rotina de "tem algo novo?"
 
 Sempre que ele pedir novidades, rode as duas partes — a segunda é tão útil quanto
@@ -355,7 +382,11 @@ varrer sempre a mesma fonte:
   navegador:** abra a busca do bairro e clique no botão "Ver mais" em laço
   (`[...document.querySelectorAll('button,a')].find(e=>e.textContent.trim()==='Ver mais').click()`,
   ~1,3 s entre cliques; cada clique traz mais 12 e atualiza `?page=N` na URL), depois
-  colha `a[href*="/imovel/"]`. Em 8 cliques foram 108 cards. A amostra gira: em 2026-09-14 nenhum dos 12 era novo em relação a
+  colha `a[href*="/imovel/"]`. Em 8 cliques foram 108 cards.
+  **Cuidado com o limite de taxa:** depois de ~900 imagens em poucos minutos, o
+  `imagens.pilarhomes.com.br` passa a responder **HTTP 429** e as fotos somem da
+  folha de contato (a página do anúncio continua abrindo). Libera aos poucos, em
+  dezenas de minutos. Varra em lotes e trie as fotos por partes. A amostra gira: em 2026-09-14 nenhum dos 12 era novo em relação a
   09-11, mas em 09-15 metade dos bairros veio com códigos inéditos.
   A página de detalhe traz `__NUXT_DATA__`, um array em que os campos são índices:
   `condoFee`, `condoName`, `askingPrice` e `suites` resolvem com `arr[obj.campo]`.
@@ -385,6 +416,14 @@ H2U212 ("Vitá", 129 m², R$ 2,10 mi) e o VivaReal 2913573233 como novidade: era
 ZI281608, descartado em 21/09. Para ver as fotos de um anúncio antigo da Pilar,
 monte a URL direto pela pasta do código:
 `blintz-properties-sandbox.s3.amazonaws.com/<CÓDIGO>/pilar-homes-images-watermark/001.jpg`.
+
+**Como remontar a lista de "já vistos" numa sessão nova.** Não existe arquivo
+versionado com isso: o `vistos.json` que eu uso vive no diretório temporário da
+sessão e morre com ela. Reconstrua a partir de duas fontes, as duas no repo:
+o `index.html` (todos os códigos que aparecem em `link`, `link2` e `foto`, ativos
+e descartados) e a lista de recusados logo abaixo. Na prática:
+`grep -oE 'imovel/[A-Z0-9]+|imovel/[0-9]+|id-[0-9]+' index.html | sort -u`.
+Qualquer coisa fora dessas duas listas é novidade de verdade.
 
 Recusados sem virar linha na página (cruze com eles também):
 - **Recusados em 23/09/2026, na segunda leva** (passaram nas fotos, mas ele não
@@ -451,7 +490,39 @@ o de 4º andar (R$ 150 mil mais barato) tem 9 itens contra 6 do 16º.
 Resolvido com sufixo numérico. Se um dia mudar a regra de id, lembre que ela é
 order-dependent e que o id é a chave do estado do usuário.
 
-## Estado em 2026-08-29
+## Estado em 2026-09-23
+
+**56 linhas: 21 ativos e 35 descartados.** 6 favoritos, dos quais 2 ativos
+(Presidente Antônio Cândido e Tonelero 239) e 4 já descartados — a estrela fica
+de propósito. 10 ativos estão como `revisado`; o resto segue em `a-visitar`.
+
+Ativos, do mais caro ao mais barato: Carlos Weber 663 (R$ 2,77 mi), Mofarrej 706
+(2,40), Dr. José Elias 227 (2,40 / 2,33 / 2,10 — três unidades do Pátio das Artes),
+Barão do Bananal CVIA1774 (2,39), Barão do Bananal 305 (2,30), Rua Camilo 556
+(2,30), Mofarrej 706 (2,20), Rua Roma (2,19), Itapicuru 84 (2,19), São Geraldo 38
+(2,10), Presidente Antônio Cândido ⭐ (2,05), AXS827 (2,00), Bartira 193 (2,00),
+Carlos Weber 87 (1,98), Tonelero 239 ⭐ (1,95), Passo da Pátria 1407 (1,87),
+Coriolano 1642 (1,85), Carlos Weber 535 (1,80) e Croata 169 (1,75).
+
+**Uma visita registrada:** Ponta Porã 710, descartada depois dela ("apartamento
+ótimo, mas o condomínio é muito antigo").
+
+### Em aberto (23/09/2026)
+
+- **45 candidatos da Pilar sem triagem de foto.** Saíram da varredura profunda de
+  23/09 (1.194 anúncios coletados, 160 inéditos, 71 dentro de custo e ano). O CDN
+  de imagens passou a responder **HTTP 429** depois de ~900 fotos e ainda não
+  liberou; espere e retome. A lista desses 45 não está versionada: refazer a
+  varredura é mais rápido do que tentar recuperá-la.
+- **Rua Faustolo, 766** (VivaReal 2913704422, 118 m², 3 suítes, 3 vagas,
+  R$ 2,0 mi): ele quis ver antes de eu descartar por causa do Bairro Siciliano.
+  Sem resposta ainda.
+- **Ano do Tower Hills** (Rua Croata, 169): nenhuma fonte publica. Ele vai
+  perguntar à corretora (Carla).
+- **Condomínio do ARCO940** (Vitá, R$ 2,05 mi): o cadastro da Pilar diz R$ 200,
+  provável erro. Confirmar antes de adicionar.
+
+## Estado inicial (2026-08-29, histórico)
 
 20 imóveis. Os 18 primeiros têm itens já revisados pelo usuário em visita ou releitura
 do anúncio; o Horizons (26/08) e o AP2434 (29/08) ainda não passaram por revisão — o

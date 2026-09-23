@@ -16,6 +16,25 @@ Cada apartamento é **uma linha** do array `apts`. Ao reescrever uma linha por
 script, recoloque a vírgula final: sem ela o `const D` vira erro de sintaxe e a
 página inteira fica em branco. Depois de mexer, valide parseando cada linha.
 
+## Estado do usuário (localStorage + `D.estado`)
+
+Chaves por imóvel: `fav:<id>`, `status:<id>`, `nota:<id>`, `itens:<id>` e
+`visitou:<id>`. Os `status` são `a-visitar` (padrão), `revisado`, `agendado`,
+`visitado` e `descartado`.
+
+- **`revisado`** entrou em 22/09/2026 com o filtro **"a revisar"**, que mostra só
+  quem ainda está em `a-visitar` — quem já é revisado, agendado ou visitado sai da
+  fila.
+- **`visitou:<id>`** guarda a data em que o imóvel foi marcado como `visitado` e
+  **sobrevive a um descarte posterior**: o card mostra "visitado em dd/mm" mesmo
+  depois de descartado. É como se sabe que o descarte veio de uma visita.
+- **Descartar não apaga o favorito.** A estrela fica no descartado de propósito.
+- Os filtros do topo são favoritos, a revisar e descartados; o de descartados
+  alterna a lista inteira, e a contagem de favoritos acompanha esse botão. Não há
+  mais filtro por bairro (removido em 22/09: a lista toda já é dos bairros certos).
+- Ao publicar qualquer mudança em `D.estado`, **mude a `estadoVersao`** (padrão
+  `AAAA-MM-DD-n`), senão nenhum aparelho adota.
+
 ## Files
 - `index.html` — a aplicação inteira: dados, CSS e JS. **É o único arquivo que importa.**
 - `README.md`
@@ -28,8 +47,21 @@ Os dados vivem no `const D = { amenidades, apts }` dentro do `index.html`,
 **uma linha por apartamento**, para que adicionar um imóvel seja copiar uma linha.
 Preserve esse formato ao editar — não reformate o bloco em JSON indentado.
 
-Campos: `bairro, endereco, privado, cobertura, andar, m2, qts, vgs, link, link2, foto,
-cond, iptu, valor, add, itens[]`. `foto` e `link2` são opcionais. `add` é a data em
+Campos: `id, bairro, endereco, predio, privado, cobertura, andar, ano, m2, qts, vgs,
+lat, lon, aprox, link, link2, link3, foto, cond, iptu, valor, add, detalhes, itens[]`.
+São opcionais: `id`, `predio`, `ano`, `aprox`, `link2`, `link3`, `foto` e `detalhes`.
+
+- `id` fixa a chave do estado. A chave padrão sai de `endereco + '-' + m2`
+  minúsculo, sem acento, com `-2`, `-3`… para repetidos — então **mudar o
+  `endereco` de uma linha deixa as marcações dela órfãs**. Ao publicar um endereço que antes
+  era `privado`, grave o `id` antigo na linha.
+- `predio` e `ano` aparecem juntos no card ("Via Condoti, 2004"); `ano` também é
+  coluna da tabela.
+- `lat`/`lon` (5 casas) posicionam o pin no mapa, e `aprox: true` marca ponto
+  aproximado — pin tracejado, e o "ver mapa" do card abre a coordenada em vez do
+  endereço. Sem `lat`, a linha fica sem pin e é listada abaixo do mapa.
+- `detalhes` é texto livre mostrado no card: use para o que não cabe nos campos
+  (andar, divergência entre corretores, o que confirmar na visita). `add` é a data em
 que o imóvel entrou na lista, `AAAA-MM-DD`, e serve pra saber o que é novidade —
 preencha ao adicionar uma linha e nunca reescreva a dos outros. Quem não tem `add`
 é tratado como `2026-08-24`, a data em que o campo nasceu. `link2` é um segundo
