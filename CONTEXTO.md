@@ -161,7 +161,11 @@ explícita e deixe a decisão com ele — foi assim que o La Dolce Vita (Rua Cam
 556) entrou na lista em 22/09. O mesmo vale para o **Vila Nova Leopoldina** (as
 ruas Nagel 12 e 33 já foram descartadas uma a uma, mas o condomínio não está
 banido). A **Rua Lauriano Fernandes Júnior** e a **Rua Belchior de Azevedo**
-(Podium) continuam sendo corte automático. A **Rua Coriolano**
+(Podium) continuam sendo corte automático, junto com qualquer MaxHaus — e só eles.
+**Bairro vizinho também não elimina** (ele corrigiu de novo em 23/09/2026, sobre
+Vila Anastácio, Boaçava e Vila Hamburguesa): mande com a localização explícita e
+deixe ele decidir. A Vila Anastácio tinha sido recusada em 01/09 num imóvel
+específico, e eu transformei isso em regra de bairro por conta própria. A **Rua Coriolano**
 continua valendo: o nº 1642 (Neo Milano) entrou na lista em 16/09.
 
 ## Onde buscar (e o viés que já custou caro)
