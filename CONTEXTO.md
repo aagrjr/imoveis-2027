@@ -149,8 +149,13 @@ diga onde é junto com a sugestão.
 **Ruas fora da busca.** Em 2026-09-17 ele tirou a **Rua Lauriano Fernandes Júnior**
 e a **Rua Belchior de Azevedo**, as duas na Vila Leopoldina — a segunda é onde fica
 o **Podium**, então nenhuma unidade dele serve, por mais barata que apareça (já
-apareceram três, de R$ 1,67 mi a R$ 2,5 mi). Ficam fora também os endereços do
-**Bairro Siciliano** (Francisco Alves, Faustolo, Jeroaquara). A **Rua Coriolano**
+apareceram três, de R$ 1,67 mi a R$ 2,5 mi). **O Bairro Siciliano não elimina sozinho** (ele corrigiu em 23/09/2026: "tinhamos
+combinado q vc ia me passar pra verificar"): mostre o imóvel com a localização
+explícita e deixe a decisão com ele — foi assim que o La Dolce Vita (Rua Camilo,
+556) entrou na lista em 22/09. O mesmo vale para o **Vila Nova Leopoldina** (as
+ruas Nagel 12 e 33 já foram descartadas uma a uma, mas o condomínio não está
+banido). A **Rua Lauriano Fernandes Júnior** e a **Rua Belchior de Azevedo**
+(Podium) continuam sendo corte automático. A **Rua Coriolano**
 continua valendo: o nº 1642 (Neo Milano) entrou na lista em 16/09.
 
 ## Onde buscar (e o viés que já custou caro)
