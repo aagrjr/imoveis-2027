@@ -365,6 +365,15 @@ monte a URL direto pela pasta do código:
 `blintz-properties-sandbox.s3.amazonaws.com/<CÓDIGO>/pilar-homes-images-watermark/001.jpg`.
 
 Recusados sem virar linha na página (cruze com eles também):
+- **Recusados em 23/09/2026, na segunda leva** (passaram nas fotos, mas ele não
+  quis nenhum): Maramores CO0250 (cobertura Vila Leopoldina, 140 m², R$ 2,35 mi,
+  mensal R$ 1.600) e CO0261 (cobertura Perdizes, 186 m², 1 vaga, R$ 1,69 mi);
+  VivaReal 2913810042 (Rua Pinto Gonçalves, 85, Perdizes, 140 m², R$ 2,20 mi),
+  2913720839 (Pompeia, 120 m², R$ 1,79 mi), 2913814040 (Vila Madalena, 117 m²,
+  R$ 1,93 mi) e 2913713658 (Pompeia, 146 m², R$ 1,89 mi).
+- **VivaReal 2913814823** (Pinheiros, 127 m², R$ 2,10 mi): eu mandei como
+  reformado e estava **no contrapiso**; ele reclamou. Ver a regra do piso na
+  seção de acabamento.
 - **Recusados em 23/09/2026, só pelos números e pelo anúncio** (ele não quis
   nenhum): Pilar ARCO1204 (Maison Montparnasse, Alto da Lapa, 134 m², R$ 1,75 mi),
   ARCO331 (Ed. Maia, Vila Madalena, 117 m², R$ 1,93 mi), ZI289384 (Perdizes,
