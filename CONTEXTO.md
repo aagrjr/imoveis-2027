@@ -430,6 +430,10 @@ e descartados) e a lista de recusados logo abaixo. Na prática:
 Qualquer coisa fora dessas duas listas é novidade de verdade.
 
 Recusados sem virar linha na página (cruze com eles também):
+- **VB26467** (Edifício Maresias, Rua Brentano, Vila Hamburguesa, 145 m², 1 suíte,
+  R$ 2,10 mi): recusado em 23/09 — "pelas fotos está terrível, bem ultrapassado".
+  Eu tinha mandado com ressalva, olhando só a miniatura; a regra é abrir as fotos
+  antes de mandar, mesmo quando o imóvel vai com ressalva.
 - **Recusados em 23/09/2026, na segunda leva** (passaram nas fotos, mas ele não
   quis nenhum): Maramores CO0250 (cobertura Vila Leopoldina, 140 m², R$ 2,35 mi,
   mensal R$ 1.600) e CO0261 (cobertura Perdizes, 186 m², 1 vaga, R$ 1,69 mi);
