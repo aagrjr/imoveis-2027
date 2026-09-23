@@ -224,6 +224,10 @@ ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
   R$ 1,85 mi e cond R$ 2.616 contra R$ 2.600 não é o mesmo imóvel. Essa assinatura
   (preço + condomínio) é mais confiável que a metragem, que os portais arredondam.
 - **Maramores** — bloqueia WebFetch (403), use o browser.
+- **Dimorah** (dimorah.com.br/imoveis/compra-ou-aluguel) — imobiliária pequena,
+  9 anúncios, códigos `DMH`, parceira da Pilar: as fotos vêm do mesmo S3 e quase
+  todos os imóveis também estão na Pilar. Responde a `curl`. A ficha traz
+  condomínio e IPTU mensal, que a Pilar nem sempre mostra.
 
 **Validando o endereço deduzido da célula da Pilar (ida e volta).** Reverse
 geocoding com `zoom=18` devolve um `house_number`; então faça o caminho inverso,
@@ -331,9 +335,16 @@ varrer sempre a mesma fonte:
   lista é virtualizada e a rolagem programática trava.
 - **VivaReal** — bairro no caminho com `ordem=MOST_RECENT`, filtrando os números
   no cliente (ver acima). Traz "Publicado há X".
-- **Pilar** — `/venda/imoveis/<bairro>-sao-paulo-sp-brasil/apartamento?minAskingPrice=&maxAskingPrice=&regions=<Nome>`,
-  via `curl`. Mostra 12 por bairro e não tem paginação: é amostra, diga isso ao
-  reportar. A amostra gira: em 2026-09-14 nenhum dos 12 era novo em relação a
+- **Pilar** — `/venda/imoveis/<bairro>-sao-paulo-sp-brasil/apartamento?minAskingPrice=&maxAskingPrice=&regions=<Nome>`.
+  **Não varra por `curl`: ele só devolve os 12 primeiros cards, sempre os mesmos**
+  (`?page=`, `?pagina=`, `?offset=` são ignorados no HTML do servidor; a paginação
+  roda no cliente). Perdizes tem **959 anúncios** e eu estava vendo 12 — ~1%, o que
+  deixou passar o Jazz Perdizes (DMH002), que estava na Pilar o tempo todo e só
+  apareceu quando ele mandou o site da Dimorah em 23/09/2026. **Varra pelo
+  navegador:** abra a busca do bairro e clique no botão "Ver mais" em laço
+  (`[...document.querySelectorAll('button,a')].find(e=>e.textContent.trim()==='Ver mais').click()`,
+  ~1,3 s entre cliques; cada clique traz mais 12 e atualiza `?page=N` na URL), depois
+  colha `a[href*="/imovel/"]`. Em 8 cliques foram 108 cards. A amostra gira: em 2026-09-14 nenhum dos 12 era novo em relação a
   09-11, mas em 09-15 metade dos bairros veio com códigos inéditos.
   A página de detalhe traz `__NUXT_DATA__`, um array em que os campos são índices:
   `condoFee`, `condoName`, `askingPrice` e `suites` resolvem com `arr[obj.campo]`.
