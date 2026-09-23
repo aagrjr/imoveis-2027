@@ -87,14 +87,15 @@ errados. O alvo é estreito:
   Rua Cayowaá. **Em apartamento vazio, olhe o piso, não a parede.** Parede branca
   recém-pintada e caixilho novo não querem dizer reformado: em 21/09 passaram
   Campevas e Rodrigo Lobato, e em 23/09 o VivaReal 2913814823 (Pinheiros, 127 m²,
-  R$ 2,10 mi) — ele reclamou das três vezes. Só trate como pronto quando o
-  revestimento do chão aparecer instalado em alguma foto — **e conferido em foto
-  grande (w:1400), nunca na miniatura da folha de contato**: em 105 px o contrapiso
-  claro passa por porcelanato. Foi assim que o Unicco (PDI17860) foi mandado como
-  "piso claro já instalado" em 23/09 e era cimento aparente em todos os cômodos, o
-  terceiro contrapiso que escapou. **Apartamento vazio agora tem passo obrigatório:
-  abrir 2 fotos em tamanho grande antes de citar.** Se o piso não der para
-  confirmar, não mande.
+  R$ 2,10 mi) — ele reclamou das três vezes. **Regra dura: apartamento vazio não vai para ele.** Eu erro a leitura do piso mesmo
+  em foto grande — contrapiso claro e queimado parece porcelanato, e a varanda
+  quase sempre já tem revestimento e confunde ainda mais. Foram quatro em três
+  dias: Campevas e Rodrigo Lobato (21/09), VivaReal 2913814823 (Pinheiros), Unicco
+  PDI17860 e PDI18218 (23/09) — nos dois últimos eu tinha até escrito "piso claro
+  já instalado". Então: **se não houver móveis nas fotos, só mande se o texto do
+  anúncio disser explicitamente que está pronto/reformado, e diga a ele que o
+  imóvel está vazio e que o piso não foi confirmado.** Na dúvida, não mande.
+  Imóvel habitado continua valendo a triagem normal por foto.
 - ❌ **Prédio muito antigo.** Recusou o Rua Cardoso de Almeida, 704 em 2026-09-02
   ao saber que o edifício é de 1976 — a unidade era reformada e bonita, o prédio
   é que pesou. **Sempre levante e informe o ano de construção** junto com a
@@ -430,6 +431,10 @@ e descartados) e a lista de recusados logo abaixo. Na prática:
 Qualquer coisa fora dessas duas listas é novidade de verdade.
 
 Recusados sem virar linha na página (cruze com eles também):
+- **PDI18218** (Caminhos da Lapa, Rua Fortunato Ferraz, 127 m², 3 suítes,
+  R$ 1,80 mi): **contrapiso**, recusado em 23/09. Eu tinha mandado como "porcelanato
+  claro já instalado" depois de ver em foto grande — o erro que originou a regra
+  dura acima.
 - **VB26467** (Edifício Maresias, Rua Brentano, Vila Hamburguesa, 145 m², 1 suíte,
   R$ 2,10 mi): recusado em 23/09 — "pelas fotos está terrível, bem ultrapassado".
   Eu tinha mandado com ressalva, olhando só a miniatura; a regra é abrir as fotos
