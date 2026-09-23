@@ -88,7 +88,13 @@ errados. O alvo é estreito:
   recém-pintada e caixilho novo não querem dizer reformado: em 21/09 passaram
   Campevas e Rodrigo Lobato, e em 23/09 o VivaReal 2913814823 (Pinheiros, 127 m²,
   R$ 2,10 mi) — ele reclamou das três vezes. Só trate como pronto quando o
-  revestimento do chão aparecer instalado em alguma foto.
+  revestimento do chão aparecer instalado em alguma foto — **e conferido em foto
+  grande (w:1400), nunca na miniatura da folha de contato**: em 105 px o contrapiso
+  claro passa por porcelanato. Foi assim que o Unicco (PDI17860) foi mandado como
+  "piso claro já instalado" em 23/09 e era cimento aparente em todos os cômodos, o
+  terceiro contrapiso que escapou. **Apartamento vazio agora tem passo obrigatório:
+  abrir 2 fotos em tamanho grande antes de citar.** Se o piso não der para
+  confirmar, não mande.
 - ❌ **Prédio muito antigo.** Recusou o Rua Cardoso de Almeida, 704 em 2026-09-02
   ao saber que o edifício é de 1976 — a unidade era reformada e bonita, o prédio
   é que pesou. **Sempre levante e informe o ano de construção** junto com a
