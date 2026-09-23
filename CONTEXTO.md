@@ -361,6 +361,10 @@ monte a URL direto pela pasta do código:
 `blintz-properties-sandbox.s3.amazonaws.com/<CÓDIGO>/pilar-homes-images-watermark/001.jpg`.
 
 Recusados sem virar linha na página (cruze com eles também):
+- **Recusados em 23/09/2026, só pelos números e pelo anúncio** (ele não quis
+  nenhum): Pilar ARCO1204 (Maison Montparnasse, Alto da Lapa, 134 m², R$ 1,75 mi),
+  ARCO331 (Ed. Maia, Vila Madalena, 117 m², R$ 1,93 mi), ZI289384 (Perdizes,
+  123 m², R$ 1,96 mi) e PNS012 (Solimões, Pompeia, 1993, 180 m², R$ 2,30 mi).
 - **Rua Chafalote, 70** (Vila Ipojuca, 131 m², 2 suítes, 3 vagas, R$ 2,35 mi,
   cond R$ 1.800; QuintoAndar 894895292 e três anúncios no VivaReal): recusado em
   22/09 por preço — "não acho que vale 2.400". Apareceu numa busca à parte de
