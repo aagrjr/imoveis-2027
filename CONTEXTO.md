@@ -370,6 +370,11 @@ Recusados sem virar linha na página (cruze com eles também):
   cond R$ 2.000): a célula de geo cai na Rua Lauriano Fernandes Júnior, que está
   excluída. Recusado em 22/09. O H2U220 tem a mesma assinatura e pode ser ele.
 
+**Para ele ver as fotos, mande o link do anúncio, não uma galeria montada.** Pedido
+dele em 23/09/2026, depois de eu montar páginas locais com todas as fotos do
+Mercedes, da Chafalote e da Faustolo. A montagem local continua servindo para a
+*minha* triagem quando o painel do navegador está visível.
+
 Depois **filtre por fotos antes de mostrar qualquer coisa** — ver a seção de
 acabamento acima. A taxa histórica é de ~15% dos que passam pelos números.
 
