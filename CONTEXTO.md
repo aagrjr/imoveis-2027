@@ -84,7 +84,11 @@ errados. O alvo é estreito:
   branca, mobília clássica. Recusou Rua Wanderley e Rua Doutor Alberto Torres.
 - ❌ **Contrapiso / unidade crua.** Não quer tocar obra. Recusou Rua Catão (eu
   tinha sugerido como vantagem — "acaba do seu jeito" — e estava errado) e
-  Rua Cayowaá.
+  Rua Cayowaá. **Em apartamento vazio, olhe o piso, não a parede.** Parede branca
+  recém-pintada e caixilho novo não querem dizer reformado: em 21/09 passaram
+  Campevas e Rodrigo Lobato, e em 23/09 o VivaReal 2913814823 (Pinheiros, 127 m²,
+  R$ 2,10 mi) — ele reclamou das três vezes. Só trate como pronto quando o
+  revestimento do chão aparecer instalado em alguma foto.
 - ❌ **Prédio muito antigo.** Recusou o Rua Cardoso de Almeida, 704 em 2026-09-02
   ao saber que o edifício é de 1976 — a unidade era reformada e bonita, o prédio
   é que pesou. **Sempre levante e informe o ano de construção** junto com a
