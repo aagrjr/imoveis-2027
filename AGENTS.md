@@ -29,7 +29,9 @@ Chaves por imóvel: `fav:<id>`, `status:<id>`, `nota:<id>`, `itens:<id>` e
   **sobrevive a um descarte posterior**: o card mostra "visitado em dd/mm" mesmo
   depois de descartado. É como se sabe que o descarte veio de uma visita.
 - **Descartar não apaga o favorito.** A estrela fica no descartado de propósito.
-- Os filtros do topo são favoritos, a revisar e descartados; o de descartados
+- **"revisados"** (23/09/2026) é o complemento de "a revisar": mostra revisado,
+  agendado e visitado. Os dois chips se excluem, ligar um desliga o outro.
+- Os filtros do topo são favoritos, a revisar, revisados e descartados; o de descartados
   alterna a lista inteira, e a contagem de favoritos acompanha esse botão. Não há
   mais filtro por bairro (removido em 22/09: a lista toda já é dos bairros certos).
 - Ao publicar qualquer mudança em `D.estado`, **mude a `estadoVersao`** (padrão

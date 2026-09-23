@@ -188,6 +188,7 @@
   <div class="controls">
     <button class="chip" id="chip-fav">&#9733; favoritos</button>
     <button class="chip" id="chip-rev" title="ver so os que ainda nao foram revisados">a revisar</button>
+    <button class="chip" id="chip-revd" title="ver so os que ja foram revisados">revisados</button>
     <button class="chip" id="chip-desc" title="ver so os descartados">descartados</button>
     <span class="spacer"></span>
     <select id="ordem">
@@ -304,7 +305,7 @@ if (location.hash.startsWith('#s=')) {
   } catch (e) { console.warn('link de dados invalido', e); }
 }
 
-const st = { mapa: false, fav: false, rev: false, desc: false, ordem: 'add', dir: -1, tabela: false, sortCol: null, sortDir: 1 };
+const st = { mapa: false, fav: false, rev: false, revd: false, desc: false, ordem: 'add', dir: -1, tabela: false, sortCol: null, sortDir: 1 };
 
 // Dois imoveis podem ter mesmo endereco e metragem (unidades diferentes do mesmo
 // predio): o contador garante id unico, senao um sobrescreve o estado do outro.
@@ -349,6 +350,7 @@ function filtrar() {
     if (st.fav && !load('fav:' + a.id, false)) return false;
     // "A revisar" = ainda no status padrao; revisado, agendado e visitado ja passaram por revisao.
     if (st.rev && s !== 'a-visitar') return false;
+    if (st.revd && s === 'a-visitar') return false;
     return true;
   });
 }
@@ -544,7 +546,14 @@ window.addEventListener('resize', () => { if (st.mapa && mp && document.contains
 
 document.addEventListener('click', e => {
   if (e.target.id === 'chip-fav') { st.fav = !st.fav; e.target.classList.toggle('on'); return render(); }
-  if (e.target.id === 'chip-rev') { st.rev = !st.rev; e.target.classList.toggle('on'); return render(); }
+  // "a revisar" e "revisados" se excluem: ligar um desliga o outro.
+  if (e.target.id === 'chip-rev' || e.target.id === 'chip-revd') {
+    const k = e.target.id === 'chip-rev' ? 'rev' : 'revd', o = k === 'rev' ? 'revd' : 'rev';
+    st[k] = !st[k]; st[o] = false;
+    document.getElementById('chip-rev').classList.toggle('on', st.rev);
+    document.getElementById('chip-revd').classList.toggle('on', st.revd);
+    return render();
+  }
   if (e.target.id === 'chip-desc') { st.desc = !st.desc; e.target.classList.toggle('on'); return render(); }
   if (e.target.id === 'chip-mapa') { st.mapa = !st.mapa; e.target.classList.toggle('on'); return render(); }
   const pin = e.target.closest('.pin');
