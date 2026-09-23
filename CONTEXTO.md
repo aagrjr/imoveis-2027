@@ -431,6 +431,11 @@ e descartados) e a lista de recusados logo abaixo. Na prática:
 Qualquer coisa fora dessas duas listas é novidade de verdade.
 
 Recusados sem virar linha na página (cruze com eles também):
+- **Scena Alto da Lapa, Rua Filipinas, 327** (Vila Ipojuca, 2018): a unidade de
+  121 m², 3 suítes, 3 vagas, R$ 2,10 mi aparece com **dois códigos na Pilar,
+  AEI2602 e LEF45174**. Mandada em 21/09 e de novo em 23/09; ele reclamou que "sempre
+  vem repetido". Descartar pelos dois códigos. O PR7569 (122 m², 2 suítes, R$ 1,89 mi)
+  é outra unidade do mesmo prédio.
 - **PDI18218** (Caminhos da Lapa, Rua Fortunato Ferraz, 127 m², 3 suítes,
   R$ 1,80 mi): **contrapiso**, recusado em 23/09. Eu tinha mandado como "porcelanato
   claro já instalado" depois de ver em foto grande — o erro que originou a regra
@@ -522,11 +527,11 @@ Coriolano 1642 (1,85), Carlos Weber 535 (1,80) e Croata 169 (1,75).
 
 ### Em aberto (23/09/2026)
 
-- **45 candidatos da Pilar sem triagem de foto.** Saíram da varredura profunda de
-  23/09 (1.194 anúncios coletados, 160 inéditos, 71 dentro de custo e ano). O CDN
-  de imagens passou a responder **HTTP 429** depois de ~900 fotos e ainda não
-  liberou; espere e retome. A lista desses 45 não está versionada: refazer a
-  varredura é mais rápido do que tentar recuperá-la.
+- **Triagem da Pilar concluída em 23/09/2026** (59 candidatos revistos). Passaram
+  e foram mostrados a ele: PR7569, ARCO1295/TA148 (Vernissage Pinheiros),
+  PLANTA1090 e CLI403 (Sarau Pinheiros), ZI279874 (Vitá), ARCO1173 (Jardim
+  Leopoldina Parque Clube), ECLAT162 (Domna Pompéia) e VK212, que entrou na página.
+  Sem resposta ainda sobre os outros. O ZI295168 é provavelmente a Rua Faustolo, 766.
 - **Rua Faustolo, 766** (VivaReal 2913704422, 118 m², 3 suítes, 3 vagas,
   R$ 2,0 mi): ele quis ver antes de eu descartar por causa do Bairro Siciliano.
   Sem resposta ainda.
