@@ -577,11 +577,11 @@ registrado.
   (Prabitar) é um terceiro anúncio dela e virou `link3`. O QuintoAndar 895627218
   (143 m², 4º–7º andar, R$ 2,43 mi, cond R$ 2.200) é outra unidade do Riservato, só
   com 15 fotos: procurei em 24/09 nos 15 anúncios de 143 m² da rua no VivaReal e na
-  web e não achei outro anúncio dela.
+  web e não achei outro anúncio dela. Entrou na página em 24/09 para avaliação.
 - **Via Condoti no QuintoAndar (894729340, 145 m², 2 suítes, R$ 1,95 mi)** é
   provavelmente a Tonelero 239 (Maramores AP2442). Confirmar pelas fotos e virar `link2`.
 - **Coriolano 1642 saiu do ar em 24/09** (descartado no estado publicado, versão
-  `2026-09-24-1`). Ativos agora: 18 (entraram Casa das Caldeiras, Riservato, Helbor True Perdizes e Vila Nova Leopoldina II).
+  `2026-09-24-1`). Ativos agora: 19 (entraram Casa das Caldeiras, Riservato, Helbor True Perdizes, Vila Nova Leopoldina II e o segundo Riservato).
 - **Pilar não foi varrida em 24/09** (a varredura profunda foi na noite de 23/09).
 
 ## Estado inicial (2026-08-29, histórico)
