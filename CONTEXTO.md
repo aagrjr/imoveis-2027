@@ -431,6 +431,14 @@ e descartados) e a lista de recusados logo abaixo. Na prática:
 Qualquer coisa fora dessas duas listas é novidade de verdade.
 
 Recusados sem virar linha na página (cruze com eles também):
+- **Ignorados em 24/09/2026** (mostrados em 23/09, ele mandou deixar de lado; não
+  trazer de volta): Pilar PR7569 (Scena, Rua Filipinas, 327, 122 m², R$ 1,89 mi),
+  ARCO1295 e TA148 (Vernissage Pinheiros, Rua Cardeal Arcoverde, 121 m², ~R$ 2,0 mi),
+  PLANTA1090 e CLI403 (Sarau Pinheiros, 120 m², R$ 2,15 / 2,05 mi), ZI279874 (Vitá,
+  Rua Guaipá, 129 m², 4 quartos, R$ 1,995 mi), ARCO940 (Vitá, R$ 2,05 mi, condomínio
+  suspeito de R$ 200), ARCO1173 (Jardim Leopoldina Parque Clube, Av. Mofarrej, 275,
+  121 m², R$ 1,75 mi), ECLAT162 (Domna Pompéia, 120 m², R$ 1,78 mi) e a **Rua
+  Faustolo, 766** (VivaReal 2913704422; Pilar ZI295168 é provavelmente a mesma).
 - **Scena Alto da Lapa, Rua Filipinas, 327** (Vila Ipojuca, 2018): a unidade de
   121 m², 3 suítes, 3 vagas, R$ 2,10 mi aparece com **dois códigos na Pilar,
   AEI2602 e LEF45174**. Mandada em 21/09 e de novo em 23/09; ele reclamou que "sempre
@@ -531,18 +539,10 @@ registrado.
 **Uma visita registrada:** Ponta Porã 710, descartada depois dela ("apartamento
 ótimo, mas o condomínio é muito antigo").
 
-### Em aberto (23/09/2026)
+### Em aberto
 
-- **Triagem da Pilar concluída em 23/09/2026** (59 candidatos revistos). Passaram
-  e foram mostrados a ele: PR7569, ARCO1295/TA148 (Vernissage Pinheiros),
-  PLANTA1090 e CLI403 (Sarau Pinheiros), ZI279874 (Vitá), ARCO1173 (Jardim
-  Leopoldina Parque Clube), ECLAT162 (Domna Pompéia) e VK212, que entrou na página.
-  Sem resposta ainda sobre os outros. O ZI295168 é provavelmente a Rua Faustolo, 766.
-- **Rua Faustolo, 766** (VivaReal 2913704422, 118 m², 3 suítes, 3 vagas,
-  R$ 2,0 mi): ele quis ver antes de eu descartar por causa do Bairro Siciliano.
-  Sem resposta ainda.
-- **Condomínio do ARCO940** (Vitá, R$ 2,05 mi): o cadastro da Pilar diz R$ 200,
-  provável erro. Confirmar antes de adicionar.
+Nada. Em 24/09/2026 ele mandou ignorar todas as pendências (ver os recusados de
+23/09 na seção de "tem algo novo?").
 
 ## Estado inicial (2026-08-29, histórico)
 
