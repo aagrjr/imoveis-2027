@@ -566,7 +566,8 @@ registrado.
   que está ativo como revisado (ele lembrava como descartado); a linha ganhou endereço,
   prédio e `link2`, com `id: axs827-133` para manter o estado. Helbor True Perdizes
   (QuintoAndar 895228969) também entrou. Sem resposta ainda:
-  QuintoAndar 895287289 (outra unidade do Atelier Aquarela), 895694063 (Reserva Alto da Lapa) e 895626245 (Vila Nova Leopoldina II).
+  QuintoAndar 895287289 (outra unidade do Atelier Aquarela) e 895694063 (Reserva Alto da Lapa). A Vila Nova Leopoldina II
+  (QuintoAndar 895626245, `id: vnl2-qa895626245`) também entrou.
 - **Rua Camândulas = Riservato Alto da Lapa, nº 112, Rossi, 2009.** O VivaReal
   2913927469 (AP0079, Bellavia, 147 m², 25º andar, R$ 2,05 mi, 14 fotos) é a mesma
   unidade do QuintoAndar 895006981 (143 m², 3 suítes, 2 vagas, 24º–27º andar,
@@ -576,7 +577,7 @@ registrado.
 - **Via Condoti no QuintoAndar (894729340, 145 m², 2 suítes, R$ 1,95 mi)** é
   provavelmente a Tonelero 239 (Maramores AP2442). Confirmar pelas fotos e virar `link2`.
 - **Coriolano 1642 saiu do ar em 24/09** (descartado no estado publicado, versão
-  `2026-09-24-1`). Ativos agora: 17 (entraram Casa das Caldeiras, Riservato e Helbor True Perdizes).
+  `2026-09-24-1`). Ativos agora: 18 (entraram Casa das Caldeiras, Riservato, Helbor True Perdizes e Vila Nova Leopoldina II).
 - **Pilar não foi varrida em 24/09** (a varredura profunda foi na noite de 23/09).
 
 ## Estado inicial (2026-08-29, histórico)
