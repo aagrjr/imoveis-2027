@@ -558,22 +558,25 @@ registrado.
 
 ### Em aberto
 
-- **Mostrados em 24/09/2026, sem resposta:** QuintoAndar 894545710 (Mark, Rua
-  Maracanã, 121, 2018), 895567050 e 895287289 (Atelier Aquarela, Rua Faustolo, 1450,
-  2011), 895557859 (Casa das Caldeiras, Av. Francisco Matarazzo, 1850, 2013),
-  895228969 (Helbor True Perdizes, Rua Iperoig, 858, 2012), 895694063 (Reserva Alto
-  da Lapa, Rua Sacadura Cabral, 160, 2014), 895626245 (Vila Nova Leopoldina II) e
-  VivaReal 2913927469 (Rua Camândulas, 147 m², ano desconhecido).
+- **Resposta de 24/09/2026 aos mostrados do dia:** entraram na página a Casa das
+  Caldeiras (QuintoAndar 895557859) e o Riservato (Rua Camândulas, 112: VivaReal
+  2913927469 + QuintoAndar 895006981). O **Mark (QuintoAndar 894545710) é o Pilar
+  CCMG047**, já descartado ("tamanho dos quartos", segundo ele); virou `link2` da
+  linha descartada. O **Atelier Aquarela (QuintoAndar 895567050) é o Pilar AXS827**,
+  que está ativo como revisado (ele lembrava como descartado); a linha ganhou endereço,
+  prédio e `link2`, com `id: axs827-133` para manter o estado. Sem resposta ainda:
+  QuintoAndar 895287289 (outra unidade do Atelier Aquarela), 895228969 (Helbor True
+  Perdizes), 895694063 (Reserva Alto da Lapa) e 895626245 (Vila Nova Leopoldina II).
 - **Rua Camândulas = Riservato Alto da Lapa, nº 112, Rossi, 2009.** O VivaReal
   2913927469 (AP0079, Bellavia, 147 m², 25º andar, R$ 2,05 mi, 14 fotos) é a mesma
   unidade do QuintoAndar 895006981 (143 m², 3 suítes, 2 vagas, 24º–27º andar,
   R$ 2,13 mi, cond R$ 1.900 + IPTU R$ 800, 25 fotos, publicado em 09/2025):
   confirmado pelas fotos (mesma mesa redonda, pendente e quarto azul com lambri).
-  Se entrar na página, é uma linha só com `link2`.
+  Entrou na página em 24/09 como uma linha só, com `link2`.
 - **Via Condoti no QuintoAndar (894729340, 145 m², 2 suítes, R$ 1,95 mi)** é
   provavelmente a Tonelero 239 (Maramores AP2442). Confirmar pelas fotos e virar `link2`.
 - **Coriolano 1642 saiu do ar em 24/09** (descartado no estado publicado, versão
-  `2026-09-24-1`). Ativos agora: 14.
+  `2026-09-24-1`). Ativos agora: 16 (entraram Casa das Caldeiras e Riservato).
 - **Pilar não foi varrida em 24/09** (a varredura profunda foi na noite de 23/09).
 
 ## Estado inicial (2026-08-29, histórico)
