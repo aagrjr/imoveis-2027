@@ -202,6 +202,21 @@ ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
   12 primeiros (link, m², quartos, rua, preço), sem browser. O `curl` da página de
   anúncio às vezes vem sem fotos; aí abra no browser e colete
   `original<id>-*.jpg` do `innerHTML`, servidas por `/img/med/`.
+  **Varredura completa do QuintoAndar (24/09/2026).** O caminho
+  `/comprar/imovel/<bairro>-sao-paulo-sp-brasil/apartamento/3-quartos/novos-ou-reformados`
+  filtra 3+ quartos pela URL, e a lista **não é virtualizada nessa rota: o botão "Ver
+  mais" (texto exato) carrega +12 por clique** até acabar (~11 cliques; Perdizes foi a
+  29). Colha `a[href*="/imovel/"]` subindo até o ancestral com "R$" e filtre preço,
+  m² e "Condo. + IPTU" no próprio navegador (o site bloqueia `fetch` para localhost e
+  a ordenação "Mais recentes" não vira URL). As imagens dos cards só carregam quando
+  aparecem na tela, então as fotos vêm da página de detalhe por `curl`:
+  `__NEXT_DATA__` → `props.pageProps.initialState.house.houseInfo` traz `salePrice`,
+  `area`, `suites`, `parkingSpaces`, `condoPrice`, `iptu` (mensal), `condominium.name`,
+  `constructionYear` (quase sempre vazio), `rangeFloor`, `lastPublishedDate` e
+  `photos` (servir por `/img/med/<nome>`). Até 23/09 a gente só via os ~12 primeiros
+  por bairro: a primeira varredura completa achou 124 inéditos na faixa.
+- **VivaReal, fotos:** na página do anúncio todas as imagens têm o mesmo nome de
+  arquivo; o que distingue é o hash (`/img/vr-listing/<hash>/...`). Deduplique pelo hash.
 - **Pilar Homes** — a busca vem renderizada do servidor: `curl` e um split em
   `data-test-id="property-card"` dão código, preço, m², quartos e vagas dos 12 de
   cada bairro, sem browser (testado em 2026-09-14). Tem exclusivos e off-market
@@ -431,6 +446,8 @@ e descartados) e a lista de recusados logo abaixo. Na prática:
 Qualquer coisa fora dessas duas listas é novidade de verdade.
 
 Recusados sem virar linha na página (cruze com eles também):
+- **QuintoAndar triados por foto/ano/localização em 24/09/2026** (não mostrar de novo):
+  895740604, 895725309, 895721112, 895701510, 895700558, 895691320, 895688485, 895676880, 895673601, 895672700, 895662777, 895662516, 895654743, 895653541, 895652061, 895648170, 895647629, 895646909, 895646015, 895641184, 895637690, 895637047, 895635892, 895635348, 895635250, 895623787, 895620952, 895619995, 895619070, 895618800, 895577943, 895574028, 895573245, 895567099, 895566198, 895563352, 895563145, 895563079, 895560053, 895554278, 895536301, 895535873, 895516979, 895495727, 895486849, 895476354, 895474752, 895473782, 895468869, 895463410, 895461514, 895460398, 895440699, 895433318, 895433119, 895413129, 895397641, 895391156, 895388045, 895382030, 895376444, 895359107, 895353667, 895340073, 895323470, 895315230, 895274745, 895271221, 895264798, 895264055, 895252216, 895228937, 895171133, 895149919, 895140188, 895135147, 895129214, 895115306, 895094192, 895088584, 895069985, 895058502, 895045087, 895042508, 895038387, 894959062, 894953424, 894928432, 894923286, 894917462, 894898851, 894816391, 894774588, 894762486, 894729340, 894710186, 894667976, 894667299, 894652165, 894640780, 894541186, 894536964, 894475285, 894398969, 894300397, 894253130, 894024640, 893896215, 893787044, 893785651, 893734050, 893726693, 893573782, 893493281, 893370076, 893217549, 893078516.
 - **Ignorados em 24/09/2026** (mostrados em 23/09, ele mandou deixar de lado; não
   trazer de volta): Pilar PR7569 (Scena, Rua Filipinas, 327, 122 m², R$ 1,89 mi),
   ARCO1295 e TA148 (Vernissage Pinheiros, Rua Cardeal Arcoverde, 121 m², ~R$ 2,0 mi),
@@ -541,8 +558,17 @@ registrado.
 
 ### Em aberto
 
-Nada. Em 24/09/2026 ele mandou ignorar todas as pendências (ver os recusados de
-23/09 na seção de "tem algo novo?").
+- **Mostrados em 24/09/2026, sem resposta:** QuintoAndar 894545710 (Mark, Rua
+  Maracanã, 121, 2018), 895567050 e 895287289 (Atelier Aquarela, Rua Faustolo, 1450,
+  2011), 895557859 (Casa das Caldeiras, Av. Francisco Matarazzo, 1850, 2013),
+  895228969 (Helbor True Perdizes, Rua Iperoig, 858, 2012), 895694063 (Reserva Alto
+  da Lapa, Rua Sacadura Cabral, 160, 2014), 895626245 (Vila Nova Leopoldina II) e
+  VivaReal 2913927469 (Rua Camândulas, 147 m², ano desconhecido).
+- **Via Condoti no QuintoAndar (894729340, 145 m², 2 suítes, R$ 1,95 mi)** é
+  provavelmente a Tonelero 239 (Maramores AP2442). Confirmar pelas fotos e virar `link2`.
+- **Coriolano 1642 saiu do ar em 24/09** (descartado no estado publicado, versão
+  `2026-09-24-1`). Ativos agora: 14.
+- **Pilar não foi varrida em 24/09** (a varredura profunda foi na noite de 23/09).
 
 ## Estado inicial (2026-08-29, histórico)
 
