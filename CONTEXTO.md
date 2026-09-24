@@ -510,17 +510,23 @@ order-dependent e que o id é a chave do estado do usuário.
 
 ## Estado em 2026-09-23
 
-**56 linhas: 21 ativos e 35 descartados.** 6 favoritos, dos quais 2 ativos
-(Presidente Antônio Cândido e Tonelero 239) e 4 já descartados — a estrela fica
-de propósito. 10 ativos estão como `revisado`; o resto segue em `a-visitar`.
+**58 linhas: 15 ativos e 43 descartados** (estado publicado em 23/09/2026, versão
+`2026-09-23-1`). 6 favoritos, dos quais 2 ativos (Presidente Antônio Cândido e
+Tonelero 239) e 4 já descartados — a estrela fica de propósito. **Todos os 15
+ativos estão como `revisado`**: o filtro "a revisar" está vazio.
 
-Ativos, do mais caro ao mais barato: Carlos Weber 663 (R$ 2,77 mi), Mofarrej 706
-(2,40), Dr. José Elias 227 (2,40 / 2,33 / 2,10 — três unidades do Pátio das Artes),
-Barão do Bananal CVIA1774 (2,39), Barão do Bananal 305 (2,30), Rua Camilo 556
-(2,30), Mofarrej 706 (2,20), Rua Roma (2,19), Itapicuru 84 (2,19), São Geraldo 38
-(2,10), Presidente Antônio Cândido ⭐ (2,05), AXS827 (2,00), Bartira 193 (2,00),
-Carlos Weber 87 (1,98), Tonelero 239 ⭐ (1,95), Passo da Pátria 1407 (1,87),
-Coriolano 1642 (1,85), Carlos Weber 535 (1,80) e Croata 169 (1,75).
+Ativos, do mais caro ao mais barato: Mofarrej 706 (R$ 2,40), Dr. José Elias 227
+(2,40 / 2,33 — duas unidades do Pátio das Artes), Barão do Bananal CVIA1774 (2,39),
+Barão do Bananal 305 (2,30), Rua Camilo 556 (2,30), Mofarrej 706 (2,20), Rua Roma
+(2,19), Itapicuru 84 (2,19), Presidente Antônio Cândido ⭐ (2,05), AXS827 (2,00),
+Carlos Weber 87 (1,98), Tonelero 239 ⭐ (1,95), Coriolano 1642 (1,85) e Carlos
+Weber 535 (1,80).
+
+Descartados em 23/09 pelo link dele: Carlos Weber 663, José Elias 227 (3ª
+unidade, "se gostar muito do prédio vale considerar depois"), São Geraldo 38
+(Jazz Perdizes), Bartira 193, Passo da Pátria 1407, Croata 169, Rua Bergamota
+(ZI293585) e o **VK212 (Martese)**, descartado logo depois de entrar, sem motivo
+registrado.
 
 **Uma visita registrada:** Ponta Porã 710, descartada depois dela ("apartamento
 ótimo, mas o condomínio é muito antigo").
@@ -535,8 +541,6 @@ Coriolano 1642 (1,85), Carlos Weber 535 (1,80) e Croata 169 (1,75).
 - **Rua Faustolo, 766** (VivaReal 2913704422, 118 m², 3 suítes, 3 vagas,
   R$ 2,0 mi): ele quis ver antes de eu descartar por causa do Bairro Siciliano.
   Sem resposta ainda.
-- **Ano do Tower Hills** (Rua Croata, 169): nenhuma fonte publica. Ele vai
-  perguntar à corretora (Carla).
 - **Condomínio do ARCO940** (Vitá, R$ 2,05 mi): o cadastro da Pilar diz R$ 200,
   provável erro. Confirmar antes de adicionar.
 
