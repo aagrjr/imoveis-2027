@@ -564,6 +564,12 @@ registrado.
   895228969 (Helbor True Perdizes, Rua Iperoig, 858, 2012), 895694063 (Reserva Alto
   da Lapa, Rua Sacadura Cabral, 160, 2014), 895626245 (Vila Nova Leopoldina II) e
   VivaReal 2913927469 (Rua Camândulas, 147 m², ano desconhecido).
+- **Rua Camândulas = Riservato Alto da Lapa, nº 112, Rossi, 2009.** O VivaReal
+  2913927469 (AP0079, Bellavia, 147 m², 25º andar, R$ 2,05 mi, 14 fotos) é a mesma
+  unidade do QuintoAndar 895006981 (143 m², 3 suítes, 2 vagas, 24º–27º andar,
+  R$ 2,13 mi, cond R$ 1.900 + IPTU R$ 800, 25 fotos, publicado em 09/2025):
+  confirmado pelas fotos (mesma mesa redonda, pendente e quarto azul com lambri).
+  Se entrar na página, é uma linha só com `link2`.
 - **Via Condoti no QuintoAndar (894729340, 145 m², 2 suítes, R$ 1,95 mi)** é
   provavelmente a Tonelero 239 (Maramores AP2442). Confirmar pelas fotos e virar `link2`.
 - **Coriolano 1642 saiu do ar em 24/09** (descartado no estado publicado, versão
