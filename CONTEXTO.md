@@ -619,6 +619,13 @@ registrado.
 
 ### Em aberto
 
+- **QuintoAndar 895304182** (Scena Alto da Lapa, Rua Mário Whately, 383; 122 m², 3 suítes,
+  2 vagas, 4º a 7º andar, R$ 1,755 mi, cond. R$ 1.500 + IPTU R$ 1.000; no ar desde 25/09): ele pediu
+  outro anúncio porque as fotos confundem (só ~9 das 44 são da unidade: sala com tapete
+  colorido, cozinha de marcenaria azul, quarto com cabeceira ripada, banheiro de madeira; o resto
+  é área comum). Nenhum outro anúncio encontrado em 25/09: não é Pilar PR7569, AEI2602/LEF45174
+  nem ZI288828 (vazio, branco), nem os VivaReal de 122 m² da rua (2575744605, 2879598521,
+  2870987312, 2873712076, 2884495420, 2881220782, 2884795810). Aguardando se entra na página.
 - **Mostrados em 25/09 na revisão do mensal, sem resposta:** Pilar ZI288930, CCI839 (na página desde 25/09;
   Rua Coronel Melo Oliveira, 1998),
   MO2775 (= QuintoAndar 895548362, Arua, Rua Cajaíba, 335; na página desde 25/09 com os dois links), ZI292401 (= QuintoAndar 895581949, Botticelli,
