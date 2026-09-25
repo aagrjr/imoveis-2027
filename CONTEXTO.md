@@ -619,8 +619,10 @@ registrado.
 
 ### Em aberto
 
-- **Mostrados em 25/09 na revisão do mensal, sem resposta:** Pilar ZI288930, CCI839,
-  MO2775 (= QuintoAndar 895548362, Arua), ZI292401, LEF41956, FOX27238, ZI282648;
+- **Mostrados em 25/09 na revisão do mensal, sem resposta:** Pilar ZI288930, CCI839 (na página desde 25/09;
+  Rua Coronel Melo Oliveira, 1998),
+  MO2775 (= QuintoAndar 895548362, Arua), ZI292401 (= QuintoAndar 895581949, Botticelli,
+  mesma unidade pelas fotos; virou `link2` do card), LEF41956, FOX27238, ZI282648;
   QuintoAndar 895432515 (Jerivás; = Pilar H2U253, mesmas fotos, R$ 1,95 mi no QuintoAndar e
   R$ 2,05 mi na Pilar; entrou na página em 25/09 com os dois links), 895368369 (Reserva Caminhos da Lapa), 895700504
   (Lumiere), 895581949 (Botticelli, Rua Apinajés, 640, 2008) e 895563348 (Residenziale Amalfi, Rua Princesa Leopoldina, 595, 2004), os dois na página desde 25/09, 895152224
