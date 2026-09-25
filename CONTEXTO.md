@@ -475,6 +475,15 @@ e descartados) e a lista de recusados logo abaixo. Na prática:
 Qualquer coisa fora dessas duas listas é novidade de verdade.
 
 Recusados sem virar linha na página (cruze com eles também):
+- **Sondagem Jaguaré / Parque Continental / Butantã (25/09/2026)**, a pedido dele, sem
+  entrar na busca regular. Parque Continental não tem nada na faixa. Recusados: QuintoAndar
+  895678002 (Rua Inácio Manuel Álvares, Butantã, 171 m², R$ 2,0 mi): "muito longe da
+  região"; 895443862 (Grand Metropolitan Butantã, Rua Sapetuba, 430, 120 m², R$ 2,40 mi):
+  "o metro quadrado não faz nenhum sentido" (R$ 20 mil/m², contra a mediana de ~R$ 15 mil
+  da página). Mostrados sem resposta: Boulevard São Francisco (Rua Otávio de Morais, 156,
+  Cidade São Francisco, 2009), coberturas de 233–266 m² a R$ 2,0–2,2 mi (QuintoAndar
+  893906329, 895042553, 894354260). **R$/m² bem acima da mediana da página derruba**:
+  confira antes de mostrar.
 - **Piazza Navona, Rua Belmonte, 360** (Vila Leopoldina, 1997, 20 unidades de 158 m²,
   mensal ~R$ 3.900): ele trouxe o Flow FL1766122 (3 suítes, R$ 1,55 mi) em 25/09 e
   mandou deixar de fora. Outras unidades do prédio, também fora: VivaReal 2757932617
