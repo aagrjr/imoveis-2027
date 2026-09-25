@@ -623,7 +623,7 @@ registrado.
   MO2775 (= QuintoAndar 895548362, Arua), ZI292401, LEF41956, FOX27238, ZI282648;
   QuintoAndar 895432515 (Jerivás; = Pilar H2U253, mesmas fotos, R$ 1,95 mi no QuintoAndar e
   R$ 2,05 mi na Pilar; entrou na página em 25/09 com os dois links), 895368369 (Reserva Caminhos da Lapa), 895700504
-  (Lumiere), 895581949 (Botticelli), 895563348 (Residenziale Amalfi), 895152224
+  (Lumiere), 895581949 (Botticelli, Rua Apinajés, 640, 2008) e 895563348 (Residenziale Amalfi, Rua Princesa Leopoldina, 595, 2004), os dois na página desde 25/09, 895152224
   (Isabella de Aragon), 895684113, 894927461 (Design Perdizes), 895635043; VivaReal
   2913942356. O QuintoAndar 895659214 (Madero, R$ 2,39 mi, 151 m²) é provavelmente o
   CVIA1774 da lista: confirmar pelas fotos e virar `link2`.
