@@ -102,7 +102,12 @@ errados. O alvo é estreito:
   sugestão; ele não estava na tabela e derrubou um candidato já aprovado nas fotos.
   Não há corte definido: 2002 (Presidente Antônio Cândido) segue na lista.
 
-  **Onde achar o ano.** O QuintoAndar traz "Construído em AAAA" na ficha quando
+  **Ano vazio não é ano aceitável.** Em 25/09 o filtro de ano deixou passar tudo que vinha
+sem `launchDate`, e mandei o NRE1460 (Edifício Paula, 1974) sem saber o ano; ele pediu
+para adicionar antes de eu descobrir. Levante o ano de todo candidato **antes** de
+mostrar, sobretudo em Perdizes e Pinheiros, onde o estoque dos anos 70 é grande.
+
+**Onde achar o ano.** O QuintoAndar traz "Construído em AAAA" na ficha quando
   tem o dado, e sempre dá o nome do edifício; o Pilar às vezes cita no texto
   ("Construído em 2012, pela Rossi"); VivaReal e Maramores quase nunca. Quando
   faltar, pesquise o nome do edifício ou `"<rua>, <número>" condomínio ano` — as
@@ -612,7 +617,7 @@ registrado.
   895699692, AEI3735) e a página do condomínio no VivaReal. Ele é diferente do
   895492002, também do 24º–27º (piso de madeira contra porcelanato).
 - **Casa das Caldeiras saiu do ar em 25/09** (QuintoAndar suspenso); descartada no
-  estado publicado, versão `2026-09-25-1`. Ativos: 20 (entraram as duas do Jerivás).
+  estado publicado, versão `2026-09-25-1`. Ativos: 21 (entraram as duas do Jerivás e o Edifício Paula, Rua Apiacás, 387: Pilar NRE1460 = ZI287183, prédio de 1974, adicionado a pedido dele com o ano sinalizado).
 - **Regiões da busca da Pilar:** o link que ele mandou tinha Alto de Pinheiros e
   Sumarezinho e não tinha Alto da Lapa nem Vila Ipojuca. Perguntado em 25/09.
 
