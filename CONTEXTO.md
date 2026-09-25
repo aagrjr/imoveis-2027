@@ -20,6 +20,12 @@ Apartamento para compra em São Paulo, zona oeste. Perfil que emergiu da lista:
   as fotos — vários imóveis foram descartados assim e precisaram ser resgatados.
   No VivaReal isso importa na URL: `vagas=2` no filtro esconde os de 1 vaga
 - **Custo mensal** (condomínio + IPTU) é critério de peso — é a ordenação padrão da página
+  mas **não tem teto** (decidido em 25/09/2026: "eu avalio pelas fotos"). Até 25/09 os
+  scripts cortavam mensal acima de R$ 3.200 sem ele ter pedido — isso eliminou 141 de
+  249 anúncios da Pilar em 25/09 e boa parte do QuintoAndar em 24/09, e teria cortado
+  imóveis que ele aprovou (Presidente Antônio Cândido R$ 4.046, Rua Camilo R$ 4.600).
+  Informe o mensal em toda sugestão, mas não filtre por ele. Os outros parâmetros
+  (faixa de preço, área, quartos, bairros, ano, acabamento) continuam valendo
 
 Não é investimento, é moradia. Não há prazo declarado.
 
