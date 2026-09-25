@@ -163,7 +163,11 @@ explícita e deixe a decisão com ele — foi assim que o La Dolce Vita (Rua Cam
 ruas Nagel 12 e 33 já foram descartadas uma a uma, mas o condomínio não está
 banido). A **Rua Lauriano Fernandes Júnior** e a **Rua Belchior de Azevedo**
 (Podium) continuam sendo corte automático, junto com qualquer MaxHaus — e só eles.
-**Bairro vizinho também não elimina** (ele corrigiu de novo em 23/09/2026, sobre
+**Barra Funda e Água Branca estão fora das próximas buscas** (decidido em 25/09/2026).
+Eu tinha mandado Pateo Barra e Casa das Caldeiras esticando a regra do vizinho; ele vai
+olhar os que já foram mostrados, mas não quer mais nada de lá. Os vizinhos que valem
+são só **Vila Anastácio, Boaçava e Vila Hamburguesa** (confirmado por ele em 25/09),
+sempre com a localização explícita. **Bairro vizinho também não elimina** (ele corrigiu de novo em 23/09/2026, sobre
 Vila Anastácio, Boaçava e Vila Hamburguesa): mande com a localização explícita e
 deixe ele decidir. A Vila Anastácio tinha sido recusada em 01/09 num imóvel
 específico, e eu transformei isso em regra de bairro por conta própria. A **Rua Coriolano**
