@@ -614,8 +614,9 @@ unidade, "se gostar muito do prédio vale considerar depois"), São Geraldo 38
 (ZI293585) e o **VK212 (Martese)**, descartado logo depois de entrar, sem motivo
 registrado.
 
-**Uma visita registrada:** Ponta Porã 710, descartada depois dela ("apartamento
-ótimo, mas o condomínio é muito antigo").
+**Visitas registradas:** Ponta Porã 710, descartada depois dela ("apartamento
+ótimo, mas o condomínio é muito antigo"); Tonelero 239 (Via Condoti, AP2442 + QuintoAndar
+894729340), visitada em 25/09/2026 às 17h: "gostamos", segue na lista como `visitado`.
 
 ### Em aberto
 
