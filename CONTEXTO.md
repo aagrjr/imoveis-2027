@@ -471,6 +471,10 @@ e descartados) e a lista de recusados logo abaixo. Na prática:
 Qualquer coisa fora dessas duas listas é novidade de verdade.
 
 Recusados sem virar linha na página (cruze com eles também):
+- **Piazza Navona, Rua Belmonte, 360** (Vila Leopoldina, 1997, 20 unidades de 158 m²,
+  mensal ~R$ 3.900): ele trouxe o Flow FL1766122 (3 suítes, R$ 1,55 mi) em 25/09 e
+  mandou deixar de fora. Outras unidades do prédio, também fora: VivaReal 2757932617
+  (R$ 1,495 mi) e QuintoAndar 893338796 = VivaReal 2913287934 (R$ 1,6 mi).
 - **Ignorados em 25/09/2026** (mostrados em 24/09 sem resposta; ele mandou deixar de
   lado): QuintoAndar 895287289 (Atelier Aquarela, Rua Faustolo, 1450, 3 vagas,
   R$ 2,15 mi) e 895694063 (Reserva Alto da Lapa, Rua Sacadura Cabral, 160, R$ 1,69 mi).
