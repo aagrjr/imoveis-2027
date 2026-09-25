@@ -605,8 +605,14 @@ registrado.
   2914129567 (este último mandado por engano como "terceira unidade" em 25/09) (R$ 2,13 mi,
   cond R$ 1.900 + IPTU ~R$ 800), confirmado pelas fotos. Riservato 143 m² do 4º–7º
   andar (QuintoAndar 895627218) é outra unidade, sem outro anúncio encontrado.
+- **Resposta de 25/09:** entraram duas unidades do Caminhos da Lapa Jerivás
+  (QuintoAndar 895623821 = Pilar LEF45175, e 894946170). O 895525962 (3 suítes, 3 vagas,
+  R$ 2,149 mi, 24º–27º andar, só 5 fotos) não tem outro anúncio: conferido em 25/09 contra
+  os 6 do Jerivás na Pilar (LEF45175, H2U253, H2U254, AEI4884, AXS1082 = QuintoAndar
+  895699692, AEI3735) e a página do condomínio no VivaReal. Ele é diferente do
+  895492002, também do 24º–27º (piso de madeira contra porcelanato).
 - **Casa das Caldeiras saiu do ar em 25/09** (QuintoAndar suspenso); descartada no
-  estado publicado, versão `2026-09-25-1`. Ativos: 18.
+  estado publicado, versão `2026-09-25-1`. Ativos: 20 (entraram as duas do Jerivás).
 - **Regiões da busca da Pilar:** o link que ele mandou tinha Alto de Pinheiros e
   Sumarezinho e não tinha Alto da Lapa nem Vila Ipojuca. Perguntado em 25/09.
 
