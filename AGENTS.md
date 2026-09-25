@@ -31,6 +31,9 @@ Chaves por imóvel: `fav:<id>`, `status:<id>`, `nota:<id>`, `itens:<id>` e
 - **Descartar não apaga o favorito.** A estrela fica no descartado de propósito.
 - **"revisados"** (23/09/2026) é o complemento de "a revisar": mostra revisado,
   agendado e visitado. Os dois chips se excluem, ligar um desliga o outro.
+- A linha **#totais** (25/09/2026), acima dos filtros, conta a busca inteira: total,
+  disponíveis, descartados, visitados (`visitou:` ou status `visitado`) e agendados
+  (só se houver). Não segue os filtros, ao contrário da faixa de números do cabeçalho.
 - Os filtros do topo são favoritos, a revisar, revisados e descartados; o de descartados
   alterna a lista inteira, e a contagem de favoritos acompanha esse botão. Não há
   mais filtro por bairro (removido em 22/09: a lista toda já é dos bairros certos).
@@ -62,7 +65,7 @@ São opcionais: `id`, `predio`, `ano`, `aprox`, `link2`, `link3`, `foto` e `deta
 - `lat`/`lon` (5 casas) posicionam o pin no mapa, e `aprox: true` marca ponto
   aproximado — pin tracejado, e o "ver mapa" do card abre a coordenada em vez do
   endereço. Sem `lat`, a linha fica sem pin e é listada abaixo do mapa.
-- `detalhes` é texto livre mostrado no card: use para o que não cabe nos campos
+- `detalhes` é texto livre mostrado no card, **sem markdown** (asteriscos aparecem crus): use para o que não cabe nos campos
   (andar, divergência entre corretores, o que confirmar na visita). `add` é a data em
 que o imóvel entrou na lista, `AAAA-MM-DD`, e serve pra saber o que é novidade —
 preencha ao adicionar uma linha e nunca reescreva a dos outros. Quem não tem `add`
