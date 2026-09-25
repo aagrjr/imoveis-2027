@@ -442,6 +442,12 @@ varrer sempre a mesma fonte:
   e as primeiras ~10 são as do imóvel. A busca também traz Vila Madalena e Alto de
   Pinheiros, que ficam de fora.
 
+**Mesmo prédio de um imóvel da lista = comparar as fotos com a linha, sempre.** Em
+25/09 mandei o VivaReal 2914129567 como "terceira unidade do Riservato" porque dizia
+143 m² e a linha diz 147 m²; era a mesma unidade, quarto anúncio dela. Metragem,
+imobiliária e código diferentes não provam unidade diferente: o mesmo apartamento já
+apareceu com 143 e 147 m², R$ 2,05 e 2,13 mi. Só as fotos decidem.
+
 **Antes de mostrar, cruze também com os descartados, não só com os códigos já
 vistos.** Um apartamento descartado volta com código novo, em outra imobiliária ou
 em outro portal. Compare m² + preço + condomínio com as linhas descartadas do
@@ -595,7 +601,8 @@ registrado.
   (QuintoAndar 894545710) = Pilar CCMG047, descartado ("tamanho dos quartos"), virou
   `link2`. Atelier Aquarela (QuintoAndar 895567050) = Pilar AXS827, ativo (`id:
   axs827-133`). Riservato 147 m² (Rua Camândulas, 112; Rossi, 2009): VivaReal
-  2913927469 = QuintoAndar 895006981 = VivaReal 2877473184 = Pilar VK178 (R$ 2,13 mi,
+  2913927469 = QuintoAndar 895006981 = VivaReal 2877473184 = Pilar VK178 = VivaReal
+  2914129567 (este último mandado por engano como "terceira unidade" em 25/09) (R$ 2,13 mi,
   cond R$ 1.900 + IPTU ~R$ 800), confirmado pelas fotos. Riservato 143 m² do 4º–7º
   andar (QuintoAndar 895627218) é outra unidade, sem outro anúncio encontrado.
 - **Casa das Caldeiras saiu do ar em 25/09** (QuintoAndar suspenso); descartada no
