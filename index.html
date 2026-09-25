@@ -162,6 +162,9 @@
   .pin.rev { background: var(--good); }
   .pin.desc { background: #9ca3af; }
   .pin.aprox { border-style: dashed; }
+  .leg { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
+  .leg span { display: inline-flex; align-items: center; gap: 5px; }
+  .leg .pin { position: static; margin: 0; width: 14px; height: 14px; font-size: 9px; cursor: default; box-shadow: none; }
   .mapa-pop { position: absolute; z-index: 5; background: var(--surface); border: 1px solid var(--border);
     border-radius: 8px; padding: 10px 12px; font: 13px -apple-system, sans-serif; max-width: calc(100% - 20px); max-height: 340px;
     display: grid; gap: 12px; grid-template-columns: repeat(var(--n), 240px);
@@ -466,12 +469,16 @@ function mapaHTML(l) {
   const sem = l.filter(a => a.lat == null).map(a => a.endereco);
   return `<div class="mapa"><div class="mapa-zoom"><button data-z="1">+</button><button data-z="-1">&minus;</button></div>
     <div class="mapa-attr">&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></div></div>
-    <div class="sub" style="margin-top:8px">Pin amarelo: favorito &middot; azul: a revisar &middot; verde: revisado &middot; cinza: descartado &middot; borda tracejada: localizacao aproximada &middot; numero: varios anuncios no mesmo predio${
-      sem.length ? ' &middot; sem localizacao: ' + sem.join(', ') : ''}</div>`;
+    <div class="sub leg" style="margin-top:8px">
+      <span><i class="pin fav"></i>favorito</span><span><i class="pin"></i>a revisar</span>
+      <span><i class="pin rev"></i>revisado</span><span><i class="pin desc"></i>descartado</span>
+      <span><i class="pin aprox"></i>localizacao aproximada</span><span><i class="pin">2</i>varios anuncios no mesmo predio</span>
+    </div>${sem.length && !st.desc ? `<div class="sub" style="margin-top:4px">Sem localizacao: ${sem.join(', ')}</div>` : ''}`;
 }
 
 function mapaIniciar(l) {
   const el = document.querySelector('.mapa'), grupos = {};
+  if (!el) return; // o mapa pode ter sido desligado antes do setTimeout rodar
   l.filter(a => a.lat != null).forEach(a => {
     const k = a.lat.toFixed(4) + ',' + a.lon.toFixed(4);
     (grupos[k] = grupos[k] || { lat: a.lat, lon: a.lon, apts: [] }).apts.push(a);
@@ -573,7 +580,7 @@ document.addEventListener('click', e => {
   }
   if (e.target.id === 'chip-desc') { st.desc = !st.desc; e.target.classList.toggle('on'); return render(); }
   if (e.target.id === 'chip-mapa') { st.mapa = !st.mapa; e.target.classList.toggle('on'); return render(); }
-  const pin = e.target.closest('.pin');
+  const pin = e.target.closest('.mapa .pin');
   if (pin) { const i = +pin.dataset.g; mp.aberto = mp.aberto === i ? null : i; return mapaDesenhar(); }
   const zb = e.target.closest('.mapa-zoom button');
   if (zb) return mapaZoom(+zb.dataset.z);
@@ -594,7 +601,7 @@ document.addEventListener('click', e => {
   if (x) { const id = x.closest('.card').dataset.id;
     saveStatus(id, load('status:' + id, 'a-visitar') === 'descartado' ? 'a-visitar' : 'descartado');
     return render(); }
-  const f = e.target.closest('.fav');
+  const f = e.target.closest('.card .fav');
   if (f) { const id = f.closest('.card').dataset.id;
     save('fav:' + id, !load('fav:' + id, false)); return render(); }
 });
