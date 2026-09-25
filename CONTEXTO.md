@@ -456,6 +456,9 @@ e descartados) e a lista de recusados logo abaixo. Na prática:
 Qualquer coisa fora dessas duas listas é novidade de verdade.
 
 Recusados sem virar linha na página (cruze com eles também):
+- **Ignorados em 25/09/2026** (mostrados em 24/09 sem resposta; ele mandou deixar de
+  lado): QuintoAndar 895287289 (Atelier Aquarela, Rua Faustolo, 1450, 3 vagas,
+  R$ 2,15 mi) e 895694063 (Reserva Alto da Lapa, Rua Sacadura Cabral, 160, R$ 1,69 mi).
 - **Triados em 25/09/2026 e não mostrados** (fotos, ano, localização ou rua excluída):
   Pilar ZI286313, ZI276469, CVIA881, ZI295609, ZI260074, AEI263, LAP3948, ZI155843, ZI285303, ZI288471, LEF29478, ZI150566, ECLAT318, ZI277338, ZI273917, LEF29756, ZI293619, ZI279144, ZI278848, ZI142220, ZI294891, ZI287567, ARCO797, LAP3364, AEI2282, ZI292011, ZI272935, ZI163489, IMI1805, ZI287659, ZI286038, ZI273632, AXS1314, CE145, PNS085, OC906, LEF38509, ARCO1393, NK318005, ZI276046, CVIA1697, CVIA2004, ZI142197, SQP2303, ZI286498, ZI293820, ZI289490, ZI278516, ZI295085, VK178, LEF12295, CBH198, PDI17831, ZI283037, ZI293786, LEF4737, HS27270, IEF062, SGI537, AEI530, CVIA1022, AXS557, ZI98659, ZI295047, ZI166776, AXS1474, ZI169560, ZI290199, ZI263705, ZI288973, ZI284419, SOHA517, ZI294363, ZB253, ZI266217, AEI2282, ZI286255, NRE2673, ZI295763;
   QuintoAndar 893259871, 894497775, 895043780, 895420831, 895440538, 895560151, 895561873, 895566229, 895628461, 895634423, 895663484, 895714221, 895716137, 895723201, 895734560, 895737041;
@@ -582,8 +585,6 @@ registrado.
   Rua Tonelero, 149 m², 3 suítes, R$ 1,79 mi), QU987 (Benedito Pinheiros, 2020,
   divisa com Jardins) e, com 1 vaga, ZI293979 (Rua Cayowaá) e NRE1460 = ZI287183
   (Rua Apiacás, 387, mesma unidade em dois códigos).
-- **Ainda sem resposta de 24/09:** QuintoAndar 895287289 (outra unidade do Atelier
-  Aquarela, 3 vagas, R$ 2,15 mi) e 895694063 (Reserva Alto da Lapa).
 - **Via Condoti no QuintoAndar (894729340, 145 m², 2 suítes, R$ 1,95 mi)** é
   provavelmente a Tonelero 239 (Maramores AP2442). Confirmar pelas fotos e virar `link2`.
 - **Anúncios repetidos já resolvidos (24–25/09), para não mostrar de novo:** Mark
