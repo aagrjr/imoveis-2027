@@ -217,6 +217,16 @@ ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
   por bairro: a primeira varredura completa achou 124 inéditos na faixa.
 - **VivaReal, fotos:** na página do anúncio todas as imagens têm o mesmo nome de
   arquivo; o que distingue é o hash (`/img/vr-listing/<hash>/...`). Deduplique pelo hash.
+- **Pilar, rotina diária (desde 25/09/2026, dica dele): uma chamada só, ordenada por data.**
+  `curl` em
+  `https://www.pilarhomes.com.br/venda/imoveis/vila-leopoldina-sao-paulo-sp-brasil/apartamento?sortBy=publication_date&orderBy=desc&minAskingPrice=1550000&maxAskingPrice=2400000&minArea=115&parkingSpots=1&regions=Vila+Leopoldina%2CVila+Romana%2CAlto+da+Lapa%2CVila+Ipojuca%2CPinheiros%2CPerdizes%2CPomp%C3%A9ia%2CVila+Madalena&propertyTypes=cobertura%2Cduplex%2Ccasa-de-condominio&cities=S%C3%A3o+Paulo&states=SP`
+  devolve do servidor os 12 anúncios mais recentes de todos os bairros, já filtrados
+  (preço, área, vaga; `propertyTypes` soma cobertura, duplex e casa de condomínio ao
+  `/apartamento` do caminho). `page=` continua ignorado: se os 12 vierem todos
+  inéditos, rode o mesmo link por bairro (`regions=<um só>`) para ver mais 12 de cada.
+  A varredura completa com "Ver mais" fica só para quando houver atraso. Em 25/09 ela
+  foi feita uma última vez: 530 na faixa, 280 inéditos (Perdizes e Pinheiros nunca
+  tinham sido cobertos inteiros), 80 passaram nos números e 6 nas fotos.
 - **Pilar Homes** — a busca vem renderizada do servidor: `curl` e um split em
   `data-test-id="property-card"` dão código, preço, m², quartos e vagas dos 12 de
   cada bairro, sem browser (testado em 2026-09-14). Tem exclusivos e off-market
@@ -446,6 +456,10 @@ e descartados) e a lista de recusados logo abaixo. Na prática:
 Qualquer coisa fora dessas duas listas é novidade de verdade.
 
 Recusados sem virar linha na página (cruze com eles também):
+- **Triados em 25/09/2026 e não mostrados** (fotos, ano, localização ou rua excluída):
+  Pilar ZI286313, ZI276469, CVIA881, ZI295609, ZI260074, AEI263, LAP3948, ZI155843, ZI285303, ZI288471, LEF29478, ZI150566, ECLAT318, ZI277338, ZI273917, LEF29756, ZI293619, ZI279144, ZI278848, ZI142220, ZI294891, ZI287567, ARCO797, LAP3364, AEI2282, ZI292011, ZI272935, ZI163489, IMI1805, ZI287659, ZI286038, ZI273632, AXS1314, CE145, PNS085, OC906, LEF38509, ARCO1393, NK318005, ZI276046, CVIA1697, CVIA2004, ZI142197, SQP2303, ZI286498, ZI293820, ZI289490, ZI278516, ZI295085, VK178, LEF12295, CBH198, PDI17831, ZI283037, ZI293786, LEF4737, HS27270, IEF062, SGI537, AEI530, CVIA1022, AXS557, ZI98659, ZI295047, ZI166776, AXS1474, ZI169560, ZI290199, ZI263705, ZI288973, ZI284419, SOHA517, ZI294363, ZB253, ZI266217, AEI2282, ZI286255, NRE2673, ZI295763;
+  QuintoAndar 893259871, 894497775, 895043780, 895420831, 895440538, 895560151, 895561873, 895566229, 895628461, 895634423, 895663484, 895714221, 895716137, 895723201, 895734560, 895737041;
+  VivaReal 2914183734, 2914202816, 2914104054, 2914157734, 2914108851, 2914107341, 2914201053, 2914193399, 2914159734.
 - **QuintoAndar triados por foto/ano/localização em 24/09/2026** (não mostrar de novo):
   895740604, 895725309, 895721112, 895701510, 895700558, 895691320, 895688485, 895676880, 895673601, 895672700, 895662777, 895662516, 895654743, 895653541, 895652061, 895648170, 895647629, 895646909, 895646015, 895641184, 895637690, 895637047, 895635892, 895635348, 895635250, 895623787, 895620952, 895619995, 895619070, 895618800, 895577943, 895574028, 895573245, 895567099, 895566198, 895563352, 895563145, 895563079, 895560053, 895554278, 895536301, 895535873, 895516979, 895495727, 895486849, 895476354, 895474752, 895473782, 895468869, 895463410, 895461514, 895460398, 895440699, 895433318, 895433119, 895413129, 895397641, 895391156, 895388045, 895382030, 895376444, 895359107, 895353667, 895340073, 895323470, 895315230, 895274745, 895271221, 895264798, 895264055, 895252216, 895228937, 895171133, 895149919, 895140188, 895135147, 895129214, 895115306, 895094192, 895088584, 895069985, 895058502, 895045087, 895042508, 895038387, 894959062, 894953424, 894928432, 894923286, 894917462, 894898851, 894816391, 894774588, 894762486, 894729340, 894710186, 894667976, 894667299, 894652165, 894640780, 894541186, 894536964, 894475285, 894398969, 894300397, 894253130, 894024640, 893896215, 893787044, 893785651, 893734050, 893726693, 893573782, 893493281, 893370076, 893217549, 893078516.
 - **Ignorados em 24/09/2026** (mostrados em 23/09, ele mandou deixar de lado; não
@@ -558,31 +572,31 @@ registrado.
 
 ### Em aberto
 
-- **Resposta de 24/09/2026 aos mostrados do dia:** entraram na página a Casa das
-  Caldeiras (QuintoAndar 895557859) e o Riservato (Rua Camândulas, 112: VivaReal
-  2913927469 + QuintoAndar 895006981). O **Mark (QuintoAndar 894545710) é o Pilar
-  CCMG047**, já descartado ("tamanho dos quartos", segundo ele); virou `link2` da
-  linha descartada. O **Atelier Aquarela (QuintoAndar 895567050) é o Pilar AXS827**,
-  que está ativo como revisado (ele lembrava como descartado); a linha ganhou endereço,
-  prédio e `link2`, com `id: axs827-133` para manter o estado. Helbor True Perdizes
-  (QuintoAndar 895228969) também entrou. Sem resposta ainda:
-  QuintoAndar 895287289 (outra unidade do Atelier Aquarela) e 895694063 (Reserva Alto da Lapa). A Vila Nova Leopoldina II
-  (QuintoAndar 895626245, `id: vnl2-qa895626245`) também entrou.
-- **Rua Camândulas = Riservato Alto da Lapa, nº 112, Rossi, 2009.** O VivaReal
-  2913927469 (AP0079, Bellavia, 147 m², 25º andar, R$ 2,05 mi, 14 fotos) é a mesma
-  unidade do QuintoAndar 895006981 (143 m², 3 suítes, 2 vagas, 24º–27º andar,
-  R$ 2,13 mi, cond R$ 1.900 + IPTU R$ 800, 25 fotos, publicado em 09/2025):
-  confirmado pelas fotos (mesma mesa redonda, pendente e quarto azul com lambri).
-  Entrou na página em 24/09 como uma linha só, com `link2`. O VivaReal 2877473184
-  (Prabitar) é um terceiro anúncio dela e virou `link3`. O QuintoAndar 895627218
-  (143 m², 4º–7º andar, R$ 2,43 mi, cond R$ 2.200) é outra unidade do Riservato, só
-  com 15 fotos: procurei em 24/09 nos 15 anúncios de 143 m² da rua no VivaReal e na
-  web e não achei outro anúncio dela. Entrou na página em 24/09 para avaliação.
+- **Mostrados em 25/09/2026, sem resposta:** QuintoAndar 893560573 e 895675514 (Pateo
+  Barra, Rua Norma Pieruccini Giannotti, 665, Barra Funda, 2016); 894946170,
+  895461052, 895492002, 895525962, 895623821 e 895699692 (Caminhos da Lapa Jerivás,
+  Rua Fortunato Ferraz, 250, ~2020 pela Loft); VivaReal 2914129567 (Riservato, 143 m²,
+  R$ 2,05 mi, terceira unidade do prédio) e 2914170335 (Rua Barão do Bananal, 123 m²,
+  3 vagas, R$ 2,16 mi: outra unidade que não a Barão 305 da lista, pelas fotos); Pilar
+  ZI293158 (Perdizes, Cardoso de Almeida provável, 157 m²), SEP21192 (Via Condoti,
+  Rua Tonelero, 149 m², 3 suítes, R$ 1,79 mi), QU987 (Benedito Pinheiros, 2020,
+  divisa com Jardins) e, com 1 vaga, ZI293979 (Rua Cayowaá) e NRE1460 = ZI287183
+  (Rua Apiacás, 387, mesma unidade em dois códigos).
+- **Ainda sem resposta de 24/09:** QuintoAndar 895287289 (outra unidade do Atelier
+  Aquarela, 3 vagas, R$ 2,15 mi) e 895694063 (Reserva Alto da Lapa).
 - **Via Condoti no QuintoAndar (894729340, 145 m², 2 suítes, R$ 1,95 mi)** é
   provavelmente a Tonelero 239 (Maramores AP2442). Confirmar pelas fotos e virar `link2`.
-- **Coriolano 1642 saiu do ar em 24/09** (descartado no estado publicado, versão
-  `2026-09-24-1`). Ativos agora: 19 (entraram Casa das Caldeiras, Riservato, Helbor True Perdizes, Vila Nova Leopoldina II e o segundo Riservato).
-- **Pilar não foi varrida em 24/09** (a varredura profunda foi na noite de 23/09).
+- **Anúncios repetidos já resolvidos (24–25/09), para não mostrar de novo:** Mark
+  (QuintoAndar 894545710) = Pilar CCMG047, descartado ("tamanho dos quartos"), virou
+  `link2`. Atelier Aquarela (QuintoAndar 895567050) = Pilar AXS827, ativo (`id:
+  axs827-133`). Riservato 147 m² (Rua Camândulas, 112; Rossi, 2009): VivaReal
+  2913927469 = QuintoAndar 895006981 = VivaReal 2877473184 = Pilar VK178 (R$ 2,13 mi,
+  cond R$ 1.900 + IPTU ~R$ 800), confirmado pelas fotos. Riservato 143 m² do 4º–7º
+  andar (QuintoAndar 895627218) é outra unidade, sem outro anúncio encontrado.
+- **Casa das Caldeiras saiu do ar em 25/09** (QuintoAndar suspenso); descartada no
+  estado publicado, versão `2026-09-25-1`. Ativos: 18.
+- **Regiões da busca da Pilar:** o link que ele mandou tinha Alto de Pinheiros e
+  Sumarezinho e não tinha Alto da Lapa nem Vila Ipojuca. Perguntado em 25/09.
 
 ## Estado inicial (2026-08-29, histórico)
 
