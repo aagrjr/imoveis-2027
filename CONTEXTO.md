@@ -621,7 +621,8 @@ registrado.
 
 - **Mostrados em 25/09 na revisão do mensal, sem resposta:** Pilar ZI288930, CCI839,
   MO2775 (= QuintoAndar 895548362, Arua), ZI292401, LEF41956, FOX27238, ZI282648;
-  QuintoAndar 895432515 (Jerivás), 895368369 (Reserva Caminhos da Lapa), 895700504
+  QuintoAndar 895432515 (Jerivás; = Pilar H2U253, mesmas fotos, R$ 1,95 mi no QuintoAndar e
+  R$ 2,05 mi na Pilar; não está na página), 895368369 (Reserva Caminhos da Lapa), 895700504
   (Lumiere), 895581949 (Botticelli), 895563348 (Residenziale Amalfi), 895152224
   (Isabella de Aragon), 895684113, 894927461 (Design Perdizes), 895635043; VivaReal
   2913942356. O QuintoAndar 895659214 (Madero, R$ 2,39 mi, 151 m²) é provavelmente o
