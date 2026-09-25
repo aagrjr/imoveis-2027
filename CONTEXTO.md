@@ -600,8 +600,8 @@ registrado.
   Rua Tonelero, 149 m², 3 suítes, R$ 1,79 mi), QU987 (Benedito Pinheiros, 2020,
   divisa com Jardins) e, com 1 vaga, ZI293979 (Rua Cayowaá) e NRE1460 = ZI287183
   (Rua Apiacás, 387, mesma unidade em dois códigos).
-- **Via Condoti no QuintoAndar (894729340, 145 m², 2 suítes, R$ 1,95 mi)** é
-  provavelmente a Tonelero 239 (Maramores AP2442). Confirmar pelas fotos e virar `link2`.
+- **Via Condoti no QuintoAndar (894729340) = Tonelero 239 (Maramores AP2442)**,
+  confirmado pelas fotos em 25/09 e ligado como `link2`.
 - **Anúncios repetidos já resolvidos (24–25/09), para não mostrar de novo:** Mark
   (QuintoAndar 894545710) = Pilar CCMG047, descartado ("tamanho dos quartos"), virou
   `link2`. Atelier Aquarela (QuintoAndar 895567050) = Pilar AXS827, ativo (`id:
