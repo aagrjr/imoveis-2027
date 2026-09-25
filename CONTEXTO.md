@@ -616,6 +616,10 @@ registrado.
   os 6 do Jerivás na Pilar (LEF45175, H2U253, H2U254, AEI4884, AXS1082 = QuintoAndar
   895699692, AEI3735) e a página do condomínio no VivaReal. Ele é diferente do
   895492002, também do 24º–27º (piso de madeira contra porcelanato).
+- **Visitas agendadas:** Tonelero 239 (Via Condoti, Maramores AP2442) em 25/09/2026 às
+  17h e Presidente Antônio Cândido (Palazzo Dell Arte) em 26/09/2026 às 12h40. Status
+  `agendado` publicado na versão `2026-09-25-2`. Depois da visita, esperar o link `#s=`
+  com o que ele corrigiu.
 - **Casa das Caldeiras saiu do ar em 25/09** (QuintoAndar suspenso); descartada no
   estado publicado, versão `2026-09-25-1`. Ativos: 21 (entraram as duas do Jerivás e o Edifício Paula, Rua Apiacás, 387: Pilar NRE1460 = ZI287183, prédio de 1974, adicionado a pedido dele com o ano sinalizado).
 - **Regiões da busca da Pilar:** o link que ele mandou tinha Alto de Pinheiros e
