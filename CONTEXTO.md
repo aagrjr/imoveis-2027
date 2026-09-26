@@ -624,6 +624,15 @@ registrado.
 
 ### Em aberto
 
+- **Exploração em Campinas (26/09/2026), só curiosidade, nada entrou na página:** QuintoAndar
+  (novos-ou-reformados, 3+ quartos) em Cambuí, Nova Campinas, Taquaral e Guanabara, mesmos
+  critérios de preço e metragem; a Pilar tem só 1 anúncio na cidade. ~70 na faixa. Os de
+  200-570 m² por R$ 1,6-2 mi são prédios dos anos 1980-90. Destaques mostrados: 895429981 e
+  895683362 (Rua Cel. Francisco Andrade Coutinho, 126 m², provavelmente Yard Cambuí 2025),
+  895128371 (Alto Cambuí, ~2021), 895579445 (Sartoria Taquaral, 2021), 895677948 (Splendor
+  Patriani, Taquaral); vazios novos: 895299836 (Yard, 2025), 895376468 (Aura, 2025),
+  Vestra Cambuí (7 unidades 895306xxx, preço de incorporadora). R$/m² dos novos parecido com
+  o de SP (R$ 14-17 mil); o que cai é o condomínio.
 - **QuintoAndar 895304182** (Scena Alto da Lapa, Rua Mário Whately, 383; 122 m², 3 suítes,
   2 vagas, 4º a 7º andar, R$ 1,755 mi, cond. R$ 1.500 + IPTU R$ 1.000; no ar desde 25/09): ele pediu
   outro anúncio porque as fotos confundem (só ~9 das 44 são da unidade: sala com tapete
