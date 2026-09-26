@@ -638,6 +638,8 @@ registrado.
 
 ### Em aberto
 
+- **Entrou em 26/09/2026 a pedido dele:** QuintoAndar 893808605 (Itaguá, Rua Luís Martins, 25, 1989,
+  200 m², 1 por andar, R$ 1,58 mi). Eu tinha cortado pelas fotos na lista do polígono.
 - **Entrou em 26/09/2026 a pedido dele:** QuintoAndar 894667976 (W/L Vila Romana, Rua Catão, 496, Tecnisa,
   2024, 132 m², 3 suítes, R$ 2,185 mi). Eu tinha cortado na triagem de 24/09; ele achou que já tinha
   visto, mas não estava nos descartados (conferido pelas fotos contra CCMG083, FIKA5854, ZI288619).
