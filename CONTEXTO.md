@@ -635,6 +635,11 @@ registrado.
   Bairro Siciliano). A Villalobos (Kenlo, sufixo -VILQ) tem o nome do prédio no campo
   `"building"` do HTML. VivaReal 2913290114 (Rodrigo Lobato, 111, 120 m², R$ 1,97 mi) é outra
   unidade, vazia e nova.
+  Outro anúncio do AP4101 não achado em 26/09: o QuintoAndar não tem venda no Tribeca (só um
+  aluguel de 120 m²/3 quartos, 895470530), a Pilar não tem nada a 400 m, e os VivaReal de 120 m²
+  da Rua Vespasiano (2902643937, 2888169392 = 2888169623 = 2888168819, 2902652212, 2908352625)
+  são outras unidades pelas fotos. A planta original do Tribeca é de 3 quartos; o AP4101 deve ter
+  sido convertido para 2.
 - **Rodada de 26/09/2026 (manhã).** Ativos: os 19 no ar, sem mudança de preço (Pilar
   NRE2512 marca R$ 2,40 mi, o card R$ 2,398 mi pela Maramores). Pilar do dia: ZI295985 =
   CCI839 descartado (mesmos 130 m², R$ 1,69 mi, cond. 2.449); LEF30211 e LEF16862 (2 quartos,
