@@ -649,6 +649,8 @@ registrado.
   anúncio errado), 895469262 (Campos Elísios, 2010, 159 m², R$ 1,63 mi); baratos com cara de
   reformado: 894645256 (Centro, 205 m², R$ 1,15 mi), 894097490 e 893984282 (coberturas
   duplex vazias, 190-194 m², R$ 1,2-1,4 mi).
+  **Decisão (26/09/2026): não gostou das opções de Campinas e Jundiaí, a busca segue só em
+  SP.** Não trazer outras cidades de novo sem ele pedir.
 - **QuintoAndar 895304182** (Scena Alto da Lapa, Rua Mário Whately, 383; 122 m², 3 suítes,
   2 vagas, 4º a 7º andar, R$ 1,755 mi, cond. R$ 1.500 + IPTU R$ 1.000; no ar desde 25/09): ele pediu
   outro anúncio porque as fotos confundem (só ~9 das 44 são da unidade: sala com tapete
