@@ -641,6 +641,11 @@ registrado.
   Votupoca, 167 m², 2 quartos, 2012), ZI283956 = VB27161 = OI1071 (Alto da Lapa, Rua Filipinas,
   144 m², 2 quartos). AEI5304 cai na Lauriano: cortado. Vila Anastácio de 127 m² (ZI294411,
   INVR238, ZI285603, LEF45099) é Caminhos da Lapa/Fortunato Ferraz: fora.
+  **Ele questionou dois que eu cortei só pelo R$/m²:** ECLAT478 (Vila Romana, Rua Fábia provável,
+  141 m², 3 suítes, 2 vagas, R$ 2,35 mi, R$ 16,7 mil/m², mensal R$ 2.300) e ZI248983 (Pompeia, Rua
+  Padre Chico provável, 123 m², 3 quartos/1 suíte, 3 vagas, R$ 2,3 mi, R$ 18,7 mil/m²). Lição: até
+  ~R$ 17-19 mil/m² não é "muito acima" o bastante para cortar calado quando as fotos são boas;
+  mostre com o R$/m² em destaque.
 - **Recusados em 26/09/2026 ("dos de hoje nada que valha adicionar"):** QuintoAndar 895178621
   (Terraças Alto da Lapa), 895635190 (Terrazzo vazio), 895448721 (Mar das Caraíbas), 895560323 (Noble
   Hills), 895744947 (Maresias), 893295712 (Azaleia), 895062508 (Santa Martin), 895467216 (Fidalga),
