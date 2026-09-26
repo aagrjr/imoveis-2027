@@ -630,6 +630,13 @@ registrado.
 
 ### Em aberto
 
+- **Pilar CVIA1927 (26/09/2026, ele perguntou por outros anúncios):** Edifício Saint Patrick, Rua
+  Monte Alegre, 634 (Perdizes leste, lon −46,668, perto da região do Itapicuru que ele achou
+  longe), 1995; 179 m², 3 quartos viraram 2 suítes, 3 vagas, R$ 1,95 mi, cond. R$ 4.500 +
+  IPTU R$ 1.500. = VivaReal 2871069578 (Sh Prime, R$ 2,04 mi, cond. R$ 4.300, 16 fotos), mesma
+  unidade pelos pontos fixos (cozinha com azulejo azul, painel de madeira no quarto, deck na
+  varanda). O QuintoAndar 894505489 (Saint Patrick, 177 m², 3 suítes, R$ 1,95 mi) é outra
+  unidade, decoração clássica. Aguardando se entra.
 - **Entraram em 26/09/2026, achados por ele:** Medley (Chaves na Mão 31183234, Rua Cayowaá, 2200,
   2015, 130 m², 2 suítes, vazio mas com travertino instalado) e Ilha de Creta (Ingrácia, Rua
   Croata, 622, 2009, 115 m², 2 suítes). Nenhum dos dois tem outro anúncio achado. O Ilha de Creta
