@@ -635,9 +635,13 @@ registrado.
 **Visitas registradas:** Ponta Porã 710, descartada depois dela ("apartamento
 ótimo, mas o condomínio é muito antigo"); Tonelero 239 (Via Condoti, AP2442 + QuintoAndar
 894729340), visitada em 25/09/2026 às 17h: "gostamos", segue na lista como `visitado`.
+Presidente Antônio Cândido (QuintoAndar 895465004 + Masfer AP86050), visitado em 26/09/2026 às
+12h40: "visita boa", segue na lista com ressalvas (precisa de ajustes em móveis e cozinha).
 
 ### Em aberto
 
+- **Entrou em 26/09/2026, achado por ele:** classificado QuintoAndar 114560281 (Key West, Rua Nanuque,
+  473, 1995, 169 m², R$ 1,802 mi, Leopoldina House).
 - **26/09/2026:** QuintoAndar 895664086 = Pilar SEP21192 (Via Condoti, 149 m², andar alto, R$ 1,8 mi) entrou a
   pedido dele. O classificado QuintoAndar 130765686 é o Tonelero 239 visitado (fotos) e virou `link3`
   dele. Links `/classificado/<id>` do QuintoAndar são anúncios de terceiros (Imobz etc.); as fotos
