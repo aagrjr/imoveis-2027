@@ -17,6 +17,10 @@ Apartamento para compra em São Paulo, zona oeste. Perfil que emergiu da lista:
   do preço também serve. **2 quartos também valem se a área for de 115 m² ou mais**
   (26/09/2026: "se os de dois quartos estiverem em tamanho apropriado pode mostrar");
   no QuintoAndar isso é o caminho `/2-quartos/` (que já inclui 3+).
+- **Sem coberturas nem duplex (26/09/2026):** "vamos adicionar uma regra para ignorar
+  coberturas/duplex". Corte na busca: na Pilar, tire `propertyTypes` (fica só `/apartamento`); no
+  QuintoAndar e no VivaReal, ignore anúncios com "cobertura" ou "duplex" no título, na URL ou na
+  descrição. Vale para as próximas buscas; o West Side (duplex) segue na página até ele decidir.
 - **Vagas:** 2–3 é o normal, mas **1 vaga não elimina** se o apartamento for bom
   (definido em 2026-09-20). Antes disso eu cortava 1 vaga na triagem, sem abrir
   as fotos — vários imóveis foram descartados assim e precisaram ser resgatados.
@@ -248,9 +252,9 @@ ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
   arquivo; o que distingue é o hash (`/img/vr-listing/<hash>/...`). Deduplique pelo hash.
 - **Pilar, rotina diária (desde 25/09/2026, dica dele): uma chamada só, ordenada por data.**
   `curl` em
-  `https://www.pilarhomes.com.br/venda/imoveis/vila-leopoldina-sao-paulo-sp-brasil/apartamento?sortBy=publication_date&orderBy=desc&minAskingPrice=1550000&maxAskingPrice=2400000&minArea=115&parkingSpots=1&regions=Vila+Leopoldina%2CVila+Romana%2CAlto+da+Lapa%2CVila+Ipojuca%2CPinheiros%2CPerdizes%2CPomp%C3%A9ia%2CVila+Madalena&propertyTypes=cobertura%2Cduplex%2Ccasa-de-condominio&cities=S%C3%A3o+Paulo&states=SP`
+  `https://www.pilarhomes.com.br/venda/imoveis/vila-leopoldina-sao-paulo-sp-brasil/apartamento?sortBy=publication_date&orderBy=desc&minAskingPrice=1550000&maxAskingPrice=2400000&minArea=115&parkingSpots=1&regions=Vila+Leopoldina%2CVila+Romana%2CAlto+da+Lapa%2CVila+Ipojuca%2CPinheiros%2CPerdizes%2CPomp%C3%A9ia%2CVila+Madalena&propertyTypes=casa-de-condominio&cities=S%C3%A3o+Paulo&states=SP`
   devolve do servidor os 12 anúncios mais recentes de todos os bairros, já filtrados
-  (preço, área, vaga; `propertyTypes` soma cobertura, duplex e casa de condomínio ao
+  (preço, área, vaga; `propertyTypes` soma casa de condomínio ao; cobertura e duplex saíram em 26/09
   `/apartamento` do caminho). `page=` continua ignorado: se os 12 vierem todos
   inéditos, rode o mesmo link por bairro (`regions=<um só>`) para ver mais 12 de cada.
   A varredura completa com "Ver mais" fica só para quando houver atraso. Em 25/09 ela
