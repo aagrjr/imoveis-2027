@@ -643,7 +643,9 @@ registrado.
   144 m², 2 quartos). AEI5304 cai na Lauriano: cortado. Vila Anastácio de 127 m² (ZI294411,
   INVR238, ZI285603, LEF45099) é Caminhos da Lapa/Fortunato Ferraz: fora. IEF262 (Lapa, Rua Tito
   provável, 177 m², 4 quartos/3 suítes, R$ 2,15 mi, 2011) passou nas fotos e eu deixei de fora só
-  para encurtar a lista; ele perguntou por ele.
+  para encurtar a lista; ele perguntou por ele. É o Idea Vila Romana (Rua Catão, 804, 2010/11), no
+  quarteirão do ZI289918 recusado pela localização. Os três (IEF262, ECLAT478, ZI248983) entraram na
+  página em 26/09 a pedido dele.
   **Ele questionou dois que eu cortei só pelo R$/m²:** ECLAT478 (Vila Romana, Rua Fábia provável,
   141 m², 3 suítes, 2 vagas, R$ 2,35 mi, R$ 16,7 mil/m², mensal R$ 2.300) e ZI248983 (Pompeia, Rua
   Padre Chico provável, 123 m², 3 quartos/1 suíte, 3 vagas, R$ 2,3 mi, R$ 18,7 mil/m²). Lição: até
