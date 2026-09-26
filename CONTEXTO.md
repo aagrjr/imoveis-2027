@@ -638,6 +638,9 @@ registrado.
 
 ### Em aberto
 
+- **Entrou em 26/09/2026 a pedido dele:** QuintoAndar 894667976 (W/L Vila Romana, Rua Catão, 496, Tecnisa,
+  2024, 132 m², 3 suítes, R$ 2,185 mi). Eu tinha cortado na triagem de 24/09; ele achou que já tinha
+  visto, mas não estava nos descartados (conferido pelas fotos contra CCMG083, FIKA5854, ZI288619).
 - **Entrou em 26/09/2026, escolhido por ele:** QuintoAndar 895738361 (Jardins de Monet, Rua Passo da
   Pátria, 971, 2005 pela Loft, 151 m², 3 suítes, R$ 2,3 mi). Estava na lista de "cortados só por mensal"
   de 25/09 (mensal R$ 5.200).
