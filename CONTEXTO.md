@@ -648,6 +648,8 @@ registrado.
   334); 2 quartos: 892914307 (Ribeiro de Barros, 2016), 895739843 (Rua Aurélia, 1851), 895182469
   (Plátano, Escultores, 597, 2002). Atelier Aquarela 895630070 e 895731546 são outras unidades do
   prédio do AXS827 (fotos). Dolce Vita 895361898 é provavelmente o AXS884 da página.
+  **Resposta dele: nenhum desses entra** (só o 895738361, que ele mesmo escolheu da lista). Não trazer
+  de volta os mostrados acima.
 - **Busca da Pilar que ele mandou em 26/09/2026:** mapa com `h3Ids=87a8100cdffffff,87a8103b6ffffff,87a8103b0ffffff,87a8103b4ffffff,87a8103b2ffffff,87a8103b5ffffff`,
   `maxAskingPrice=2400000&minArea=120&bedrooms=2&suites=1&parkingSpots=1&propertyTypes=duplex,cobertura`
   (sem piso de preço). 247 anúncios; 181 nunca registrados. Varredura com "Ver mais" no navegador; o
