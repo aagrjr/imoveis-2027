@@ -624,6 +624,12 @@ registrado.
 
 ### Em aberto
 
+- **QuintoAndar 895574028** (Baccarelli's House, Rua Húngara, 126, Vila Ipojuca, **1991**;
+  154 m², 4 quartos/2 suítes, 3 vagas, 12º a 15º, R$ 2,0 mi, cond. R$ 1.900 + IPTU R$ 990,
+  mobiliado, reformado com painéis de madeira): eu tinha cortado na triagem de 24/09 sem
+  mostrar (prédio antigo). Ele achou sozinho em 26/09 e pediu outro anúncio: **VivaReal
+  2628592669** é a mesma unidade pelas fotos (R$ 2,3 mi, 15 fotos, "3 suítes"). O VivaReal
+  2692010553 (R$ 1,45 mi) é outra unidade do prédio, acabamento antigo. Aguardando decisão.
 - **Exploração em Campinas (26/09/2026), só curiosidade, nada entrou na página:** QuintoAndar
   (novos-ou-reformados, 3+ quartos) em Cambuí, Nova Campinas, Taquaral e Guanabara, mesmos
   critérios de preço e metragem; a Pilar tem só 1 anúncio na cidade. ~70 na faixa. Os de
