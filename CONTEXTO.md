@@ -630,6 +630,10 @@ registrado.
 
 ### Em aberto
 
+- **Entraram em 26/09/2026, achados por ele:** Medley (Chaves na Mão 31183234, Rua Cayowaá, 2200,
+  2015, 130 m², 2 suítes, vazio mas com travertino instalado) e Ilha de Creta (Ingrácia, Rua
+  Croata, 622, 2009, 115 m², 2 suítes). Nenhum dos dois tem outro anúncio achado. O Ilha de Creta
+  tem mais 4 unidades à venda, todas outras pelas fotos (ver `detalhes` do card).
 - **Entraram em 26/09/2026:** West Side (QuintoAndar 895563249, 1987) e Tribeca Personal Club
   (Villalobos AP4101, Rua Vespasiano, 445, 2008, 2 quartos/120 m², achado por ele; divisa com o
   Bairro Siciliano). A Villalobos (Kenlo, sufixo -VILQ) tem o nome do prédio no campo
