@@ -642,7 +642,10 @@ registrado.
   (`blintz-properties-sandbox.s3.amazonaws.com/<CÓDIGO>/pilar-homes-images-watermark/...`, que é o
   `watermarkUrl` da página). Mostrados: MRP268 (Pompeia, Rua Novais Junior, 158 m², 2008), ZI293631
   (Perdizes, Rua Tucuna, 154 m²), AEI5638 (Vila Leopoldina, Aliança Liberal, 189 m², 2011),
-  SEP21083 = LAP3292 (Lapa, Rua Jeroaquara, 162 m², 2011), NK317636 = AX397 (Alto da Lapa, Rua
+  SEP21083 (= **AX396, já descartado na página**: mesmas fotos, R$ 2,2 mi, cond. R$ 2.400; eu não
+  cruzei m² + preço + condomínio com os descartados; a célula é a do ZI161755, Rua Roma, e não a
+  Jeroaquara como a geocodificação reversa sugeriu; LAP3292, ZI287276 e ZI268545 são outras unidades
+  de 162 m² do mesmo prédio), NK317636 = AX397 (Alto da Lapa, Rua
   Votupoca, 167 m², 2 quartos, 2012), ZI283956 = VB27161 = OI1071 (Alto da Lapa, Rua Filipinas,
   144 m², 2 quartos). AEI5304 cai na Lauriano: cortado. Vila Anastácio de 127 m² (ZI294411,
   INVR238, ZI285603, LEF45099) é Caminhos da Lapa/Fortunato Ferraz: fora. IEF262 (Lapa, Rua Tito
