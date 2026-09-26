@@ -637,7 +637,7 @@ registrado.
   QuintoAndar (8 bairros, 3 e 2 quartos): 44 inéditos. Mostrados: 895178621 (Terraças Alto
   da Lapa, 2010; mesmo prédio e planta de 142 m² da linha "Rua Matias Roxo, 100" descartada
   por sair do ar em 19/09, mas outra unidade pelas fotos: aquela era 7º andar com parede de
-  pedra, esta é 16º-19º com paredes escuras; a rua não está vetada), 895563249 (West Side, 1987), 895448721 (Mar das Caraíbas, 1997),
+  pedra, esta é 16º-19º com paredes escuras; a rua não está vetada), 895563249 (West Side, 1987; duplex de 172 m², 8º a 11º, mobiliado; outro anúncio não achado em 26/09: Pilar sem nada a menos de 600 m, nenhum dos 6 VivaReal de 167-174 m² da rua bate pelas fotos), 895448721 (Mar das Caraíbas, 1997),
   895635190 (Terrazzo, 2010), 895560323 (Noble Hills, 2006), 893295712 (Azaleia, 1995),
   895062508 (Santa Martin, 1994), 895467216 (Fidalga, 1999), 895744947 (Maresias, 1996);
   2 quartos: 894705105/894878773/894979476 (360 Graus, 2013), 895576748 (Horizon, 2021),
