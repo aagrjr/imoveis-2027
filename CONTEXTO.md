@@ -504,8 +504,9 @@ Recusados sem virar linha na página (cruze com eles também):
   "o metro quadrado não faz nenhum sentido" (R$ 20 mil/m², contra a mediana de ~R$ 15 mil
   da página). Mostrados sem resposta: Boulevard São Francisco (Rua Otávio de Morais, 156,
   Cidade São Francisco, 2009), coberturas de 233–266 m² a R$ 2,0–2,2 mi (QuintoAndar
-  893906329, 895042553, 894354260). **R$/m² bem acima da mediana da página derruba**:
-  confira antes de mostrar.
+  893906329, 895042553, 894354260). Ele recusou esse Grand Metropolitan pelo R$/m²; **isso não
+  virou regra de corte** (26/09/2026: "quem mandou cortar com esse argumento?"). Mostre com o
+  R$/m² ao lado e deixe ele julgar.
 - **Piazza Navona, Rua Belmonte, 360** (Vila Leopoldina, 1997, 20 unidades de 158 m²,
   mensal ~R$ 3.900): ele trouxe o Flow FL1766122 (3 suítes, R$ 1,55 mi) em 25/09 e
   mandou deixar de fora. Outras unidades do prédio, também fora: VivaReal 2757932617
@@ -640,12 +641,13 @@ registrado.
   SEP21083 = LAP3292 (Lapa, Rua Jeroaquara, 162 m², 2011), NK317636 = AX397 (Alto da Lapa, Rua
   Votupoca, 167 m², 2 quartos, 2012), ZI283956 = VB27161 = OI1071 (Alto da Lapa, Rua Filipinas,
   144 m², 2 quartos). AEI5304 cai na Lauriano: cortado. Vila Anastácio de 127 m² (ZI294411,
-  INVR238, ZI285603, LEF45099) é Caminhos da Lapa/Fortunato Ferraz: fora.
+  INVR238, ZI285603, LEF45099) é Caminhos da Lapa/Fortunato Ferraz: fora. IEF262 (Lapa, Rua Tito
+  provável, 177 m², 4 quartos/3 suítes, R$ 2,15 mi, 2011) passou nas fotos e eu deixei de fora só
+  para encurtar a lista; ele perguntou por ele.
   **Ele questionou dois que eu cortei só pelo R$/m²:** ECLAT478 (Vila Romana, Rua Fábia provável,
   141 m², 3 suítes, 2 vagas, R$ 2,35 mi, R$ 16,7 mil/m², mensal R$ 2.300) e ZI248983 (Pompeia, Rua
   Padre Chico provável, 123 m², 3 quartos/1 suíte, 3 vagas, R$ 2,3 mi, R$ 18,7 mil/m²). Lição: até
-  ~R$ 17-19 mil/m² não é "muito acima" o bastante para cortar calado quando as fotos são boas;
-  mostre com o R$/m² em destaque.
+  R$/m² não é critério de corte; mostre com o valor em destaque.
 - **Recusados em 26/09/2026 ("dos de hoje nada que valha adicionar"):** QuintoAndar 895178621
   (Terraças Alto da Lapa), 895635190 (Terrazzo vazio), 895448721 (Mar das Caraíbas), 895560323 (Noble
   Hills), 895744947 (Maresias), 893295712 (Azaleia), 895062508 (Santa Martin), 895467216 (Fidalga),
