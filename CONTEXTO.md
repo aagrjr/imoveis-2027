@@ -640,6 +640,15 @@ registrado.
   895472710 (Harmonie, Nova Campinas, lançado 2021, 206 m², R$ 2,3 mi), 894905534 e 895666387
   (Helbor Arthouse Double Sky, 2017, 189 m², R$ 2,3 mi). Os de 300-450 m² a R$ 4-5 mil/m²
   são todos de acabamento antigo.
+- **Exploração em Jundiaí (26/09/2026), só curiosidade:** QuintoAndar, cidade inteira
+  (295 anúncios de 3+ quartos novos ou reformados; piso de preço baixado para R$ 1 mi para
+  ver a faixa). R$/m² bem menor: R$ 5-10 mil nos grandes. Destaques mostrados: 893096911
+  (Naturale Sport Acqua Life, Jd. Flórida, 240 m², R$ 2,1 mi, ano não achado), 895154029
+  (Maison D'Or, Centro, 220 m², R$ 2,2 mi, prédio ~1998), 894926511 (cobertura duplex, Res.
+  Anhanguera, 246 m², R$ 2,24 mi), 895200010 (Anhangabaú, 220 m², R$ 2,04 mi; mensal do
+  anúncio errado), 895469262 (Campos Elísios, 2010, 159 m², R$ 1,63 mi); baratos com cara de
+  reformado: 894645256 (Centro, 205 m², R$ 1,15 mi), 894097490 e 893984282 (coberturas
+  duplex vazias, 190-194 m², R$ 1,2-1,4 mi).
 - **QuintoAndar 895304182** (Scena Alto da Lapa, Rua Mário Whately, 383; 122 m², 3 suítes,
   2 vagas, 4º a 7º andar, R$ 1,755 mi, cond. R$ 1.500 + IPTU R$ 1.000; no ar desde 25/09): ele pediu
   outro anúncio porque as fotos confundem (só ~9 das 44 são da unidade: sala com tapete
