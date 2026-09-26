@@ -630,6 +630,11 @@ registrado.
 
 ### Em aberto
 
+- **Entraram em 26/09/2026:** West Side (QuintoAndar 895563249, 1987) e Tribeca Personal Club
+  (Villalobos AP4101, Rua Vespasiano, 445, 2008, 2 quartos/120 m², achado por ele; divisa com o
+  Bairro Siciliano). A Villalobos (Kenlo, sufixo -VILQ) tem o nome do prédio no campo
+  `"building"` do HTML. VivaReal 2913290114 (Rodrigo Lobato, 111, 120 m², R$ 1,97 mi) é outra
+  unidade, vazia e nova.
 - **Rodada de 26/09/2026 (manhã).** Ativos: os 19 no ar, sem mudança de preço (Pilar
   NRE2512 marca R$ 2,40 mi, o card R$ 2,398 mi pela Maramores). Pilar do dia: ZI295985 =
   CCI839 descartado (mesmos 130 m², R$ 1,69 mi, cond. 2.449); LEF30211 e LEF16862 (2 quartos,
