@@ -630,6 +630,11 @@ registrado.
 
 ### Em aberto
 
+- **Recusados em 26/09/2026 ("dos de hoje nada que valha adicionar"):** QuintoAndar 895178621
+  (Terraças Alto da Lapa), 895635190 (Terrazzo vazio), 895448721 (Mar das Caraíbas), 895560323 (Noble
+  Hills), 895744947 (Maresias), 893295712 (Azaleia), 895062508 (Santa Martin), 895467216 (Fidalga),
+  895212704 (Essencis), 894606873, 895325547 (Paulistânia); Pilar ZI294865; VivaReal 2914354365,
+  2914478641 (Kayowá), 2914070442 (Terrazzo mobiliado). Não trazer de volta.
 - **2 quartos recusados em 26/09/2026 ("não são legais"):** QuintoAndar 895576748 (Horizon, 2021),
   894878773 (360 Graus, 2013; as outras unidades 894979476 e 894705105 vão junto), 895129605 (Upcon
   Blue, 2016) e 895619368 (Rua Mota Pais). Não trazer de volta. Motivo não dito; os quatro eram
