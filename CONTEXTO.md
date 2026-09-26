@@ -635,6 +635,16 @@ registrado.
 
 ### Em aberto
 
+- **Busca do QuintoAndar que ele mandou em 26/09/2026 (polígono Leopoldina–Lapa–Pompeia, 2+ quartos,
+  120+ m², 1+ suíte, 1-3 vagas, até R$ 2,4 mi):** o contador diz 877, mas a lista carrega só 187 e
+  para; testado por faixa de preço, o resto são sugestões fora da área. Faixa de preço na URL só
+  funciona com valores redondos (`de-1650000-a-1800000`); com `1600001` ela perde o polígono.
+  119 nunca registrados; 104 sem cobertura/duplex. Mostrados: 895562239 (Princeton, Raul Pompéia,
+  930), 895428427 (Reserva Alto da Lapa, Sacadura Cabral, 160), 895289113 e 895393639 (Rua Croata,
+  169/157), 895412761 (Personal Home, Carlos Weber, 499), 894118175 (Coline de Nice, Oscar Caravelas,
+  334); 2 quartos: 892914307 (Ribeiro de Barros, 2016), 895739843 (Rua Aurélia, 1851), 895182469
+  (Plátano, Escultores, 597, 2002). Atelier Aquarela 895630070 e 895731546 são outras unidades do
+  prédio do AXS827 (fotos). Dolce Vita 895361898 é provavelmente o AXS884 da página.
 - **Busca da Pilar que ele mandou em 26/09/2026:** mapa com `h3Ids=87a8100cdffffff,87a8103b6ffffff,87a8103b0ffffff,87a8103b4ffffff,87a8103b2ffffff,87a8103b5ffffff`,
   `maxAskingPrice=2400000&minArea=120&bedrooms=2&suites=1&parkingSpots=1&propertyTypes=duplex,cobertura`
   (sem piso de preço). 247 anúncios; 181 nunca registrados. Varredura com "Ver mais" no navegador; o
