@@ -14,7 +14,9 @@ Apartamento para compra em São Paulo, zona oeste. Perfil que emergiu da lista:
   para 2,4 em 22/09/2026; nada que já estava na página foi descartado pela mudança)
 - **Tamanho:** a partir de 115 m², 3+ quartos (o mínimo de área subiu de 110 para
   115 m² em 2026-09-14). **Sem teto de área** (22/09/2026): maior que 200 m² dentro
-  do preço também serve
+  do preço também serve. **2 quartos também valem se a área for de 115 m² ou mais**
+  (26/09/2026: "se os de dois quartos estiverem em tamanho apropriado pode mostrar");
+  no QuintoAndar isso é o caminho `/2-quartos/` (que já inclui 3+).
 - **Vagas:** 2–3 é o normal, mas **1 vaga não elimina** se o apartamento for bom
   (definido em 2026-09-20). Antes disso eu cortava 1 vaga na triagem, sem abrir
   as fotos — vários imóveis foram descartados assim e precisaram ser resgatados.
@@ -107,6 +109,10 @@ errados. O alvo é estreito:
   é que pesou. **Sempre levante e informe o ano de construção** junto com a
   sugestão; ele não estava na tabela e derrubou um candidato já aprovado nas fotos.
   Não há corte definido: 2002 (Presidente Antônio Cândido) segue na lista.
+
+  **Idade do prédio não elimina (26/09/2026):** "não desconsiderar nada pela idade do
+  prédio, me deixe olhar se forem bons". Se o apartamento é bom nas fotos, mostre com o
+  ano em destaque e deixe a decisão com ele. O ano continua obrigatório antes de mostrar.
 
   **Ano vazio não é ano aceitável.** Em 25/09 o filtro de ano deixou passar tudo que vinha
 sem `launchDate`, e mandei o NRE1460 (Edifício Paula, 1974) sem saber o ano; ele pediu
@@ -624,6 +630,20 @@ registrado.
 
 ### Em aberto
 
+- **Rodada de 26/09/2026 (manhã).** Ativos: os 19 no ar, sem mudança de preço (Pilar
+  NRE2512 marca R$ 2,40 mi, o card R$ 2,398 mi pela Maramores). Pilar do dia: ZI295985 =
+  CCI839 descartado (mesmos 130 m², R$ 1,69 mi, cond. 2.449); LEF30211 e LEF16862 (2 quartos,
+  R$ 18-19 mil/m², caros); GR2670, LEF8290 (antigos por dentro); ZI294865 mostrado.
+  QuintoAndar (8 bairros, 3 e 2 quartos): 44 inéditos. Mostrados: 895178621 (Terraças Alto
+  da Lapa, 2010), 895563249 (West Side, 1987), 895448721 (Mar das Caraíbas, 1997),
+  895635190 (Terrazzo, 2010), 895560323 (Noble Hills, 2006), 893295712 (Azaleia, 1995),
+  895062508 (Santa Martin, 1994), 895467216 (Fidalga, 1999), 895744947 (Maresias, 1996);
+  2 quartos: 894705105/894878773/894979476 (360 Graus, 2013), 895576748 (Horizon, 2021),
+  895129605 (Upcon Blue, 2016), 895212704 (Essencis, 2015), 895619368 (Mota Pais),
+  894606873 (Homem de Melo), 895325547 (Paulistânia, ano não achado). 895697434 (Le Havre,
+  153 m², R$ 2,38 mi) é provavelmente a linha Le Havre da página. 895411856 (Domna, 120 m²,
+  R$ 1,785 mi) é provavelmente o ECLAT162 que ele mandou ignorar. MaxHaus 895364948 cortado.
+  Os demais inéditos ficaram pelas fotos. VivaReal e Masfer não foram varridos nesta rodada.
 - **QuintoAndar 895574028** (Baccarelli's House, Rua Húngara, 126, Vila Ipojuca, **1991**;
   154 m², 4 quartos/2 suítes, 3 vagas, 12º a 15º, R$ 2,0 mi, cond. R$ 1.900 + IPTU R$ 990,
   mobiliado, reformado com painéis de madeira): eu tinha cortado na triagem de 24/09 sem
