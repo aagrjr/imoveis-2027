@@ -630,6 +630,11 @@ registrado.
 
 ### Em aberto
 
+- **2 quartos recusados em 26/09/2026 ("não são legais"):** QuintoAndar 895576748 (Horizon, 2021),
+  894878773 (360 Graus, 2013; as outras unidades 894979476 e 894705105 vão junto), 895129605 (Upcon
+  Blue, 2016) e 895619368 (Rua Mota Pais). Não trazer de volta. Motivo não dito; os quatro eram
+  plantas de 124-138 m² em prédios novos, decorados. Os 2 quartos que ele aceitou são maiores ou
+  achados por ele (Tribeca, Medley, Ilha de Creta, Saint Patrick).
 - **Pilar CVIA1927 (26/09/2026, ele perguntou por outros anúncios):** Edifício Saint Patrick, Rua
   Monte Alegre, 634 (Perdizes leste, lon −46,668, perto da região do Itapicuru que ele achou
   longe), 1995; 179 m², 3 quartos viraram 2 suítes, 3 vagas, R$ 1,95 mi, cond. R$ 4.500 +
