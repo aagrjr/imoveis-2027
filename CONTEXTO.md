@@ -666,7 +666,17 @@ registrado.
   894606873 (Homem de Melo), 895325547 (Paulistânia, ano não achado). 895697434 (Le Havre,
   153 m², R$ 2,38 mi) é provavelmente a linha Le Havre da página. 895411856 (Domna, 120 m²,
   R$ 1,785 mi) é provavelmente o ECLAT162 que ele mandou ignorar. MaxHaus 895364948 cortado.
-  Os demais inéditos ficaram pelas fotos. VivaReal e Masfer não foram varridos nesta rodada.
+  Os demais inéditos ficaram pelas fotos.
+  **VivaReal (tarde de 26/09, 8 bairros, `quartos=2,3,4&areaMinima=115&precoMinimo=1550000&precoMaximo=2400000&ordem=MOST_RECENT`):**
+  178 anúncios; triados os 2914xxxxxx inéditos e sem gêmeo no QuintoAndar. Mostrados: 2914354365
+  (Vila Leopoldina, 158 m², 4 quartos, R$ 2,4 mi, endereço oculto, ano não achado), 2914478641
+  (Residencial Kayowá, Rua Cayowaá, 854, 1990, 129 m², R$ 1,74 mi), 2914070442 (Terrazzo, Piracuama,
+  377, 2010, 130 m², R$ 1,88 mi; outra unidade que a 895635190). 2914122983 (Av. Mofarrej, 1130) é
+  MaxHaus: cortado. Os demais 2914 ficaram pelas fotos (acabamento antigo). Os 2913xxxxxx da lista
+  não foram revistos (quase todos já passaram em 23-25/09 ou espelham o QuintoAndar).
+  **Masfer:** AP84850 (Maison Mont Parnasse), AP85570 (Torre Tim Maia, contrapiso), AP85653
+  (Maresias), AP85782 (Gaudi), AP85940, AP85956 (Caiubi "Chocolatão"): todos vazios, piso antigo
+  ou cru; nenhum mostrado.
 - **QuintoAndar 895574028** (Baccarelli's House, Rua Húngara, 126, Vila Ipojuca, **1991**;
   154 m², 4 quartos/2 suítes, 3 vagas, 12º a 15º, R$ 2,0 mi, cond. R$ 1.900 + IPTU R$ 990,
   mobiliado, reformado com painéis de madeira): eu tinha cortado na triagem de 24/09 sem
