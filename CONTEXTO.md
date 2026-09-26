@@ -630,6 +630,17 @@ registrado.
 
 ### Em aberto
 
+- **Busca da Pilar que ele mandou em 26/09/2026:** mapa com `h3Ids=87a8100cdffffff,87a8103b6ffffff,87a8103b0ffffff,87a8103b4ffffff,87a8103b2ffffff,87a8103b5ffffff`,
+  `maxAskingPrice=2400000&minArea=120&bedrooms=2&suites=1&parkingSpots=1&propertyTypes=duplex,cobertura`
+  (sem piso de preço). 247 anúncios; 181 nunca registrados. Varredura com "Ver mais" no navegador; o
+  CDN de imagens bloqueou (429) depois de ~500 fotos e as fotos vieram direto do S3
+  (`blintz-properties-sandbox.s3.amazonaws.com/<CÓDIGO>/pilar-homes-images-watermark/...`, que é o
+  `watermarkUrl` da página). Mostrados: MRP268 (Pompeia, Rua Novais Junior, 158 m², 2008), ZI293631
+  (Perdizes, Rua Tucuna, 154 m²), AEI5638 (Vila Leopoldina, Aliança Liberal, 189 m², 2011),
+  SEP21083 = LAP3292 (Lapa, Rua Jeroaquara, 162 m², 2011), NK317636 = AX397 (Alto da Lapa, Rua
+  Votupoca, 167 m², 2 quartos, 2012), ZI283956 = VB27161 = OI1071 (Alto da Lapa, Rua Filipinas,
+  144 m², 2 quartos). AEI5304 cai na Lauriano: cortado. Vila Anastácio de 127 m² (ZI294411,
+  INVR238, ZI285603, LEF45099) é Caminhos da Lapa/Fortunato Ferraz: fora.
 - **Recusados em 26/09/2026 ("dos de hoje nada que valha adicionar"):** QuintoAndar 895178621
   (Terraças Alto da Lapa), 895635190 (Terrazzo vazio), 895448721 (Mar das Caraíbas), 895560323 (Noble
   Hills), 895744947 (Maresias), 893295712 (Azaleia), 895062508 (Santa Martin), 895467216 (Fidalga),
