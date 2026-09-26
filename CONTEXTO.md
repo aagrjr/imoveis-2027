@@ -638,6 +638,10 @@ registrado.
 
 ### Em aberto
 
+- **26/09/2026:** QuintoAndar 895664086 = Pilar SEP21192 (Via Condoti, 149 m², andar alto, R$ 1,8 mi) entrou a
+  pedido dele. O classificado QuintoAndar 130765686 é o Tonelero 239 visitado (fotos) e virou `link3`
+  dele. Links `/classificado/<id>` do QuintoAndar são anúncios de terceiros (Imobz etc.); as fotos
+  vêm no `__NEXT_DATA__` como `quintoandar.com.br/img/v2/photo/navent_houses:...`.
 - **Entrou em 26/09/2026 a pedido dele:** QuintoAndar 893808605 (Itaguá, Rua Luís Martins, 25, 1989,
   200 m², 1 por andar, R$ 1,58 mi). Eu tinha cortado pelas fotos na lista do polígono.
 - **Entrou em 26/09/2026 a pedido dele:** QuintoAndar 894667976 (W/L Vila Romana, Rua Catão, 496, Tecnisa,
