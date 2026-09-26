@@ -636,7 +636,7 @@ registrado.
   IPTU R$ 1.500. = VivaReal 2871069578 (Sh Prime, R$ 2,04 mi, cond. R$ 4.300, 16 fotos), mesma
   unidade pelos pontos fixos (cozinha com azulejo azul, painel de madeira no quarto, deck na
   varanda). O QuintoAndar 894505489 (Saint Patrick, 177 m², 3 suítes, R$ 1,95 mi) é outra
-  unidade, decoração clássica. Aguardando se entra.
+  unidade, decoração clássica. Entrou na página em 26/09 com os dois links.
 - **Entraram em 26/09/2026, achados por ele:** Medley (Chaves na Mão 31183234, Rua Cayowaá, 2200,
   2015, 130 m², 2 suítes, vazio mas com travertino instalado) e Ilha de Creta (Ingrácia, Rua
   Croata, 622, 2009, 115 m², 2 suítes). Nenhum dos dois tem outro anúncio achado. O Ilha de Creta
