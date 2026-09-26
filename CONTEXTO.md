@@ -635,6 +635,9 @@ registrado.
 
 ### Em aberto
 
+- **Entrou em 26/09/2026, escolhido por ele:** QuintoAndar 895738361 (Jardins de Monet, Rua Passo da
+  Pátria, 971, 2005 pela Loft, 151 m², 3 suítes, R$ 2,3 mi). Estava na lista de "cortados só por mensal"
+  de 25/09 (mensal R$ 5.200).
 - **Busca do QuintoAndar que ele mandou em 26/09/2026 (polígono Leopoldina–Lapa–Pompeia, 2+ quartos,
   120+ m², 1+ suíte, 1-3 vagas, até R$ 2,4 mi):** o contador diz 877, mas a lista carrega só 187 e
   para; testado por faixa de preço, o resto são sugestões fora da área. Faixa de preço na URL só
