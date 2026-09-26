@@ -183,7 +183,10 @@ explícita e deixe a decisão com ele — foi assim que o La Dolce Vita (Rua Cam
 556) entrou na lista em 22/09. O mesmo vale para o **Vila Nova Leopoldina** (as
 ruas Nagel 12 e 33 já foram descartadas uma a uma, mas o condomínio não está
 banido). A **Rua Lauriano Fernandes Júnior** e a **Rua Belchior de Azevedo**
-(Podium) continuam sendo corte automático, junto com qualquer MaxHaus — e só eles.
+(Podium) continuam sendo corte automático, junto com qualquer MaxHaus e as exclusões abaixo.
+**Raimundo Pereira de Magalhães fora, 26/09/2026:** ele gostou do apartamento do
+Quintas da Lapa ("está ótimo"), mas não quer essa via. Não sugerir outras unidades
+nesse endereço; a recusa foi pela localização, não pelo acabamento do apartamento.
 **Rua Fortunato Ferraz (Caminhos da Lapa: Jerivás e vizinhos) fora, 26/09/2026:** ele
 descartou dois Jerivás com "Fortunato Ferraz não vamos" e "é de difícil acesso". Não trazer
 mais nada da rua. **Nada do outro lado da ponte do Jaguaré** (Cidade São Francisco etc.):
