@@ -193,7 +193,8 @@ mais nada da rua. **Nada do outro lado da ponte do Jaguaré** (Cidade São Franc
 descartou o Boulevard São Francisco com "não vamos cruzar a ponte do Jaguaré".
 **Rua Nagel e Avenida Mofarrej fora, 27/09/2026:** "a partir de agora não quero mais nada novo na
 Nagel ou na Mofarrej". Corte automático para anúncios novos nessas duas ruas (inclui o Vila Nova
-Leopoldina, na Nagel). O que já está na página nelas segue como está até ele decidir.
+Leopoldina, na Nagel). Os dois Le Havre (Mofarrej, 706) que estavam na página foram descartados
+pela localização no mesmo dia.
 **Rua Itapicuru, 84 (Perdizes) descartado em 25/09/2026: "muito longe da região de
 preferência".** Fica no leste de Perdizes (lon −46,665), perto do Pacaembu. Leitura
 minha, não confirmada por ele: o lado de Perdizes que interessa é o que encosta na
