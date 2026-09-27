@@ -640,6 +640,9 @@ Presidente Antônio Cândido (QuintoAndar 895465004 + Masfer AP86050), visitado 
 
 ### Em aberto
 
+- **Via Condoti 149 m² (QuintoAndar 895664086 = Pilar SEP21192) descartado em 26/09/2026:** o Tonelero 239
+  visitado no mesmo prédio é muito melhor. Outras unidades do Via Condoti só valem se forem claramente
+  superiores ao AP2442.
 - **Entrou em 26/09/2026, achado por ele:** classificado QuintoAndar 114560281 (Key West, Rua Nanuque,
   473, 1995, 169 m², R$ 1,802 mi, Leopoldina House).
 - **26/09/2026:** QuintoAndar 895664086 = Pilar SEP21192 (Via Condoti, 149 m², andar alto, R$ 1,8 mi) entrou a
