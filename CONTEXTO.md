@@ -182,7 +182,7 @@ combinado q vc ia me passar pra verificar"): mostre o imóvel com a localizaçã
 explícita e deixe a decisão com ele — foi assim que o La Dolce Vita (Rua Camilo,
 556) entrou na lista em 22/09. O mesmo vale para o **Vila Nova Leopoldina** (as
 ruas Nagel 12 e 33 já foram descartadas uma a uma, mas o condomínio não está
-banido). A **Rua Lauriano Fernandes Júnior** e a **Rua Belchior de Azevedo**
+banido; desde 27/09 a Nagel inteira está fora, ver abaixo). A **Rua Lauriano Fernandes Júnior** e a **Rua Belchior de Azevedo**
 (Podium) continuam sendo corte automático, junto com qualquer MaxHaus e as exclusões abaixo.
 **Raimundo Pereira de Magalhães fora, 26/09/2026:** ele gostou do apartamento do
 Quintas da Lapa ("está ótimo"), mas não quer essa via. Não sugerir outras unidades
@@ -191,6 +191,9 @@ nesse endereço; a recusa foi pela localização, não pelo acabamento do aparta
 descartou dois Jerivás com "Fortunato Ferraz não vamos" e "é de difícil acesso". Não trazer
 mais nada da rua. **Nada do outro lado da ponte do Jaguaré** (Cidade São Francisco etc.):
 descartou o Boulevard São Francisco com "não vamos cruzar a ponte do Jaguaré".
+**Rua Nagel e Avenida Mofarrej fora, 27/09/2026:** "a partir de agora não quero mais nada novo na
+Nagel ou na Mofarrej". Corte automático para anúncios novos nessas duas ruas (inclui o Vila Nova
+Leopoldina, na Nagel). O que já está na página nelas segue como está até ele decidir.
 **Rua Itapicuru, 84 (Perdizes) descartado em 25/09/2026: "muito longe da região de
 preferência".** Fica no leste de Perdizes (lon −46,665), perto do Pacaembu. Leitura
 minha, não confirmada por ele: o lado de Perdizes que interessa é o que encosta na
