@@ -678,6 +678,15 @@ Presidente Antônio Cândido (QuintoAndar 895465004 + Masfer AP86050), visitado 
   rodada**; ficaram sem fotos: 2914727318, 2914713209, 2914741351, 2914739147 = 2914716664
   (Fradique Coutinho), 2914737389 (Agissê), 2914741739 (Bianchi Bertoldi), 2914740537 (Alves
   Guimarães), 2914726337 (Mateus Grou), 2914699734 (Oscar Freire), 2914715671 (Faustolo).
+- **Leopoldina House, primeira varredura (28/09/2026):** a busca dele dá 41 anúncios em 4 páginas
+  (`&page=N`). O site limita o número de acessos (HTTP 429, "Rate exceeded"), e a página de busca
+  pré-carrega os links dos cards e gasta esse limite. Para abrir os detalhes, saia da busca (por
+  exemplo, para `/robots.txt`) e faça `fetch('/imovel/x-LHnnnn')` com uns 6 s entre as chamadas. O
+  anúncio principal só aparece no HTML renderizado: os campos `Endereco`/`Empreendimento` do payload
+  são dos "imóveis semelhantes". As fotos ficam em `"Codigo":"<n>","Foto":"..."`, e o `<n>` pode diferir
+  do código (LH5194 usa a pasta 5195). **Entraram como revisado, escolhidos por ele:** LH3121
+  (Maison Montparnasse, Jorge Americano, 263), LH2548 (Key West, 160 m², outra unidade) e LH5194
+  (Scena, outra unidade). **Os outros 38 ainda não foram triados.**
 - **Via Condoti 149 m² (QuintoAndar 895664086 = Pilar SEP21192) descartado em 26/09/2026:** o Tonelero 239
   visitado no mesmo prédio é muito melhor. Outras unidades do Via Condoti só valem se forem claramente
   superiores ao AP2442.
