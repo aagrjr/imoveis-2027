@@ -483,6 +483,10 @@ varrer sempre a mesma fonte:
   página de detalhe mistura fotos de outros anúncios (130+ URLs `img.kenlo.io`),
   e as primeiras ~10 são as do imóvel. A busca também traz Vila Madalena e Alto de
   Pinheiros, que ficam de fora.
+- **Leopoldina House** (incluída em 28/09/2026 a pedido dele) — usar esta busca com
+  os parâmetros que ele enviou:
+  `https://leopoldinahouse.com.br/busca?finalidade=Venda&tipo=Apartamento&bairro=Vila+Leopoldina%2CAlto+da+Lapa%2CLapa%2CPinheiros%2CPomp%C3%A9ia%2CSumarezinho%2CVila+Ipojuca%2CVila+Romana%2CVila+Pomp%C3%A9ia%2CVila+Madalena&areaTotalMin=120.00&max=2400000.00&dormitorios=3&order=maior-preco`.
+  Aplique também as exclusões de ruas e tipos acima; a URL, sozinha, não as filtra.
 
 **Mesmo prédio de um imóvel da lista = comparar as fotos com a linha, sempre.** Em
 25/09 mandei o VivaReal 2914129567 como "terceira unidade do Riservato" porque dizia
