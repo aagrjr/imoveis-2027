@@ -684,7 +684,7 @@ Presidente Antônio Cândido (QuintoAndar 895465004 + Masfer AP86050), visitado 
   exemplo, para `/robots.txt`) e faça `fetch('/imovel/x-LHnnnn')` com uns 6 s entre as chamadas. O
   anúncio principal só aparece no HTML renderizado: os campos `Endereco`/`Empreendimento` do payload
   são dos "imóveis semelhantes". As fotos ficam em `"Codigo":"<n>","Foto":"..."`, e o `<n>` pode diferir
-  do código (LH5194 usa a pasta 5195). **Entraram como revisado, escolhidos por ele:** LH3121
+  do código (LH5194 usa a pasta 5195). **Entraram como "a visitar", escolhidos por ele (primeiro marquei revisado, mas ele corrigiu: ainda não foram revisados):** LH3121
   (Maison Montparnasse, Jorge Americano, 263), LH2548 (Key West, 160 m², outra unidade) e LH5194
   (Scena, outra unidade). **Depois ele pediu também o LH5087 (Vitá, Carlos Weber, 87, outra unidade pelas fotos). E o LH5206 (Key West, 160 m², reformado; os valores são iguais aos do LH2548, mas pelas fotos é outra unidade). Os outros 36 ainda não foram triados.**
 - **Via Condoti 149 m² (QuintoAndar 895664086 = Pilar SEP21192) descartado em 26/09/2026:** o Tonelero 239
