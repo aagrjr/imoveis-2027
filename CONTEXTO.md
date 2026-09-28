@@ -658,7 +658,7 @@ Presidente Antônio Cândido (QuintoAndar 895465004 + Masfer AP86050), visitado 
   2914486821, 2914546456, 2914643284, 2914541559) ficam recusados; não trazer de volta.
 - **Rodada de 28/09/2026:** os 21 ativos continuam no ar, sem mudança de preço. Mostrados: VivaReal
   2914743134 = QuintoAndar 895646909 (Edifício Pompéia, Rua Tucuna, 223, 127 m², 3q, 1 vaga,
-  R$ 1,55 mi, cond. R$ 1.365, andar 8–11, reformado; eu tinha cortado em 24/09 sem mostrar) e VivaReal
+  R$ 1,55 mi, cond. R$ 1.365, andar 8–11, reformado; eu tinha cortado em 24/09 sem mostrar) — **entrou na página em 28/09 a pedido dele, com os dois links** (linha `pompeia-qa895646909`; o prédio é a Rua Tucuna, 132 pelo QuintoAndar, Lopes e Loft, 1971 segundo a Loft) e VivaReal
   2914738954 (Rua Bartira, 200, Perdizes leste perto da PUC, 220 m², 4q, 1 vaga, R$ 1,98 mi,
   cond. R$ 2.976, reformado, um por andar). Triados e não mostrados: Pilar PNS169 (Vila Ida/Alto de
   Pinheiros, antigo), NRE2664 (duplex), LXH6700 (Perdizes Privilege, Tucuna, 2003, acabamento
