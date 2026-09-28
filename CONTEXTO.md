@@ -656,6 +656,22 @@ Presidente Antônio Cândido (QuintoAndar 895465004 + Masfer AP86050), visitado 
   174 m², R$ 2,25 mi); 2914637233 = 2914292741 (já visto); o resto antigo.
   **Resposta dele: nada entra.** Os mostrados acima (ZI296066, MLN030, 894438290, 895247073,
   2914486821, 2914546456, 2914643284, 2914541559) ficam recusados; não trazer de volta.
+- **Rodada de 28/09/2026:** os 21 ativos continuam no ar, sem mudança de preço. Mostrados: VivaReal
+  2914743134 = QuintoAndar 895646909 (Edifício Pompéia, Rua Tucuna, 223, 127 m², 3q, 1 vaga,
+  R$ 1,55 mi, cond. R$ 1.365, andar 8–11, reformado; eu tinha cortado em 24/09 sem mostrar) e VivaReal
+  2914738954 (Rua Bartira, 200, Perdizes leste perto da PUC, 220 m², 4q, 1 vaga, R$ 1,98 mi,
+  cond. R$ 2.976, reformado, um por andar). Triados e não mostrados: Pilar PNS169 (Vila Ida/Alto de
+  Pinheiros, antigo), NRE2664 (duplex), LXH6700 (Perdizes Privilege, Tucuna, 2003, acabamento
+  antigo), INVR256 (Solar das Perdizes, Apiacás, 1986, madeira escura); QuintoAndar 894618696
+  (Sumarezinho), 895225234 (Ásia 173, lado Cerqueira César), 895566965 (Av. Rebouças, 1 foto);
+  VivaReal 2914713473 (Spazio Vernice, Carlos Weber, 457, vazio e antigo), 2914735699 e
+  2914739936 (Desembargador do Vale, antigos), 2914739677 (Paraguaçu, 232 m², cond. R$ 4.800),
+  2914728913 (Aimberê, 577, lustres, Sumaré), 2914739343 = 2914716231 (Barão do Bananal, 611, piso
+  antigo), 2914621735 (Princeton, Raul Pompéia, 930, já recusado como 895562239), 2914686354
+  (Lauriano), 2914739183 (Mofarrej). **VivaReal pediu verificação humana (Cloudflare) no meio da
+  rodada**; ficaram sem fotos: 2914727318, 2914713209, 2914741351, 2914739147 = 2914716664
+  (Fradique Coutinho), 2914737389 (Agissê), 2914741739 (Bianchi Bertoldi), 2914740537 (Alves
+  Guimarães), 2914726337 (Mateus Grou), 2914699734 (Oscar Freire), 2914715671 (Faustolo).
 - **Via Condoti 149 m² (QuintoAndar 895664086 = Pilar SEP21192) descartado em 26/09/2026:** o Tonelero 239
   visitado no mesmo prédio é muito melhor. Outras unidades do Via Condoti só valem se forem claramente
   superiores ao AP2442.
