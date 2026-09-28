@@ -216,6 +216,7 @@
       <option value="valor">Pre&ccedil;o</option>
       <option value="m2">&Aacute;rea</option>
       <option value="itens">Itens</option>
+      <option value="ano">Ano do pr&eacute;dio</option>
       <option value="add" selected>Data em que entrou</option>
     </select>
     <button class="chip" id="dir" title="inverter a ordem">&darr; maior</button>
@@ -424,10 +425,12 @@ const predio = a => a.predio && a.ano ? ` &middot; ${a.predio}, ${a.ano}`
   : a.predio ? ` &middot; ${a.predio}`
   : a.ano ? ` &middot; predio de ${a.ano}` : '';
 const CHAVE = { mensal: a => a.mensal, m2v: a => a.m2v, valor: a => a.valor,
-                m2: a => a.m2, itens: a => itensDe(a).length, add: a => a.addN };
+                m2: a => a.m2, itens: a => itensDe(a).length, add: a => a.addN, ano: a => a.ano || null };
 function ordenar(l) {
   const k = CHAVE[st.ordem];
-  return l.slice().sort((a, b) => (k(a) - k(b)) * st.dir);
+  // Sem valor (ano desconhecido) vai sempre para o fim, nos dois sentidos.
+  return l.slice().sort((a, b) => { const x = k(a), y = k(b);
+    return x == null || y == null ? (x == null) - (y == null) : (x - y) * st.dir; });
 }
 
 function cardHTML(a) {
