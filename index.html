@@ -112,10 +112,10 @@
   .item:hover { border-color: var(--good); }
   .item.off:hover { border-color: var(--muted); color: var(--muted); }
 
-  .card-foot { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: auto; padding-top: 4px; }
+  .card-foot { display: flex; gap: 6px; align-items: center; margin-top: auto; padding-top: 4px; }
   .card-foot select { flex: 0 0 auto; font-size: 12px; padding: 5px 8px; }
-  .card-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; margin-left: auto; }
-  .card-links a { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 9px;
+  .card-links { display: flex; justify-content: flex-end; gap: 4px; margin-left: auto; }
+  .card-links a { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 34px; padding: 6px 7px;
     border: 1px solid var(--accent-border); border-radius: 6px; background: var(--accent-bg);
     color: var(--accent); text-decoration: none; font: 600 12px -apple-system, sans-serif; white-space: nowrap; }
   .card-links a:hover, .card-detalhes summary:hover { border-color: var(--accent); }
@@ -149,7 +149,7 @@
     .item { font-size: 12px; padding: 7px 10px; }
     .fav { font-size: 22px; padding: 6px; }
     .descartar { font-size: 18px; padding: 6px 8px; }
-    .card-foot select { font-size: 13px; padding: 8px 10px; }
+    .card-foot select { font-size: 13px; padding: 8px 6px; }
     .site-header { padding: 0 14px; height: auto; flex-direction: column;
       align-items: flex-start; gap: 6px; padding: 10px 14px; }
     .header-stats { gap: 16px; }
@@ -426,7 +426,7 @@ function cardHTML(a) {
   const cls = a.m2v <= q1 ? 'barato' : a.m2v >= q3 ? 'caro' : '';
   const andar = a.andar ? (isNaN(a.andar) ? a.andar : a.andar + '&ordm; andar') : 'andar n/d';
   const mapa = a.privado && a.lat == null ? '' : `<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.aprox || a.privado
-    ? a.lat + ',' + a.lon : a.endereco + ', ' + a.bairro + ', São Paulo - SP')}" target="_blank" rel="noopener">ver mapa${a.aprox ? ' (aprox.)' : ''} &nearr;</a>`;
+    ? a.lat + ',' + a.lon : a.endereco + ', ' + a.bairro + ', São Paulo - SP')}" target="_blank" rel="noopener" aria-label="Ver mapa${a.aprox ? ' (localização aproximada)' : ''}" title="Ver mapa${a.aprox ? ' (localização aproximada)' : ''}">Mapa</a>`;
   return `<div class="card st-${s}" data-id="${a.id}">
     ${a.foto ? `<a class="card-foto-link" href="${a.link}" target="_blank" rel="noopener"><img class="card-foto"
       src="${a.foto}" alt="Abrir anuncio de ${a.endereco}" loading="lazy" decoding="async"
@@ -435,7 +435,7 @@ function cardHTML(a) {
       <div>
         <div class="bairro">${a.bairro}${a.cobertura ? ' &middot; cobertura' : ''}</div>
         <div class="endereco">${a.endereco}</div>
-        <div class="sub">${andar}${predio(a)}${a.privado ? ' &middot; endereco so na visita' : ''} &middot; entrou ${dmy(a.add || '2026-08-24')}${(v => v ? ` &middot; <b style="color:var(--good)">visitado${v === true ? '' : ' em ' + dmy(v)}</b>` : '')(load('visitou:' + a.id, null))}</div>
+        <div class="sub">${andar}${predio(a)}${a.privado ? ' &middot; endereco so na visita' : ''}${a.aprox ? ' &middot; mapa aprox.' : ''} &middot; entrou ${dmy(a.add || '2026-08-24')}${(v => v ? ` &middot; <b style="color:var(--good)">visitado${v === true ? '' : ' em ' + dmy(v)}</b>` : '')(load('visitou:' + a.id, null))}</div>
       </div>
       <div class="card-acoes">
         <button class="fav ${fav ? 'on' : ''}" title="favoritar">&#9733;</button>
@@ -456,9 +456,9 @@ function cardHTML(a) {
       <select>${['a-visitar', 'revisado', 'agendado', 'visitado', 'descartado'].map(o =>
         `<option value="${o}" ${o === s ? 'selected' : ''}>${o.replace('-', ' ')}</option>`).join('')}</select>
       <div class="card-links">
-        <a href="${a.link}" target="_blank" rel="noopener">ver anuncio &rarr;</a>
-        ${a.link2 ? `<a href="${a.link2}" target="_blank" rel="noopener">2&ordm; anuncio &rarr;</a>` : ''}
-        ${a.link3 ? `<a href="${a.link3}" target="_blank" rel="noopener">3&ordm; anuncio &rarr;</a>` : ''}
+        <a href="${a.link}" target="_blank" rel="noopener">Anúncio</a>
+        ${a.link2 ? `<a href="${a.link2}" target="_blank" rel="noopener" aria-label="2º anúncio" title="2º anúncio">2&ordm;</a>` : ''}
+        ${a.link3 ? `<a href="${a.link3}" target="_blank" rel="noopener" aria-label="3º anúncio" title="3º anúncio">3&ordm;</a>` : ''}
         ${mapa}
       </div>
     </div>
