@@ -644,6 +644,16 @@ Presidente Antônio Cândido (QuintoAndar 895465004 + Masfer AP86050), visitado 
 
 ### Em aberto
 
+- **Rodada de 27/09/2026:** 29 ativos no ar, preços iguais. O polígono do QuintoAndar por URL não é
+  confiável (numa carga respeita a área, noutra traz a cidade inteira); voltei aos bairros com
+  `/2-quartos/`. Pilar: MLN030 (Pinheiros, Av. Rebouças/Oscar Freire, 2q 135 m², reformado — longe,
+  lado Jardins), ZI296066 (Perdizes, Cayowaá provável, 133 m², 3 suítes, andar alto), ZAC45069
+  ("potencial de transformação" = precisa reforma, cortado), LEF26219 (lançamento, renders, cortado).
+  QuintoAndar (faixa estendida a R$ 1,3 mi): 894438290 (Maggiore, Nanuque, 488, 115 m², R$ 1,45 mi),
+  895247073 (Concorde, Franco da Rocha, 215, 170 m², R$ 1,51 mi); os demais antigos. VivaReal
+  (ids > 2914478000): 2914486821 (Fradique Coutinho, 120 m², R$ 2,18 mi), 2914546456 (Barão da
+  Passagem, 142 m², R$ 1,9 mi), 2914643284 (Diana, 223 m², R$ 2,2 mi), 2914541559 (Carlos Weber,
+  174 m², R$ 2,25 mi); 2914637233 = 2914292741 (já visto); o resto antigo.
 - **Via Condoti 149 m² (QuintoAndar 895664086 = Pilar SEP21192) descartado em 26/09/2026:** o Tonelero 239
   visitado no mesmo prédio é muito melhor. Outras unidades do Via Condoti só valem se forem claramente
   superiores ao AP2442.
