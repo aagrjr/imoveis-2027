@@ -654,6 +654,8 @@ Presidente Antônio Cândido (QuintoAndar 895465004 + Masfer AP86050), visitado 
   (ids > 2914478000): 2914486821 (Fradique Coutinho, 120 m², R$ 2,18 mi), 2914546456 (Barão da
   Passagem, 142 m², R$ 1,9 mi), 2914643284 (Diana, 223 m², R$ 2,2 mi), 2914541559 (Carlos Weber,
   174 m², R$ 2,25 mi); 2914637233 = 2914292741 (já visto); o resto antigo.
+  **Resposta dele: nada entra.** Os mostrados acima (ZI296066, MLN030, 894438290, 895247073,
+  2914486821, 2914546456, 2914643284, 2914541559) ficam recusados; não trazer de volta.
 - **Via Condoti 149 m² (QuintoAndar 895664086 = Pilar SEP21192) descartado em 26/09/2026:** o Tonelero 239
   visitado no mesmo prédio é muito melhor. Outras unidades do Via Condoti só valem se forem claramente
   superiores ao AP2442.
