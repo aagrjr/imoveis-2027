@@ -688,6 +688,19 @@ Presidente Antônio Cândido (QuintoAndar 895465004 + Masfer AP86050), visitado 
   do código (LH5194 usa a pasta 5195). **LH3121 = Pilar ARCO1204 = VivaReal 2900133695** (mesma varanda baixa com árvores, mesmo texto e mesmo condomínio; ele pediu o link da ARCO como principal). **Entraram como "a visitar", escolhidos por ele (primeiro marquei revisado, mas ele corrigiu: ainda não foram revisados):** LH3121
   (Maison Montparnasse, Jorge Americano, 263), LH2548 (Key West, 160 m², outra unidade) e LH5194
   (Scena, outra unidade). **Depois ele pediu também o LH5087 (Vitá, Carlos Weber, 87, outra unidade pelas fotos). E o LH5206 (Key West, 160 m², reformado; os valores são iguais aos do LH2548, mas pelas fotos é outra unidade). Triagem dos outros 36 (28/09, tarde). **Mostrados:** LH5397 (Martese, 143 m², R$ 2,39 mi; outra unidade, não o VK212), LH5503 (Doppio Alto da Lapa, 127 m²), LH513 (Pompeia, 160 m², novo), LH2442 (Reserva Alto da Lapa, 140 m², reformado; não é nenhum dos recusados em 26/09), LH5091 (Vitá, 129 m²), LH4858 (Antonieta, 160 m²), LH4397 (Pinheiros, 157 m², 1 vaga), LH4608 (Residencial Roma, 130 m²). **Repetido:** LH3143 = Baccarelli descartado (QA 895574028), agora a R$ 2,2 mi. **Cortados:** pela rua, LH5445/LH1785/LH5364/LH834 (Vila Nova Leopoldina I e II, Nagel), LH5539 (Podium) e LH5443 (Terraças, Matias Roxo); LH5335 (Chateaux de France, 138 m², provável unidade já descartada); por acabamento antigo ou vazio/obra, LH4398, LH2421, LH821, LH3096, LH1546, LH2045, LH1160, LH5384, LH2805, LH1194, LH2991, LH3855, LH1390 e LH2793; LH5119, LH3362 e LH5319 são medianos. VivaReal que tinham ficado sem foto: 2914737389 (duplex), 2914739147 (cobertura) e 2914699734 (Oscar Freire) cortados pela regra; 2914713209, 2914726337, 2914727318, 2914740537 e 2914741739 por acabamento antigo; 2914741351 é duplex (escada caracol); 2914715671 (Faustolo, 133 m², 3 suítes, R$ 1.790.100) parece ser do Atelier Aquarela, falta comparar as fotos com o AXS827.**
+- **Rodada da tarde de 28/09/2026:**
+  - **Mostrados, Pilar:**
+    - NRE2722 = Neo Milano, Rua Coriolano, 1642: mesma cozinha da linha descartada em 24/09 porque o VivaReal 2912394750 saiu do ar. Voltou a R$ 1,80 mi, condomínio R$ 2.209.
+    - ZI295930: outra unidade do Neo Milano, 126 m², 4 quartos, R$ 1,59 mi.
+    - PNS180: Pedroso de Morais, 135 m², 4 quartos, 1 vaga, R$ 1,65 mi.
+    - VERO1117: Rua Antônio Bicudo, Pinheiros, 121 m², R$ 2,36 mi, vazio e novo.
+  - **Mostrados, VivaReal:**
+    - 2914801399: Top Class, Rua Caraíbas, 135 m², 3 suítes, R$ 1,55 mi.
+    - 2914774011: Rua Girassol, Vila Madalena, 148 m², 3 suítes, reformado, R$ 2,17 mi.
+  - **Cortados:**
+    - Pela localização: Pilar ZI295641 (Água Branca); QuintoAndar 893476542 (Oscar Freire) e 894118271 (Henrique Schaumann).
+    - Por acabamento antigo: Pilar LEF45414 e TA538 (Bartira); VivaReal 2914821339 (Wanderley), 2914787033 (Fernão Dias), 2914773548 e 2914756949 (Simão Álvares).
+  - Os demais VivaReal eram republicações do QuintoAndar já vistas.
 - **Via Condoti 149 m² (QuintoAndar 895664086 = Pilar SEP21192) descartado em 26/09/2026:** o Tonelero 239
   visitado no mesmo prédio é muito melhor. Outras unidades do Via Condoti só valem se forem claramente
   superiores ao AP2442.
