@@ -172,6 +172,11 @@
   .mapa-pop.abaixo { transform: translate(-50%, 16px); }
   .pop-foto { display: block; width: 100%; height: 132px; object-fit: cover; border-radius: 6px; margin-bottom: 6px;
     background: var(--surface2); }
+  .pop-metricas { display: flex; flex-wrap: wrap; gap: 6px; margin: 7px 0 5px; }
+  .pop-metricas span { display: inline-flex; align-items: baseline; gap: 5px; padding: 5px 8px;
+    border: 1px solid var(--accent-border); border-radius: 6px; background: var(--accent-bg); color: var(--accent); font-size: 11px; }
+  .pop-metricas b { font-size: 12px; }
+  .pop-metricas span + span { border-color: var(--good-border); background: var(--good-bg); color: var(--good); }
   .mapa-pop > div + div { border-left: 1px solid var(--border); padding-left: 12px; margin-left: -1px; }
   .mapa-pop a { color: var(--accent); }
   .mapa-zoom { position: absolute; right: 10px; top: 10px; z-index: 4; display: flex; flex-direction: column; gap: 4px; }
@@ -548,8 +553,9 @@ function mapaDesenhar() {
     if (mp.aberto === i) html += `<div class="mapa-pop ${abaixo ? 'abaixo' : ''}" style="left:${px}px;top:${y - y0}px;max-height:${alt}px;--n:${n}">${g.apts.map(a => {
       const q = a.aprox || a.privado ? a.lat + ',' + a.lon : a.endereco + ', ' + a.bairro + ', São Paulo - SP';
       return `<div>${a.foto ? `<a href="${a.link}" target="_blank" rel="noopener"><img class="pop-foto" src="${a.foto}" alt=""
-        referrerpolicy="no-referrer" onerror="this.remove()"></a>` : ''}<b>${a.endereco}</b> &middot; ${a.bairro}<br>${brl(a.valor)} &middot; ${a.m2} m&sup2; &middot; mensal ${brl(a.mensal)}<br>${brl(a.m2v)}/m&sup2; &middot; ${itensDe(a).length}/${D.amenidades.length} itens
-        ${a.aprox ? '<br><span class="sub">localizacao aproximada</span>' : ''}<br>
+        referrerpolicy="no-referrer" onerror="this.remove()"></a>` : ''}<b>${a.endereco}</b> &middot; ${a.bairro}<br>${brl(a.valor)} &middot; ${a.m2} m&sup2; &middot; mensal ${brl(a.mensal)}
+        <div class="pop-metricas"><span>R$/m&sup2; <b>${brl(a.m2v)}</b></span><span>Itens <b>${itensDe(a).length}/${D.amenidades.length}</b></span></div>
+        ${a.aprox ? '<div class="sub">localizacao aproximada</div>' : ''}
         <a href="${a.link}" target="_blank" rel="noopener">anuncio &rarr;</a> &middot;
         ${a.link2 ? `<a href="${a.link2}" target="_blank" rel="noopener">2&ordm; anuncio &rarr;</a> &middot;` : ''}
         ${a.link3 ? `<a href="${a.link3}" target="_blank" rel="noopener">3&ordm; anuncio &rarr;</a> &middot;` : ''}
