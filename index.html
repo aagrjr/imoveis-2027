@@ -114,7 +114,7 @@
 
   .card-foot { display: flex; gap: 6px; align-items: center; margin-top: auto; padding-top: 4px; }
   .card-foot select { flex: 0 0 auto; font-size: 12px; padding: 5px 8px; }
-  .card-links { display: flex; justify-content: flex-end; gap: 4px; margin-left: auto; }
+  .card-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px; margin-left: auto; }
   .card-links a { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 34px; padding: 6px 7px;
     border: 1px solid var(--accent-border); border-radius: 6px; background: var(--accent-bg);
     color: var(--accent); text-decoration: none; font: 600 12px -apple-system, sans-serif; white-space: nowrap; }
@@ -251,7 +251,7 @@ const D = {
   {"bairro": "Alto da Lapa", "endereco": "MJOffre #159", "privado": true, "cobertura": false, "andar": "alto", "m2": 122, "qts": 3, "vgs": 2, "link": "https://www.mjoffreimoveis.com.br/imovel/apartamento-sao-paulo-alto-da-lapa-3-quartos-2-garagens-venda-ref-159/", "foto": "https://b.casteldigital.com.br/mjoffreimoveis/ig/im/imoveis/159/whatsapp-image-2026-01-22-at-185111-1-17691189199587.jpeg", "cond": 1800, "iptu": 92, "valor": 1799999, "add": "2026-08-30", "itens": ["Churrasqueira", "Escritório", "Ar Condicionado", "Closet", "Varanda fechada", "Piscina"]},
   {"bairro": "Alto da Lapa", "endereco": "Rua Inhatium", "predio": "Ed. Aspen", "privado": false, "cobertura": false, "andar": "4° a 7° andar", "m2": 127, "qts": 4, "vgs": 3, "lat": -23.53886, "lon": -46.71322, "link": "https://www.quintoandar.com.br/imovel/895045721/comprar", "foto": "https://www.quintoandar.com.br/img/med/original895045721-612.1388072652011quintoandar1.jpg", "cond": 2485, "iptu": 112, "valor": 1850000, "add": "2026-08-24", "itens": ["Ar Condicionado", "Máquina Louça", "Academia", "Piscina", "Depósito Garagem"]},
   {"bairro": "Alto da Lapa", "endereco": "Avenida Mercedes", "predio": "Villa Marchetti", "privado": false, "cobertura": false, "andar": "4° a 7° andar", "ano": 2000, "m2": 180, "qts": 6, "vgs": 3, "lat": -23.52254, "lon": -46.71226, "link": "https://www.quintoandar.com.br/imovel/895491256/comprar", "foto": "https://www.quintoandar.com.br/img/med/original895491256-926.5744553420049b990de54-5540-4476-b32b-e6415d26b469-LEAD3P-d8bfd046-7d3e-4f4e-b5e3-6e70f30f300b.jpg", "cond": 1400, "iptu": 917, "valor": 1940000, "add": "2026-08-24", "itens": ["Escritório", "Ar Condicionado", "Closet", "Varanda fechada", "Máquina Louça", "Academia", "Piscina"]},
-  {"bairro": "Alto da Lapa", "endereco": "Rua Presidente Antônio Cândido", "predio": "Palazzo Dell Arte", "privado": false, "cobertura": false, "andar": "12° a 15° andar", "ano": 2002, "m2": 150, "qts": 3, "vgs": 3, "lat": -23.53317, "lon": -46.71588, "link": "https://www.quintoandar.com.br/imovel/895465004/comprar", "link2": "https://www.masferimoveis.com.br/imovel/apartamento-sao-paulo-3-quartos-147-m/AP86050-MA0U?from=sale", "foto": "https://www.quintoandar.com.br/img/med/original895465004-689.2043377421412b774a7de-77de-4b76-abff-b69f540c367d-LEAD3P-51620303-47a6-46dc-85c4-dfbc90d180aa.jpg", "cond": 2955, "iptu": 1091, "valor": 2050000, "add": "2026-08-24", "itens": ["Churrasq. prédio", "Ar Condicionado", "Closet", "Varanda fechada", "Piscina", "Depósito Garagem"], "detalhes": "R$/m² em simulações de preço (150 m²): R$ 1,80 mi = R$ 12.000/m² · R$ 1,85 mi = R$ 12.333/m² · R$ 1,90 mi = R$ 12.667/m² · R$ 1,95 mi = R$ 13.000/m² (pedido atual: R$ 2,05 mi = R$ 13.667/m²). · **Temos contato direto com o proprietário** (29/09/2026): sem corretagem (~6%, ~R$ 123 mil sobre R$ 2,05 mi), o proprietário recebe o mesmo líquido vendendo por ~R$ 1,93 mi, e isso abre espaço para negociar."},
+  {"bairro": "Alto da Lapa", "endereco": "Rua Presidente Antônio Cândido", "predio": "Palazzo Dell Arte", "privado": false, "cobertura": false, "andar": "12° a 15° andar", "ano": 2002, "m2": 150, "qts": 3, "vgs": 3, "lat": -23.53317, "lon": -46.71588, "link": "https://www.quintoandar.com.br/imovel/895465004/comprar", "link2": "https://www.masferimoveis.com.br/imovel/apartamento-sao-paulo-3-quartos-147-m/AP86050-MA0U?from=sale", "foto": "https://www.quintoandar.com.br/img/med/original895465004-689.2043377421412b774a7de-77de-4b76-abff-b69f540c367d-LEAD3P-51620303-47a6-46dc-85c4-dfbc90d180aa.jpg", "cond": 2955, "iptu": 1091, "valor": 2050000, "add": "2026-08-24", "itens": ["Churrasq. prédio", "Ar Condicionado", "Closet", "Varanda fechada", "Piscina", "Depósito Garagem"], "detalhes": "R$/m² em simulações de preço (150 m²): R$ 1,80 mi = R$ 12.000/m² · R$ 1,85 mi = R$ 12.333/m² · R$ 1,90 mi = R$ 12.667/m² · R$ 1,95 mi = R$ 13.000/m² (pedido atual: R$ 2,05 mi = R$ 13.667/m²). · **Temos contato direto com o proprietário** (29/09/2026): sem corretagem (~6%, ~R$ 123 mil sobre R$ 2,05 mi), o proprietário recebe o mesmo líquido vendendo por ~R$ 1,93 mi, e isso abre espaço para negociar. · Outros anúncios da mesma unidade (fotos conferidas em 29/09/2026): Masfer AP86050 (2º) e VivaReal 2888962586 (3º; diz 4 quartos, 12º andar, R$ 2,049 mi), 2908652619, 2911436415, 2902413450 (15º andar), 2891648395 (12º) e 2893148094 (R$ 2,0 mi).", "link3": "https://www.vivareal.com.br/imovel/x-id-2888962586/", "mais": ["https://www.vivareal.com.br/imovel/x-id-2908652619/", "https://www.vivareal.com.br/imovel/x-id-2911436415/", "https://www.vivareal.com.br/imovel/x-id-2902413450/", "https://www.vivareal.com.br/imovel/x-id-2891648395/", "https://www.vivareal.com.br/imovel/x-id-2893148094/"]},
   {"bairro": "Vila Ipojuca", "endereco": "Rua Mota Pais", "predio": "Pateo Mondrian", "privado": false, "cobertura": false, "andar": "4° a 7° andar", "ano": 2012, "m2": 130, "qts": 3, "vgs": 2, "lat": -23.53718, "lon": -46.70387, "aprox": true, "link": "https://www.quintoandar.com.br/imovel/895587287/comprar", "foto": "https://www.quintoandar.com.br/img/med/original895587287-723.982156714199IMG6706InstagramCasaBatuta.jpg", "cond": 2600, "iptu": 775, "valor": 1850000, "add": "2026-08-24", "itens": ["Churrasqueira", "Churrasq. prédio", "Escritório", "Ar Condicionado", "Varanda fechada", "Máquina Louça", "Academia", "Piscina"]},
   {"bairro": "Vila Leopoldina", "endereco": "ZI278746", "privado": true, "cobertura": false, "andar": null, "m2": 129, "qts": 4, "vgs": 2, "lat": -23.52219, "lon": -46.73506, "aprox": true, "link": "https://www.pilarhomes.com.br/imovel/ZI278746/apartamento-4-quartos-vila-leopoldina-sao-paulo", "foto": "https://blintz-properties-sandbox.s3.amazonaws.com/ZI278746/pilar-homes-images-watermark/001.jpg", "cond": 1350, "iptu": 824, "valor": 2070000, "add": "2026-08-24", "itens": ["Churrasq. prédio", "Ar Condicionado", "Varanda fechada", "Academia", "Piscina", "Depósito Garagem"]},
   {"bairro": "Vila Leopoldina", "endereco": "Horizons", "privado": false, "cobertura": false, "andar": "alto", "ano": 2007, "m2": 117, "qts": 3, "vgs": 2, "lat": -23.52862, "lon": -46.72913, "aprox": true, "link": "https://www.pilarhomes.com.br/imovel/DMH017/apartamento-3-quartos-vila-leopoldina-sao-paulo", "link2": "https://dimorah.com.br/imoveis/horizons-vista-livre-andar-alto-e-o-privilegio-de-viver-com-tudo-por-perto-DMH017", "foto": "https://blintz-properties-sandbox.s3.amazonaws.com/6a873b899eb101b95a015066/pilar-homes-images-watermark/fd34466d-919c-402c-a762-47de956d2e06.jpeg", "cond": 1700, "iptu": 664, "valor": 2000000, "add": "2026-08-26", "itens": ["Churrasqueira", "Escritório", "Ar Condicionado", "Closet", "Varanda fechada", "Academia", "Piscina", "Depósito Garagem"]},
@@ -390,6 +390,11 @@ const saveStatus = (id, v) => { save('status:' + id, v); if (v === 'visitado' &&
 // Itens podem ser corrigidos na visita: o override vence o que veio do anuncio.
 const itensDe = a => load('itens:' + a.id, a.itens);
 
+// Outros anúncios da mesma unidade: link2, link3 e, quando há mais, a lista `mais`.
+const outrosLinks = a => [a.link2, a.link3, ...(a.mais || [])].filter(Boolean);
+const maisLinks = a => outrosLinks(a).map((u, i) =>
+  `<a href="${u}" target="_blank" rel="noopener" aria-label="${i + 2}º anúncio" title="${i + 2}º anúncio">${i + 2}&ordm;</a>`).join('');
+
 const m2vals = D.apts.map(a => a.m2v).sort((x, y) => x - y);
 const q1 = m2vals[Math.floor(m2vals.length * .25)], q3 = m2vals[Math.floor(m2vals.length * .75)];
 
@@ -474,8 +479,7 @@ function cardHTML(a) {
         `<option value="${o}" ${o === s ? 'selected' : ''}>${o.replace('-', ' ')}</option>`).join('')}</select>
       <div class="card-links">
         <a href="${a.link}" target="_blank" rel="noopener">Anúncio</a>
-        ${a.link2 ? `<a href="${a.link2}" target="_blank" rel="noopener" aria-label="2º anúncio" title="2º anúncio">2&ordm;</a>` : ''}
-        ${a.link3 ? `<a href="${a.link3}" target="_blank" rel="noopener" aria-label="3º anúncio" title="3º anúncio">3&ordm;</a>` : ''}
+        ${maisLinks(a)}
         ${mapa}
       </div>
     </div>
@@ -498,7 +502,7 @@ function tabelaHTML(l) {
       if (c[0] === 'ano' && !v) v = '?';
       if (['valor', 'm2v', 'cond', 'iptu', 'mensal'].includes(c[0])) v = brl(v);
       return `<td class="${c[2] ? 'num' : ''}">${v}</td>`;
-    }).join('')}<td><a href="${a.link}" target="_blank" rel="noopener" style="color:var(--accent)">link</a>${a.link2 ? ` <a href="${a.link2}" target="_blank" rel="noopener" style="color:var(--accent)">2</a>` : ''}${a.link3 ? ` <a href="${a.link3}" target="_blank" rel="noopener" style="color:var(--accent)">3</a>` : ''}</td></tr>`;
+    }).join('')}<td><a href="${a.link}" target="_blank" rel="noopener" style="color:var(--accent)">link</a>${outrosLinks(a).map((u, i) => ` <a href="${u}" target="_blank" rel="noopener" style="color:var(--accent)">${i + 2}</a>`).join('')}</td></tr>`;
   }).join('')}</tbody></table></div>`;
 }
 
@@ -582,8 +586,7 @@ function mapaDesenhar() {
         <div class="pop-metricas"><span>R$/m&sup2; <b>${brl(a.m2v)}</b></span><span>Itens <b>${itensDe(a).length}/${D.amenidades.length}</b></span></div>
         ${a.aprox ? '<div class="sub">localizacao aproximada</div>' : ''}
         <div class="card-links"><a href="${a.link}" target="_blank" rel="noopener">Anúncio</a>
-        ${a.link2 ? `<a href="${a.link2}" target="_blank" rel="noopener" aria-label="2º anúncio" title="2º anúncio">2&ordm;</a>` : ''}
-        ${a.link3 ? `<a href="${a.link3}" target="_blank" rel="noopener" aria-label="3º anúncio" title="3º anúncio">3&ordm;</a>` : ''}
+        ${maisLinks(a)}
         <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}" target="_blank" rel="noopener" title="Abrir no Google Maps">Mapa</a></div></div>`;
     }).join('')}</div>`;
   });
