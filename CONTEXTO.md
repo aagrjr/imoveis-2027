@@ -701,6 +701,14 @@ Presidente Antônio Cândido (QuintoAndar 895465004 + Masfer AP86050), visitado 
     - Pela localização: Pilar ZI295641 (Água Branca); QuintoAndar 893476542 (Oscar Freire) e 894118271 (Henrique Schaumann).
     - Por acabamento antigo: Pilar LEF45414 e TA538 (Bartira); VivaReal 2914821339 (Wanderley), 2914787033 (Fernão Dias), 2914773548 e 2914756949 (Simão Álvares).
   - Os demais VivaReal eram republicações do QuintoAndar já vistas.
+- **Rodada de 29/09/2026:** os 26 ativos continuam no ar, sem mudança de preço.
+  - **Pilar:** MLN033 (Jardim América, precisa reforma) e CLI406 (Alto de Pinheiros, Lindenberg clássico) cortados.
+  - **QuintoAndar:** 893546846 (Turiassu, R$ 1,3 mi), 893680769 (Monte Alegre, condomínio R$ 3.900) e 894316762 (Smart Vila Madalena, duplex) cortados.
+  - **Masfer:** nada novo.
+  - **VivaReal:** enxurrada de republicações durante a noite.
+    - Repetidos: 2914881878 = ECLAT478 descartado (Rua Fábia, 141 m², condomínio R$ 1.300); 2914847269 = AXS827 (Faustolo, R$ 2,0 mi, condomínio R$ 1.393); Jorge Americano = unidades do Montparnasse já vistas; Raul Pompéia 146 = Princeton; Navarro de Andrade 135 = PNS180; Luís Augusto de Queirós Aranha 224 = CLI406.
+    - Mostrados: 2914880286 (Rua Tito, garden de 129 m² + jardim, R$ 2,35 mi; outra unidade, não o AXS884), 2914881245 e 2914890362 (Caraíbas), 2914891537 (Ministro Godói), 2914890139 (Minerva), 2914894442 (Cotoxó), 2914901217 (Caiubi), 2914904330 (Doutor José Elias, 157 m²), 2914882376 (João Ramalho), 2914882778 (João Moura), 2914917807 (Carlos Weber, 130 m²), 2914918005 (Pinheiros, sem endereço).
+    - Cortados por acabamento antigo: Fradique Coutinho, Mourato Coelho, João Ramalho 157 e 123 (2914880904), Coronel Melo de Oliveira, Apinajés, Gomes Freire e Caraíbas 2914912162.
 - **Via Condoti 149 m² (QuintoAndar 895664086 = Pilar SEP21192) descartado em 26/09/2026:** o Tonelero 239
   visitado no mesmo prédio é muito melhor. Outras unidades do Via Condoti só valem se forem claramente
   superiores ao AP2442.
