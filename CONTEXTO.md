@@ -1,7 +1,7 @@
 # Contexto da busca
 
 Documento de handoff: o que não dá pra deduzir lendo o código.
-Atualizado em 2026-09-23.
+Atualizado em 2026-09-29.
 
 ## O que estamos procurando
 
@@ -11,8 +11,9 @@ Apartamento para compra em São Paulo, zona oeste. Perfil que emergiu da lista:
   Pompeia e Vila Madalena (Vila Madalena confirmada em 22/09/2026). **Pinheiros saiu
   em 29/09/2026** ("vamos remover pinheiros dos possíveis bairros"): não varrer nem
   mostrar anúncios novos de lá
-- **Faixa:** R$ 1,55 mi a R$ 2,4 mi (o teto subiu de 2,2 para 2,3 em 29/08/2026 e
-  para 2,4 em 22/09/2026; nada que já estava na página foi descartado pela mudança)
+- **Faixa para novas buscas:** R$ 1,55 mi a R$ 2,3 mi (o teto subiu de 2,2 para 2,3
+  em 29/08/2026, foi a 2,4 em 22/09/2026 e voltou a 2,3 em 29/09/2026).
+  **Não remover nem descartar imóveis já presentes na página por excederem R$ 2,3 mi.**
 - **Tamanho:** a partir de 115 m², 3+ quartos (o mínimo de área subiu de 110 para
   115 m² em 2026-09-14). **Sem teto de área** (22/09/2026): maior que 200 m² dentro
   do preço também serve. **2 quartos também valem se a área for de 115 m² ou mais**
@@ -263,7 +264,7 @@ ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
   arquivo; o que distingue é o hash (`/img/vr-listing/<hash>/...`). Deduplique pelo hash.
 - **Pilar, rotina diária (desde 25/09/2026, dica dele): uma chamada só, ordenada por data.**
   `curl` em
-  `https://www.pilarhomes.com.br/venda/imoveis/vila-leopoldina-sao-paulo-sp-brasil/apartamento?sortBy=publication_date&orderBy=desc&minAskingPrice=1550000&maxAskingPrice=2400000&minArea=115&parkingSpots=1&regions=Vila+Leopoldina%2CVila+Romana%2CAlto+da+Lapa%2CVila+Ipojuca%2CPerdizes%2CPomp%C3%A9ia%2CVila+Madalena&propertyTypes=casa-de-condominio&cities=S%C3%A3o+Paulo&states=SP`
+  `https://www.pilarhomes.com.br/venda/imoveis/vila-leopoldina-sao-paulo-sp-brasil/apartamento?sortBy=publication_date&orderBy=desc&minAskingPrice=1550000&maxAskingPrice=2300000&minArea=115&parkingSpots=1&regions=Vila+Leopoldina%2CVila+Romana%2CAlto+da+Lapa%2CVila+Ipojuca%2CPerdizes%2CPomp%C3%A9ia%2CVila+Madalena&propertyTypes=casa-de-condominio&cities=S%C3%A3o+Paulo&states=SP`
   devolve do servidor os 12 anúncios mais recentes de todos os bairros, já filtrados
   (preço, área, vaga; `propertyTypes` soma casa de condomínio ao; cobertura e duplex saíram em 26/09
   `/apartamento` do caminho). `page=` continua ignorado: se os 12 vierem todos
@@ -478,7 +479,7 @@ varrer sempre a mesma fonte:
   confirmado, e não publique no campo `endereco`.
 - **Masfer** (incluída em 2026-09-22 a pedido dele: costuma postar só nas nossas
   áreas, e 4 dos ativos já vieram de lá) —
-  `https://www.masferimoveis.com.br/imoveis/a-venda/apartamento+cobertura?quartos=3+&vagas=1+&area=115+&preco-de-venda=0~3000000`,
+  `https://www.masferimoveis.com.br/imoveis/a-venda/apartamento+cobertura?quartos=3+&vagas=1+&area=115+&preco-de-venda=0~2300000`,
   via `curl`, mais `&pagina=2`. Os cards (`/imovel/<slug>/<CÓDIGO>-MA0U`) trazem
   bairro, m², quartos, vagas e preço; o detalhe traz condomínio e IPTU. Ignore
   "Rua Teodoro Sampaio" no texto: é o endereço da imobiliária, não do imóvel. A
@@ -487,7 +488,7 @@ varrer sempre a mesma fonte:
   Pinheiros, que ficam de fora.
 - **Leopoldina House** (incluída em 28/09/2026 a pedido dele) — usar esta busca com
   os parâmetros que ele enviou:
-  `https://leopoldinahouse.com.br/busca?finalidade=Venda&tipo=Apartamento&bairro=Vila+Leopoldina%2CAlto+da+Lapa%2CLapa%2CPinheiros%2CPomp%C3%A9ia%2CSumarezinho%2CVila+Ipojuca%2CVila+Romana%2CVila+Pomp%C3%A9ia%2CVila+Madalena&areaTotalMin=120.00&max=2400000.00&dormitorios=3&order=maior-preco`.
+  `https://leopoldinahouse.com.br/busca?finalidade=Venda&tipo=Apartamento&bairro=Vila+Leopoldina%2CAlto+da+Lapa%2CLapa%2CPinheiros%2CPomp%C3%A9ia%2CSumarezinho%2CVila+Ipojuca%2CVila+Romana%2CVila+Pomp%C3%A9ia%2CVila+Madalena&areaTotalMin=120.00&max=2300000.00&dormitorios=3&order=maior-preco`.
   Aplique também as exclusões de ruas e tipos acima; a URL, sozinha, não as filtra.
 
 **Mesmo prédio de um imóvel da lista = comparar as fotos com a linha, sempre.** Em
