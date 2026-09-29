@@ -715,7 +715,7 @@ Presidente Antônio Cândido (QuintoAndar 895465004 + Masfer AP86050), visitado 
 - **Presidente Antônio Cândido (visitado, favorito): contato direto com o proprietário (29/09/2026).** Sem corretagem, dá para negociar. Nos detalhes do card estão as simulações de R$/m² para R$ 1,80, 1,85, 1,90 e 1,95 mi (150 m²) e o líquido equivalente sem os ~6% de corretagem (~R$ 1,93 mi).
 - **Outras unidades à venda no Palazzo Dell Arte (Rua Presidente Antônio Cândido, 350), levantadas em 29/09/2026 para a negociação:**
   - O prédio tem unidades de 146–150 m², todas com 3 suítes.
-  - **O apartamento dele** aparece também como VivaReal 2911436415 (mesmo texto do QuintoAndar), 2902413450 (15º andar), 2891648395 (12º), 2893148094 (R$ 2,0 mi), 2888962586 (confirmado por ele e pelas fotos; o anúncio diz 4 quartos, 12º andar, R$ 2,049 mi, condomínio R$ 2.500) e 2908652619 (R$ 2,05 mi, condomínio R$ 2.238). A maioria informa condomínio R$ 2.955 e IPTU R$ 1.091.
+  - **O apartamento dele** aparece também como VivaReal 2888962586 (confirmado por ele: o anúncio diz 4 quartos, 12º andar, R$ 2,049 mi, condomínio R$ 2.500). **Ele considera os demais outras unidades**, inclusive os que eu tinha juntado pelo condomínio de R$ 2.955 e IPTU de R$ 1.091 (VivaReal 2911436415, cujo texto é igual ao do QuintoAndar, 2902413450, 2891648395, 2893148094 e 2908652619). Não colocar no card sem ele confirmar.
   - **Outras unidades, pelas fotos** (agrupamento provável):
     - QuintoAndar 895567132: 147 m², 12º–15º andar, **R$ 1,90 mi**, condomínio R$ 2.950.
     - VivaReal 2913941747 = 2913941748 (YK Private): sofá estampado, cadeiras cinza; R$ 2,03 / **1,96 mi**; condomínio R$ 2.238. (Eu tinha juntado o 2908652619 aqui por engano: aquele é o apartamento dele.)
