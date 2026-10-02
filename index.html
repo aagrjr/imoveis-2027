@@ -411,7 +411,7 @@ function stats() {
   const visit = D.apts.filter(a => load('visitou:' + a.id, null) || st_(a) === 'visitado').length;
   const agend = D.apts.filter(a => st_(a) === 'agendado').length;
   const hold = D.apts.filter(a => st_(a) === 'on-hold').length;
-  document.getElementById('totais').innerHTML = `<b>${D.apts.length}</b> no total &middot; <b>${D.apts.length - desc}</b> disponiveis &middot; <b>${desc}</b> descartados &middot; <b>${visit}</b> visitado${visit === 1 ? '' : 's'}` + (agend ? ` &middot; <b>${agend}</b> agendado${agend === 1 ? '' : 's'}` : '')
+  document.getElementById('totais').innerHTML = `<b>${D.apts.length}</b> no total &middot; <b>${D.apts.length - desc - hold}</b> disponiveis &middot; <b>${desc}</b> descartados &middot; <b>${visit}</b> visitado${visit === 1 ? '' : 's'}` + (agend ? ` &middot; <b>${agend}</b> agendado${agend === 1 ? '' : 's'}` : '')
     + (hold ? ` &middot; <b>${hold}</b> on hold` : '');
   const vis = filtrar();
   const vals = vis.map(a => a.valor);
@@ -433,7 +433,8 @@ function filtrar() {
     if (st.revd && s === 'a-visitar') return false;
     // Visitado = tem data em `visitou:` ou status visitado, o mesmo criterio do total do topo.
     if (st.vis && !(load('visitou:' + a.id, null) || s === 'visitado')) return false;
-    if (st.hold && s !== 'on-hold') return false;
+    // On hold so aparece no proprio filtro, nunca na lista de disponiveis.
+    if ((s === 'on-hold') !== st.hold) return false;
     return true;
   });
 }
