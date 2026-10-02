@@ -599,8 +599,8 @@ acabamento acima. A taxa histórica é de ~15% dos que passam pelos números.
 ## Mensagem para corretores (02/10/2026, texto dele)
 
 Usar exatamente este texto quando ele pedir o que mandar a um corretor. A faixa e o teto de condomínio aqui são
-mais apertados que os da busca (R$ 2,3 mi / ~R$ 3 mil) de propósito, para margem de negociação; a busca diária
-não mudou.
+mais apertados que os da busca (R$ 2,3 mi / ~R$ 3 mil) de propósito: "é pq eles sempre mandam coisa acima do
+esperado" (dele, 02/10). A busca diária não mudou.
 
 > Região: Vila Romana, Alto da Lapa, Vila Leopoldina, Pompeia, Perdizes, Vila Ipojuca e Vila Madalena.
 >
