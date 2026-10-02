@@ -596,6 +596,25 @@ Mercedes, da Chafalote e da Faustolo. A montagem local continua servindo para a
 Depois **filtre por fotos antes de mostrar qualquer coisa** — ver a seção de
 acabamento acima. A taxa histórica é de ~15% dos que passam pelos números.
 
+## Mensagem para corretores (02/10/2026, texto dele)
+
+Usar exatamente este texto quando ele pedir o que mandar a um corretor. A faixa e o teto de condomínio aqui são
+mais apertados que os da busca (R$ 2,3 mi / ~R$ 3 mil) de propósito, para margem de negociação; a busca diária
+não mudou.
+
+> Região: Vila Romana, Alto da Lapa, Vila Leopoldina, Pompeia, Perdizes, Vila Ipojuca e Vila Madalena.
+>
+> Não quero:
+> Ruas na Leopoldina: Lauriano Fernandes Júnior, Belchior de Azevedo, Fortunato Ferraz, Nagel, Mofarrej e Matias Roxo.
+>
+> Faixa: Até 2,2 mi, com condomínio até uns R$ 2,5 mil.
+>
+> Imóvel: a partir de 115 m², 3 quartos (ou 2 se for bem amplo), pelo menos 1 vaga. Pronto para morar, com acabamento atual. Não quero nada para reformar, no contrapiso ou em obra.
+>
+> Prédio: de preferência dos anos 2000 para cá, com lazer (piscina e academia). Não quero cobertura, duplex nem garden.
+>
+> O que pesa a favor: varanda gourmet fechada com churrasqueira, ar-condicionado, escritório, closet, lava-louças e depósito na garagem.
+
 ## Decisões já tomadas (não reabrir sem motivo)
 
 - **A planilha foi abandonada.** O projeto nasceu de `~/Downloads/Aptos.xlsx` e tinha
