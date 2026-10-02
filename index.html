@@ -58,6 +58,8 @@
   }
   .card.st-agendado { border-color: var(--warn-border); }
   .card.st-visitado { border-color: var(--good-border); }
+  .card.st-on-hold { border-style: dashed; opacity: .6; }
+  .card.st-on-hold:hover { opacity: .9; }
   .card-foto {
     display: block; width: calc(100% + 36px); height: 150px; object-fit: cover;
     margin: -16px -18px 2px; border-radius: 9px 9px 0 0; background: var(--surface2);
@@ -208,6 +210,7 @@
     <button class="chip" id="chip-rev" title="ver so os que ainda nao foram revisados">a revisar</button>
     <button class="chip" id="chip-revd" title="ver so os que ja foram revisados">revisados</button>
     <button class="chip" id="chip-vis" title="ver so os que ja foram visitados">visitados</button>
+    <button class="chip" id="chip-hold" title="ver so os que estao em espera: nao vamos visitar agora, mas nao descartamos">on hold</button>
     <button class="chip" id="chip-desc" title="ver so os descartados">descartados</button>
     <span class="spacer"></span>
     <select id="ordem">
@@ -369,7 +372,7 @@ if (location.hash.startsWith('#s=')) {
   } catch (e) { console.warn('link de dados invalido', e); }
 }
 
-const st = { mapa: false, fav: false, rev: false, revd: false, vis: false, desc: false, ordem: 'add', dir: -1, tabela: false, sortCol: null, sortDir: 1 };
+const st = { mapa: false, fav: false, rev: false, revd: false, vis: false, hold: false, desc: false, ordem: 'add', dir: -1, tabela: false, sortCol: null, sortDir: 1 };
 
 // Dois imoveis podem ter mesmo endereco e metragem (unidades diferentes do mesmo
 // predio): o contador garante id unico, senao um sobrescreve o estado do outro.
@@ -407,7 +410,9 @@ function stats() {
   const desc = D.apts.filter(a => st_(a) === 'descartado').length;
   const visit = D.apts.filter(a => load('visitou:' + a.id, null) || st_(a) === 'visitado').length;
   const agend = D.apts.filter(a => st_(a) === 'agendado').length;
-  document.getElementById('totais').innerHTML = `<b>${D.apts.length}</b> no total &middot; <b>${D.apts.length - desc}</b> disponiveis &middot; <b>${desc}</b> descartados &middot; <b>${visit}</b> visitado${visit === 1 ? '' : 's'}` + (agend ? ` &middot; <b>${agend}</b> agendado${agend === 1 ? '' : 's'}` : '');
+  const hold = D.apts.filter(a => st_(a) === 'on-hold').length;
+  document.getElementById('totais').innerHTML = `<b>${D.apts.length}</b> no total &middot; <b>${D.apts.length - desc}</b> disponiveis &middot; <b>${desc}</b> descartados &middot; <b>${visit}</b> visitado${visit === 1 ? '' : 's'}` + (agend ? ` &middot; <b>${agend}</b> agendado${agend === 1 ? '' : 's'}` : '')
+    + (hold ? ` &middot; <b>${hold}</b> on hold` : '');
   const vis = filtrar();
   const vals = vis.map(a => a.valor);
   document.getElementById('stats').innerHTML = vis.length ? `
@@ -428,6 +433,7 @@ function filtrar() {
     if (st.revd && s === 'a-visitar') return false;
     // Visitado = tem data em `visitou:` ou status visitado, o mesmo criterio do total do topo.
     if (st.vis && !(load('visitou:' + a.id, null) || s === 'visitado')) return false;
+    if (st.hold && s !== 'on-hold') return false;
     return true;
   });
 }
@@ -478,7 +484,7 @@ function cardHTML(a) {
         title="clique para marcar ou desmarcar">${i}</button>`).join(''))(itensDe(a))}</div>
     <textarea class="nota" placeholder="anotacoes...">${load('nota:' + a.id, '')}</textarea>
     <div class="card-foot">
-      <select>${['a-visitar', 'revisado', 'agendado', 'visitado', 'descartado'].map(o =>
+      <select>${['a-visitar', 'revisado', 'agendado', 'visitado', 'on-hold', 'descartado'].map(o =>
         `<option value="${o}" ${o === s ? 'selected' : ''}>${o.replace('-', ' ')}</option>`).join('')}</select>
       <div class="card-links">
         <a href="${a.link}" target="_blank" rel="noopener">Anúncio</a>
@@ -639,6 +645,7 @@ document.addEventListener('click', e => {
     return render();
   }
   if (e.target.id === 'chip-vis') { st.vis = !st.vis; e.target.classList.toggle('on'); return render(); }
+  if (e.target.id === 'chip-hold') { st.hold = !st.hold; e.target.classList.toggle('on'); return render(); }
   if (e.target.id === 'chip-desc') { st.desc = !st.desc; e.target.classList.toggle('on'); return render(); }
   if (e.target.id === 'chip-mapa') { st.mapa = !st.mapa; e.target.classList.toggle('on'); return render(); }
   const pin = e.target.closest('.mapa .pin');

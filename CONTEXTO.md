@@ -681,6 +681,7 @@ Presidente Antônio Cândido (QuintoAndar 895465004 + Masfer AP86050), visitado 
   rodada**; ficaram sem fotos: 2914727318, 2914713209, 2914741351, 2914739147 = 2914716664
   (Fradique Coutinho), 2914737389 (Agissê), 2914741739 (Bianchi Bertoldi), 2914740537 (Alves
   Guimarães), 2914726337 (Mateus Grou), 2914699734 (Oscar Freire), 2914715671 (Faustolo).
+- **Status "on hold" (01/10/2026, pedido dele):** "não seria visitado agora mas não queremos descartar". Fica na lista ativa, apagado e com borda tracejada; chip "on hold" filtra só esses; conta no topo.
 - **Leopoldina House entra na rotina diária (01/10/2026):** "leopoldina house não é pra ficar comigo, pode fazer". Varra e trie como os outros sites (a regra abaixo, de 28/09, deixou de valer).
 - ~~Leopoldina House: ele mesmo revisa a lista inteira (28/09/2026).~~ "Do Leopoldina House eu já tinha olhado todos aqui localmente. Quando perguntei de outros anúncios hoje seriam de outros sites." Não traga triagem da Leopoldina House como novidade; quando ele mandar um código de lá, o trabalho é achar o mesmo apartamento em outros sites (QuintoAndar, VivaReal, Pilar, Masfer etc.) para ter mais fotos.
 - **Leopoldina House, primeira varredura (28/09/2026):** a busca dele dá 41 anúncios em 4 páginas
