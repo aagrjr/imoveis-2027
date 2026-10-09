@@ -57,7 +57,8 @@ lat, lon, aprox, link, link2, link3, foto, cond, iptu, valor, add, detalhes, ite
 São opcionais: `id`, `predio`, `ano`, `aprox`, `link2`, `link3`, `foto` e `detalhes`.
 
 - `id` fixa a chave do estado. A chave padrão sai de `endereco + '-' + m2`
-  minúsculo, sem acento, com `-2`, `-3`… para repetidos — então **mudar o
+  minúsculo, com todo caractere fora de `a-z0-9` (inclusive letra acentuada) virando
+  hífen — `Rua Capitão…` dá `rua-capit-o-…`, não `capitao` — e `-2`, `-3`… para repetidos — então **mudar o
   `endereco` de uma linha deixa as marcações dela órfãs**. Ao publicar um endereço que antes
   era `privado`, grave o `id` antigo na linha.
 - `predio` e `ano` aparecem juntos no card ("Via Condoti, 2004"); `ano` também é
