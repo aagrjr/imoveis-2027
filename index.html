@@ -439,6 +439,9 @@ function filtrar() {
     if ((s === 'descartado') !== st.desc) return false;
     // Vendido (ou anuncio fora do ar) tambem so aparece no proprio chip.
     if ((s === 'vendido') !== st.vend) return false;
+    // Favorito ainda disponivel fica sempre na pagina inicial, mesmo visitado ou on hold.
+    const inicial = !(st.fav || st.rev || st.revd || st.vis || st.hold || st.desc || st.vend);
+    if (inicial && !fora(s) && load('fav:' + a.id, false)) return true;
     if (st.fav && !load('fav:' + a.id, false)) return false;
     // "A revisar" = ainda no status padrao; revisado, agendado e visitado ja passaram por revisao.
     if (st.rev && s !== 'a-visitar') return false;

@@ -29,6 +29,7 @@ Chaves por imóvel: `fav:<id>`, `status:<id>`, `nota:<id>`, `itens:<id>` e
   **sobrevive a um descarte posterior**: o card mostra "visitado em dd/mm" mesmo
   depois de descartado. É como se sabe que o descarte veio de uma visita.
 - **Descartar não apaga o favorito.** A estrela fica no descartado de propósito.
+- **Favorito ainda disponível fica sempre na página inicial** (13/10/2026, pedido dele): sem nenhum chip ligado, todo favorito que não está descartado nem vendido aparece, mesmo visitado ou on hold.
 - **"revisados"** (23/09/2026) é o complemento de "a revisar": mostra revisado,
   agendado e visitado. Os dois chips se excluem, ligar um desliga o outro.
 - A linha **#totais** (25/09/2026), acima dos filtros, conta a busca inteira: total,
