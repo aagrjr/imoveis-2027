@@ -1072,3 +1072,4 @@ Observações em aberto:
   é de outro prédio (Weber Art). Vale saber se a rua foi o motivo do descarte ou não.
 - O **IPTU do Horizons (R$ 664)** e o do **ZI292317 (R$ 590)** vieram sem indicação de
   mensal ou anual na página da Pilar. Gravados como mensais; confirmar.
+- Notas dos cards do Pátio das Artes AP2388 e "até 3º andar" removidas (29/10, pedido dele; 2026-10-29-1).
