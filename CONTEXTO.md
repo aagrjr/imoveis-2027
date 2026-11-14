@@ -14,9 +14,9 @@ Apartamento para compra em São Paulo, zona oeste. Perfil que emergiu da lista:
 - **Faixa para novas buscas:** R$ 1,55 mi a R$ 2,3 mi (o teto subiu de 2,2 para 2,3
   em 29/08/2026, foi a 2,4 em 22/09/2026 e voltou a 2,3 em 29/09/2026).
   **Não remover nem descartar imóveis já presentes na página por excederem R$ 2,3 mi.**
-- **Tamanho:** a partir de **120 m²**, 3+ quartos (o mínimo de área subiu de 110 para
-  115 m² em 2026-09-14 e para 120 m² em 2026-10-08; imóveis já na página abaixo disso ficam). **Sem teto de área** (22/09/2026): maior que 200 m² dentro
-  do preço também serve. **2 quartos também valem se a área for de 120 m² ou mais**
+- **Tamanho:** a partir de **130 m²**, 3+ quartos (o mínimo de área subiu de 110 para
+  115 m² em 2026-09-14, para 120 m² em 2026-10-08 e para 130 m² em 2026-11-13: "trazer só acima de 130m daqui pra frente"; imóveis já na página abaixo disso ficam). **Sem teto de área** (22/09/2026): maior que 200 m² dentro
+  do preço também serve. **2 quartos também valem se a área for de 130 m² ou mais**
   (26/09/2026: "se os de dois quartos estiverem em tamanho apropriado pode mostrar");
   no QuintoAndar isso é o caminho `/2-quartos/` (que já inclui 3+).
 - **Sem coberturas nem duplex (26/09/2026):** "vamos adicionar uma regra para ignorar
@@ -267,7 +267,7 @@ ignorou filtros por URL, o VivaReal funcionou, e a busca nunca mais saiu de lá.
   arquivo; o que distingue é o hash (`/img/vr-listing/<hash>/...`). Deduplique pelo hash.
 - **Pilar, rotina diária (desde 25/09/2026, dica dele): uma chamada só, ordenada por data.**
   `curl` em
-  `https://www.pilarhomes.com.br/venda/imoveis/vila-leopoldina-sao-paulo-sp-brasil/apartamento?sortBy=publication_date&orderBy=desc&minAskingPrice=1550000&maxAskingPrice=2300000&minArea=120&parkingSpots=1&regions=Vila+Leopoldina%2CVila+Romana%2CAlto+da+Lapa%2CVila+Ipojuca%2CPerdizes%2CPomp%C3%A9ia%2CVila+Madalena&propertyTypes=casa-de-condominio&cities=S%C3%A3o+Paulo&states=SP`
+  `https://www.pilarhomes.com.br/venda/imoveis/vila-leopoldina-sao-paulo-sp-brasil/apartamento?sortBy=publication_date&orderBy=desc&minAskingPrice=1550000&maxAskingPrice=2300000&minArea=130&parkingSpots=1&regions=Vila+Leopoldina%2CVila+Romana%2CAlto+da+Lapa%2CVila+Ipojuca%2CPerdizes%2CPomp%C3%A9ia%2CVila+Madalena&propertyTypes=casa-de-condominio&cities=S%C3%A3o+Paulo&states=SP`
   devolve do servidor os 12 anúncios mais recentes de todos os bairros, já filtrados
   (preço, área, vaga; `propertyTypes` soma casa de condomínio ao; cobertura e duplex saíram em 26/09
   `/apartamento` do caminho). `page=` continua ignorado: se os 12 vierem todos
@@ -492,7 +492,7 @@ varrer sempre a mesma fonte:
   Pinheiros, que ficam de fora.
 - **Leopoldina House** (incluída em 28/09/2026 a pedido dele) — usar esta busca com
   os parâmetros que ele enviou:
-  `https://leopoldinahouse.com.br/busca?finalidade=Venda&tipo=Apartamento&bairro=Vila+Leopoldina%2CAlto+da+Lapa%2CLapa%2CPinheiros%2CPomp%C3%A9ia%2CSumarezinho%2CVila+Ipojuca%2CVila+Romana%2CVila+Pomp%C3%A9ia%2CVila+Madalena&areaTotalMin=120.00&max=2300000.00&dormitorios=3&order=maior-preco`.
+  `https://leopoldinahouse.com.br/busca?finalidade=Venda&tipo=Apartamento&bairro=Vila+Leopoldina%2CAlto+da+Lapa%2CLapa%2CPinheiros%2CPomp%C3%A9ia%2CSumarezinho%2CVila+Ipojuca%2CVila+Romana%2CVila+Pomp%C3%A9ia%2CVila+Madalena&areaTotalMin=130.00&max=2300000.00&dormitorios=3&order=maior-preco`.
   Aplique também as exclusões de ruas e tipos acima; a URL, sozinha, não as filtra.
 
 **Mesmo prédio de um imóvel da lista = comparar as fotos com a linha, sempre.** Em
